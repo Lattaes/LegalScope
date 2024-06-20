@@ -13,3 +13,13 @@
   ```bash
   npm install mongoose
   ```
+  
+- Running Project:
+  ```bash
+  npm run serve
+  ```
+
+- Running Project Using Nodemon:
+  ```bash
+  nodemon index.js
+  ```
