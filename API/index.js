@@ -44,7 +44,7 @@ app.get('/api/peraturan/:id',  async (req, res) => {
 
 // Connect to MongoDB
 mongoose
-.connect('mongodb+srv://legalscope:1aqmOffieW80dCeb@legalscopedb.ygg9klj.mongodb.net/Legal-Scope-API?retryWrites=true&w=majority&appName=LegalScopeDB')
+.connect('mongodb://legalscope:1aqmOffieW80dCeb@ac-dkor4y4-shard-00-00.ygg9klj.mongodb.net:27017,ac-dkor4y4-shard-00-01.ygg9klj.mongodb.net:27017,ac-dkor4y4-shard-00-02.ygg9klj.mongodb.net:27017/?ssl=true&replicaSet=atlas-4911m0-shard-0&authSource=admin&retryWrites=true&w=majority&appName=LegalScopeDB')
 .then(() => {
     console.log('Connected to MongoDB')
     app.listen(3000, () => {
