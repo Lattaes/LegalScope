@@ -1,6 +1,6 @@
 # Requirement run backend API:
-- Install express: 
-  \nnpm i express
+- Install express:
+  npm i express
 
 - Install MongoDB:
   \nnpm install mongodb
