@@ -1,11 +1,15 @@
-# Requirement run backend API:
+# Requirement to run backend API:
 - Install express:
   ```bash
   npm i express
   ```
 
 - Install MongoDB:
- npm install mongodb
+ ```bash
+ npm install MongoDB
+```
 
 - Install Mongoose for accessing mongoDB from Node.js:
+  ```bash
   npm install mongoose
+  ```
