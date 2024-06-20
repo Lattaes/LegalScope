@@ -1,0 +1,117 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Hai",
+                "halo",
+                "Hi",
+                "Selamat pagi",
+                "Selamat siang",
+                "Selamat sore",
+                "Selamat malam"
+            ],
+            "responses": [
+                "Halo, ada yang bisa kami bantu?",
+                "Selamat datang di LegalScope! ada yang bisa kami bantu?",
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Sampai jumpa",
+                "Selamat tinggal",
+                "Bye"
+            ],
+            "responses": [
+                "Sampai jumpa lagi!",
+                "Semoga harimu menyenangkan",
+                "Terimkasih telah bertanya, sampai jumpa lagi"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Terimakasih",
+                "Makasih",
+                "Terimakasih atas jawabannya",
+                "Terimakasih atas bantuannya",
+                "Thanks",
+                "Thankyou"
+            ],
+            "responses": [
+                "Senang bisa membantu anda!",
+                "Tentu, senang bisa membantu",
+                "Terimakasih kembali telah bertanya"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "tujuan_pembentukan_kuhp",
+            "patterns": [
+                "Tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru",
+                "Apa tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru?",
+                "Jelaskan tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru"
+            ],
+            "responses": [
+
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "prinsip_penyusunan_kuhp",
+            "patterns": [
+                "Prinsip dasar penyusunan KUHP?",
+                "Jelaskan prinsip dasar penyusunan KUHP",
+                "Apa saja prinsip dasar penyusunan KUHP?",
+                "Prinsip yang mendasari penyusunan KUHP",
+                "Apa saja prinsip-prinsip dasar yang mendasari penyusunan KUHP ini?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "ruang_lingkup_ketentuan_waktu_kuhp",
+            "patterns": [
+                "Ruang lingkup berlakunya ketentuan peraturan KUHP",
+                "Jelaskan ruang lingkup ketentuan peraturan KUHP",
+                "Bagaimana ruang lingkup berlakunya ketentuan peraturan perundang-undangan pidana menurut waktu?"
+            ],
+            "responses": [
+
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "asas_wilayah_teritorial_kuhp",
+            "patterns": [
+                "Asas wilayah atau teritorial KUHP",
+                "Jelaskan asas wilayah atau teritorial KUHP",
+                "Apa yang dimaksud dengan asas wilayah atau teritorial dalam KUHP ini?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        },
+        {
+            "tag": "pasal2_ayat_hukum_masyarakat",
+            "patterns": [
+                "Ketentuan pasal 2 tentang hukum yang hidup dalam masyarakat",
+                "Isi pasal 2",
+                "Isi pasal 2 ayat 1",
+                "Isi pasal 2 ayat 2",
+                "Jelaskan pasal tentang hukum yang hidup dalam masyarakat",
+                "Bagaimana ketentuan dalam Pasal 2 ayat (1) dan (2) mengatur tentang hukum yang hidup dalam masyarakat?"
+            ],
+            "responses": [
+                
+            ],
+            "context":[""]
+        }
+    ]
+}
