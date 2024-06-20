@@ -1,9 +1,9 @@
 # Requirement run backend API:
 - Install express: 
-  npm i express
+  \nnpm i express
 
 - Install MongoDB:
-  npm install mongodb
+  \nnpm install mongodb
 
 - Install Mongoose for accessing mongoDB from Node.js:
-  npm install mongoose
+  \nnpm install mongoose
