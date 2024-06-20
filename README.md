@@ -5,9 +5,9 @@
   ```
 
 - Install MongoDB:
- ```bash
- npm install MongoDB
-```
+  ```bash
+  npm install MongoDB
+  ```
 
 - Install Mongoose for accessing mongoDB from Node.js:
   ```bash
