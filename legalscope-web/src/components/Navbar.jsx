@@ -13,14 +13,12 @@ const Navbar = () => {
         <header className="bg-white shadow">
             <nav className="container mx-auto flex justify-between items-center py-4">
                 <div>
-                    <Link to="/">
-                        <img className="w-16 cursor-pointer" src={Logo} alt="Logo" />
-                    </Link>
+                    <h2 className="text-1xl md:text-3xl font-bold text-[#541212]">LEGALSCOPE.</h2>
                 </div>
                 <div className="hidden md:flex flex-grow items-center justify-center">
                     <ul className="flex justify-center items-center space-x-4">
                         <li>
-                            <Link className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-red-900 ml-4" to="/">Home</Link>
+                            <Link className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4" to="/">Home</Link>
                         </li>
                         <li>
                             <Link className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4" to="/peraturan-indonesia">Peraturan Indonesia</Link>
@@ -38,10 +36,10 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center ml-auto">
                     <Link to="/login">
-                        <button className="bg-red-900 text-white px-4 py-2 rounded-full hover:bg-red-800">Sign in</button>
+                        <button className="bg-customMaroon text-white px-4 py-2 rounded-md hover:bg-red-900">Masuk</button>
                     </Link>
                     <Link to="/register">
-                        <button className="text-gray-700 px-4 py-2 rounded-full hover:bg-gray-400 ml-4">Register</button>
+                        <button className="text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 ml-4">Daftar</button>
                     </Link>
                     <button onClick={toggleMenu} className="md:hidden ml-4 focus:outline-none">
                         {isMenuOpen ? (

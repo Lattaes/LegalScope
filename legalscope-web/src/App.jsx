@@ -8,9 +8,6 @@ import PrediksiHukuman from './pages/PrediksiHukuman';
 import Chatbot from './pages/Chatbot';
 import AboutUs from './pages/AboutUs';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; // Import Footer component
-import Pricing from './pages/Pricing';
-import Features from './pages/Features';
 
 function App() {
     return (
@@ -31,9 +28,6 @@ function App() {
                         {/* <Route path="/contact" element={<Contact />} /> */}
                     </Routes>
                 </main>
-                <Features />
-                <Pricing />
-                <Footer />
             </div>
         </Router>
     );

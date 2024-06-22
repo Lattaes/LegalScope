@@ -6,16 +6,17 @@ module.exports = {
     extend: {
       colors: {
         indigo: colors.indigo,
+        customMaroon: '#541212',
+        customGreen: '#8B9A46',
       },
       fontFamily: {
-        // Tambahkan font tambahan jika diperlukan
+        // Tambahkan font
         'poppins': ['Poppins', 'sans-serif'],
       },
     },
   },
   plugins: [
-    // Tambahkan plugin tambahan jika diperlukan
-    // Misalnya, plugin untuk mengaktifkan varian dark mode
+    // Tambahkan plugin
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
