@@ -632,18 +632,6 @@
                 
             ],
             "context":[""]
-        },
-        {
-            "tag": "pelanggaran_hak_cipta_kuhp",
-            "patterns": [
-                "Bagaimana hukum pidana KUHP mengatur tindak pidana pelanggaran hak cipta?",
-                "Kasus pelanggaran hak cipta menurut hukum pidana KUHP",
-                "Jelaskan tindak pidana pencucian uang"
-            ],
-            "responses": [
-                
-            ],
-            "context":[""]
         }
     ]
 }
