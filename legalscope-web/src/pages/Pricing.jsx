@@ -13,6 +13,7 @@ const Pricing = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula urna at nibh cursus, nec gravida nunc pulvinar. Vivamus eget diam at dui condimentum aliquet.
           </p>
         </div>
+        <br></br>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
             <img className="w-20 mx-auto mt-[-3rem] bg-white" src={Single} alt="Single User" />
