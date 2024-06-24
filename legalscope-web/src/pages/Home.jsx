@@ -3,9 +3,13 @@ import backgroundImage from '../assets/image.jpg';
 import heroImage from '../assets/hero-image.png';
 import Slider from 'react-slick'; // Import react-slick
 import Pricing from './Pricing';
-import Features from './Features';
+// import Features from './Features';
 import ToolsLogo from './ToolsLogo';
 import Footer from '../components/Footer';
+import FiturDaftarHukum from './FiturDaftarHukum';
+import Newsletter from './Newslater';
+import FiturPrediksiPasal from './FiturPrediksiPasal';
+import FiturChatbot from './FiturChatbot.jsx';
 
 const Home = () => {
 
@@ -47,9 +51,13 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            {/* <Features /> */}
+            <FiturDaftarHukum />
+            <FiturPrediksiPasal />
+            <FiturChatbot />
             <ToolsLogo />
-            <Features />
             <Pricing />
+            <Newsletter />
             <Footer />
         </>
     );
