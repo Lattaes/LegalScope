@@ -47,7 +47,7 @@ const ResourcesLinks = [
     link: "/#blogs",
   },
   {
-    title: "Subscribe TCJ",
+    title: "Subscribe LSW",
     link: "https://www.youtube.com/channel/UC1H-a1MKEFXRiFlGNLcy7gQ?sub_confirmation=1",
   },
 ];
