@@ -6,7 +6,7 @@ import FeatureImage3 from '../assets/feature3.jpg';
 
 const Features = () => {
   return (
-    <section className="features" style={{ background: 'linear-gradient(to bottom, #541212, #000000)' }}>
+    <section className="features" style={{ background: 'linear-gradient(to bottom, #000000, #541212)' }}>
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">Fitur Utama</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
