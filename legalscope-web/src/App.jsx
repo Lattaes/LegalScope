@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import EditProfile from "./pages/EditProfile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PeraturanIndonesia from "./pages/PeraturanIndonesia";
@@ -9,6 +10,7 @@ import PrediksiHukuman from "./pages/PrediksiHukuman";
 import Chatbot from "./pages/Chatbot";
 import AboutUs from "./pages/AboutUs";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -33,6 +35,7 @@ function App() {
             {/* <Route path="/contact" element={<Contact />} /> */}
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
