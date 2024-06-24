@@ -8,6 +8,7 @@ module.exports = {
         indigo: colors.indigo,
         customMaroon: '#541212',
         customGreen: '#8B9A46',
+        customWhite: '#D9D9D9',
       },
       fontFamily: {
         // Tambahkan font

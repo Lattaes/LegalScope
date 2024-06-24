@@ -28,4 +28,7 @@ code {
   background-color: #333;
 }
 
+.tools-container {
+  overflow: hidden;
+}
 
