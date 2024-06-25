@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ label, options, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -11,17 +11,18 @@ const Dropdown = () => {
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
+    onSelect(option);
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left w-full mb-4">
       <div>
         <button
           type="button"
           className="inline-flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           onClick={toggleDropdown}
         >
-          {selectedOption || "Select an option"}
+          {selectedOption || label}
           <svg
             className="ml-2 -mr-1 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,26 +40,17 @@ const Dropdown = () => {
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
           <div className="py-1">
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleOptionClick("Option 1")}
-            >
-              Option 1
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleOptionClick("Option 2")}
-            >
-              Option 2
-            </button>
-            <button
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-              onClick={() => handleOptionClick("Option 3")}
-            >
-              Option 3
-            </button>
+            {options.map((option) => (
+              <button
+                key={option}
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                onClick={() => handleOptionClick(option)}
+              >
+                {option}
+              </button>
+            ))}
           </div>
         </div>
       )}
