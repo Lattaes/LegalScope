@@ -26,13 +26,15 @@ function Profile() {
           <div className="mt-8 flex items-center gap-2 bg-white">
             <MdMailOutline /> <p>asdaskd@asdkjaskdj.com</p>
           </div>
-          <div className="mt-8 flex items-center gap-2 bg-black justify-start">
-            <button
-              className="bg-indigo-600 w-full text-white font-[Poppins] py-2 px-6 rounded  hover:bg-indigo-400 
+          <div className="mt-8 flex items-center gap-2  justify-start">
+            <a href="/EditProfile" className="bg-indigo-600 w-full rounded-md">
+              <button
+                className=" w-full text-white font-[Poppins] py-2 px-6  hover:bg-indigo-400 
     duration-500"
-            >
-              Edit
-            </button>
+              >
+                Edit
+              </button>
+            </a>
           </div>
         </div>
       </div>
