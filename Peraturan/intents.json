@@ -1,0 +1,284 @@
+{
+  "intents": [
+    {
+      "tag": "qna 1",
+      "patterns": [
+        "Apa tujuan utama dari pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru?"
+      ],
+      "responses": [
+        "Tujuan utama dari pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru adalah diperlukan adanya pembaharuan hukum yaitu demokratisasi hukum pidana karena KUHP lama merupakan produk hukum pemerintahan zaman kolonial Hindia Belanda. Pada KUHP baru pemidanaannya berorientasi pada pencegahan bukan penjatuhan hukum. Salah satu contohnya, yaitu diperhatikannya atau diaturnya hak-hak korban disamping proses hukum terhadap kejahatan yang dilakukan pelaku. Pembaharuan ini dilakukan dengan alasan filosofis, politis, sosiologis, dan praktis.  \n\nFilosofis: KUHP lama disusun oleh pemerintah kolonial Belanda dan tidak sesuai dengan landasan filosofis Indonesia.\n\nSosiologis: Banyak pasal KUHP lama yang tidak lagi sesuai dengan nilai-nilai yang berlaku dalam masyarakat Indonesia modern, dan adanya kemajuan ilmu pengetahuan dan teknologi membuat berbagai pengaturan dalam KUHP menjadi tidak memadai dan ketinggalan zaman."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 2",
+      "patterns": [
+        "Apa yang dimaksud dengan Kitab Undang-Undang Hukum Pidana KUHP?"
+      ],
+      "responses": [
+        "Kitab Undang-Undang Hukum Pidana (KUHP) adalah kumpulan peraturan yang mengatur tentang hukum pidana di Indonesia., seperti tindak pidana, pemidanaan, dan proses hukum terkait pelanggaran hukum pidana. "
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 3",
+      "patterns": [
+        "Bagaimana ruang lingkup berlakunya ketentuan peraturan perundang-undangan pidana menurut waktu?"
+      ],
+      "responses": [
+        "Ketentuan peraturan Perundang-undangan hukum pidana menurut waktu diatur dalam asas legalitas dan asas retroaktif. \n\nAsas legalitas ini berasal dari doktrin nullum delictum nulla poena sine praevia lege poenal yang berarti tiada tindak pidana dan hukuman pidana tanpa sebelumnya ditetapkan dalam suatu undang-undang. Sebagai mana diatur dalam Pasal 1 ayat (1) UU 1/2023 \"Suatu perbuatan tidak dipidana, kecuali berdasarkan kekuatan perundang-undangan pidana yang telah ada\". \n\nAsas retroaktif menyatakan bahwa peraturan perundang-undanganitu harus sudah ada sebelum tindak pidana itu terjadi, artinya peraturan pidana tidak boleh belaku surut (retroaktif)."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 4",
+      "patterns": [
+        "Apa yang dimaksud dengan asas wilayah atau teritorial dalam KUHP?"
+      ],
+      "responses": [
+        "Asas wilayah atau teritorial adalah asas hubungan internasional yang mewajibkan suatu negara tetap berada dalam wilayah kekuasaannya. Hal ini juga berarti sebuah negara yang berdaulat bertanggung jawab untuk menjaga ketertiban hukum di wilayahnya. Negara berhak untuk memberlakukan hukuman pidana bagi siapa pun yang melakukan tindak pidana di wilayahnya. Sebagaimana diatur dalam Pasal 4 UU 1/2023 yang menyatakan bahwa hukuman pidana belaku bagi siapa pun yang melakukan tindak pidana:\n1. Di wilayah Negara Kesatuan Republik Indonesia (NKRI); \n2. Kapal atau Pesawat Udara Indonesia; atau\n3. Di bidang teknologi informasi atau tindak pidana lainnya yang akibatnya dialami atau terjadi di wilayah Negara Kesatuan Republik Indonesia atau di Kapal Indonesia dan di Pesawat Undara Indonesia."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 5",
+      "patterns": [
+        "Bagaimana ketentuan Pasal 2 ayat (1) dan (2) dalam hukum pidana mengatur tentang hukum yang hidup dalam masyarakat?"
+      ],
+      "responses": [
+        "Hukum yang hidup dalam masyarakat yang terdapat dalam Pasal 2 menjelaskan bahwa sebagaimana dimaksud pada ayat (1) berlaku dalam tempat hukum itu hidup dan sepanjang tidak diatur dalam Undang-Undang ini dan sesuai dengan nilai-nilai yang terkandung dalam Pancasila, Undang-Undang Dasar Negara Republik Indonesia Tahun 1945, hak asasi manusia, dan asas hukum umum yang diakui masyarakat beradab."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 6",
+      "patterns": [
+        "Apa yang terjadi jika terdapat perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan?"
+      ],
+      "responses": [
+        "Jika terjadi perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan, maka akan diberlakukan peraturan perundang-undangan yang baru, kecuali ketentuan peraturan perundang-undangan yang lama menguntungkan bagi pelaku dan pembantu tindak pidana."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 7",
+      "patterns": [
+        "Apa yang dimaksud dengan asas prelindungan dan asas nasional pasif dalam KUHP?"
+      ],
+      "responses": [
+        "Asas perlindungan atau asas nasional pasif merupakan asas yang menekankan pada perlindungan unsur nasional terhadap siapa pun dan dimana pun. Prinsip ini dijelaskan dalam Pasal 5 KHUHP 2023 yang menyatakan bahwa hukum pidana berlaku bagi siapapun di luar wilayah NKRI yang melakukan tindak pidana yang berhubungan dengan kepentingan NKRI, seperti keamanan negara, martabat Presiden, Wakil Presiden, pejabat Indonesia, atau kredit yang dikeluarkan oleh perbankan Indonesia, prekonomian, perdagangan, perbankan Indonesia, keselamatan pelayaran dan penerbangan, keselamatan bangunan, peralatan, dan aset nasional atau negara Indonesia, serta keselamatan sistem komunikasi elektronik."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 8",
+      "patterns": [
+        "Bagaimana asas nasional aktif diterapkan bagi warga negara Indonesia yang melakukan tindak pidana di luar negeri?"
+      ],
+      "responses": [
+        "Asas nasional aktif diterapkan di Indonesia sebagaimana dalam Pasal 8 UU 1/2023 yang menyatakan bahwa hukum pidana Indonesia berlaku bagi warga negara Indonesia yang melakuka tindak pidana di luar wilayah Indonesia, selama tindak pidana tersebut juga merupakan pelanggaran hukum di negara tempat kejadian pidana tersebut terjadi. Namun, terdapat pengecualian pemberlakuan untuk tindak pidana yang hanya diancam dengan pidana denda kategori III.\nWarga negara Indonesia yang melakukan tindak pidana di luar negeri tidak dapat dihukum mati jika hukum negara tempat kejadian tersebut tidak mengancam dengan hukuman mati."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 9",
+      "patterns": [
+        "Apa definisi dari tindak pidana?"
+      ],
+      "responses": [
+        "Istilah tindak pidana berasal dari bahasa Belanda \"Strafbaar feit\" yang memiliki banyak istilah lain, yaitu delik yang jika disimpulkan kedua istilah tersebut memiliki arti yang sama dengan perbuatan yang dapat/boleh dihukum, peristiwa pidana, perbuatan pidana, dan tindak pidana.\n\nJadi, tindak pidana merupakan perbuatan yang dilakukan seseoran dengan melakukan suatu kejahatan atau pelanggaran pidana yang merugikan kepentingan orang lain atau merugikan kepentingan umum."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 10",
+      "patterns": [
+        "Bagaimana permufakatan jahat diatur dalam KUHP?"
+      ],
+      "responses": [
+        "Pemufakatan jahat diatur dalam Pasal 13 UU 1/2023 baru, pasal ini berisikan:\n(1) Permufakatan jahat terjadi jika 2 (dua) orang atau lebih bersepakat untuk melakukan Tindak Pidana.\n(2) Pemufakatan jahat melakukan Tindak Pidana dipidana jika ditentukan secara tegas dalam Undang-Undang.\n(3) Pidana untuk pemufakatan jahat melakukan tindak pidana paling banyak 1/3 (satu per tiga) dari maksimum ancaman pidana pokok untuk tindak pidana yang bersangkutan.\n(4) Permufakatan jahat melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup dipidana dengan pidana penjara paling lama 7 (tujuh) tahun.\n(5) Pidana tambahan untuk permufakatan jahat melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 11",
+      "patterns": [
+        "Apa saja yang termasuk dalam persiapan melakukan tindak pidana?"
+      ],
+      "responses": [
+        "Yang termasuk dalam persiapan melakukan tindak pidana sebagaimana tercantum dalam pasal 15 ayat (1) UU 1/2023baru yang berbunyi \"Persiapan melakukan Tindak Pidana terjadi jika pelaku berusaha untuk mendapatkan atau menyiapkan sarana berupa alat, mengumpulkan informasi atau menyusun perencanaan tindakan, atau melakukan tindakan serupa yang dimaksudkan untuk menciptakan kondisi untuk dilakukannya suatu perbuatan yang secara langsung ditujukan bagi penyelesaian Tindak Pidana\"."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 12",
+      "patterns": [
+        "Bagaimana KUHP mengatur tentang percobaan melakukan tindak pidana?"
+      ],
+      "responses": [
+        "Terkait percobaan melakukan tindak pidana diatur dalam Pasal 17 UU 1/2023 baru:\n(1) Percobaan melakukan Tindak Pidana terjadi jika niat pelaku telah nyata dari adanya permulaan pelaksanaan dari Tindak Pidana yang dituju, tetapi pelaksanaannya tidak selesai, tidak mencapai hasil, atau tidak menimbulkan akibat yang dilarang, bukan karena semata-mata atas kehendaknya sendiri.\n(2) Permulaan pelaksanaan sebagaimana dimaksud pada ayat (1) terjadi jika: \n      a. Perbuatan yang dilakukan itu diniatkan atau ditujukan untuk terjadinya Tindak Pidana; dan\n      b. Perbuatan yang dilakukan langsung berpotensi menimbulkan Tindak Pidana yang dituju.\n(3) Pidana untuk percobaan melakukan Tindak Pidana paling banyak 2/3 (dua per tiga) dari maksimum ancaman pidana pokok untuk Tindak Pidana yang bersangkutan.\n(4) Percobaan melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup, dipidana dengan pidana penjara paling lama 15 (lima belas) tahun.\n(5) Pidana tambahan untuk percobaan melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 13",
+      "patterns": [
+        "Siapa saja yang dapat dipidana sebagai pelaku tindak pidana menurut Pasal 20 KUHP?"
+      ],
+      "responses": [
+        "Dalam Pasal 20 UU 1/2023 baru menyebutkan mengenai setiap orang dipidana sebagai pelaku Tindak Pidana jika:\na. Melakukan sendiri Tindak Pidana;\nb. Melakukan Tindak Pidana dengan perantaraan alat atau menyuruh orang lain yang tidak dapat dipertanggungjawabkan;\nc. Turut serta melakukan Tindak Pidana; atau\nd. Menggerakkan orang lain supaya melakukan Tindak Pidana dengan cara memberi atau menjanjikan sesuatu, menyalahgunakan kekuasaan atau martabat, melakukan Kekerasan, menggunakan ancaman kekerasan, melakukan penyesatan, atau dengan memberi kesempatan, sarana, atau keterangan."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 14",
+      "patterns": [
+        "Bagaimana aturan mengenai pembantuan dalam melakukan tindak pidana?"
+      ],
+      "responses": [
+        "Pembantuan dalam melakukan tindak pidana diatur dalam Pasal 21 KUHP baru (UU 1/2023), yang berbunyi:\n(1) Setiap orang dipidana sebagai pembantu tindak pidana jika dengan sengaja:\n     a. memberi kesempatan, sarana, atau keterangan untuk melakukan tindak pidana; atau \n     b. memberi bantuan pada waktu tindak pidana dilakukan.\n(2) Ketentuan sebagaimana dimaksud pada ayat (1) tidak berlaku untuk pembantuan melakukan Tindak Pidana yang hanya diancam dengan pidana denda paling banyak kategori II.\n(3) Pidana untuk pembantuan melakukan Tindak Pidana paling banyak 213 (dua per tiga) dari maksimum ancarnan pidana pokok untuk Tindak Pidana yang bersangkutan.\n(4) Pembantuan melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup, dipidana dengan pidana penjara paling lama 15 (lima belas) tahun.\n(5) Pidana tambahan untuk pembantuan melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan.\n\nDalam pembantuan melakukan tindak pidana, element \"sengaja\" harus ada, sehingga orang yang secara kebetulan dengan tidak mengetahui telah memberikan kesempatan, saya, upaya, atau keterangan untuk melakukan kejahatan itu tidak dihukum."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 15",
+      "patterns": [
+        "Bagaimana KUHP ini mengatur tentang pengulangan tindak pidana?"
+      ],
+      "responses": [
+        "Pengulangan melakukan tindak pidana diatur dalam Pasal 23 UU 1/2023, yang menyatakan bahwa:\n(1) Pengulangan Tindak Pidana terjadi jika Setiap Orang:\n      a. Melakukan Tindak Pidana kembali dalam waktu 5 (lima) tahun setelah menjalani seluruh atau sebagian pidana pokok yang dijatuhkan atau pidana pokok yang dijatuhkan telah dihapuskan; atau\n      b. Pada waktu melakukan Tindak Pidana, kewajiban menjalani pidana pokok yang dijatuhkan terdahulu belum kedaluwarsa.\n(2) Tindak Pidana sebagaimana dimaksud pada ayat (1) mencakup Tindak Pidana yang diancam dengan pidana minimum khusus, pidana penjara 4 (empat) tahun atau lebih, atau pidana denda paling sedikit kategori III.\n(3) Ketentuan sebagaimana dimaksud pada ayat (1) juga berlaku untuk Tindak Pidana mengenai penganiayaan."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 16",
+      "patterns": [
+        "Apa saja jenis sanksi pidana yang diatur dalam KUHP?"
+      ],
+      "responses": [
+        "Jenis sanksi pidana diatur dalam Pasal 64, Pasal 65 ayat (1), Pasal 66 ayat (1), dan Pasal 67 UU 1/2023.\n\nPasal 64:\nPidana terdiri atas:\na. Pidana pokok;\nb. Pidana tambahan; dan\nc. Pidana yang bersifat khusus untuk Tindak Pidana tertentu yang ditentukan dalam Undang-Undang.\n\nPasal 65:\n(1) Pidana pokok sebagaimana dimaksud dalam Pasal 64 huruf a terdiri atas:\n      a. Pidana penjara;\n      b. Pidana tutupan;\n      c. Pidana pengawasan;\n      d. Pidana denda; dan\n      e. Pidana kerja sosial.\n\nPasal 66:\n(1) Pidana tambahan sebagaimana dimaksud dalam Pasal 64 huruf b terdiri atas:\n      a. Pencabutan hak tertentu;\n      b. Perampasan Barang tertentu dan/ atau tagihan;\n      c. Pengumuman putusan hakim;\n      d. Pembayaran ganti nrgi;\n      e. Pencabutan izin tertentu; dan\n      f.  Pemenuhan kewajiban adat setempat.\n\nPasal 67\nPidana yang bersifat khusus sebagaimana dimaksud dalam Pasal 64 huruf c merupakan pidana mati yang selalu diancamkan secara alternatif."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 17",
+      "patterns": [
+        "Bagaimana pembebasan pelaku tindak pidana diatur jika terjadi perubahan peraturan yang menguntungkan pelaku?"
+      ],
+      "responses": [
+        "Jika terjadi perubahan peraturan, maka akan diterapkan asas retroaktif yang mengatur bahwa peraturan baru yang lebih menguntungkan pelaku tindak pidana harus diterapkan, sebagaimana diatur dalam Pasal 3 ayat (1) UU 1/2023.\n\nPasal 3:\n(1) Dalam hal terdapat perubahan peraturan perundang undangan sesudah perbuatan terjadi, diberlakukan peraturan perundang-undangan yang baru, kecuali ketentuan peraturan perundang-undangan yang lama menguntungkan bagi pelaku dan pembantu Tindak Pidana."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 18",
+      "patterns": [
+        "Apa yang diatur dalam Pasal 5 mengenai tindak pidana di luar wilayah Indonesia?"
+      ],
+      "responses": [
+        "Dalam pasal 5 UU No. 1 Tahun 2023 dalam KUHP baru mengatur tentang, ketentuan pidana dalam Undang-Undang berlaku bagi setiap orang di luar wilayah Negara Kesatuan Republik Indonesia yang melakukan Tindak Pidana terhadap kepentingan Negara Kesatuan Republik Indonesia yang berhubungan dengan:\n- Keamanan negara atau proses kehidupan ketatanegaraan;\n- Martabat Presiden, Wakil Presiden, dan/atau Pejabat Indonesia di luar negeri;\n- Mata uang, segel, cap negara, meterai, atau surat berharga yang dikeluarkan oleh Pemerintah Indonesia, atau kartu kredit yang dikeluarkan oleh perbankan Indonesia;\n- Perekonomian, perdagangan, dan perbankan Indonesia;\n- Keselamatan atau keamanan pelayaran dan penerbangan;\n- Keselamatan atau keamanan bangunan, peralatan, dan aset nasional atau negara Indonesia;\n- keselamatan atau keamanan sistem komunikasi elektronik;\n- kepentingan nasional Indonesia sebagaimana ditetapkan dalam Undang-Undang; atau\n-  warga negara Indonesia berdasarkan perjanjian internasional dengan negara tempat terjadinya Tindak Pidana."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 19",
+      "patterns": [
+        "Bagaimana Pasal 17 mengatur tentang percobaan tindak pidana?"
+      ],
+      "responses": [
+        "Dalam pasal 17 ayat (1) UU 1/2023 baru tertulis bahwa: \nPercobaan melakukan Tindak Pidana terjadi jika niat pelaku telah nyata dari adanya permulaan pelaksanaan dari Tindak Pidana yang dituju, tetapi pelaksanaannya tidak selesai, tidak mencapai hasil, atau tidak menimbulkan akibat yang dilarang, bukan karena semata-mata atas kehendaknya sendiri."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 20",
+      "patterns": [
+        "Sebutkan kasus pidana yang termasuk ke dalam pidana umum"
+      ],
+      "responses": [
+        "Berikut merupakan beberapa kasus yang termasuk ke dalam tindak pidana umum:\n- Pelanggaran lalu lintas.\n- Sumpah palsu dan keterangan palsu.\n- Senjata api.\n- Kejahatan terhadap kesusilaan.\n- Penghinaan.\n- Penipuan.\n- Pemalsuan.\n- Pembunuhan.\n- Kejahatan terhadap keamanan negara.\n- Penggelapan.\n- Kealfaan mengakibatkan kematianluka.\n- Pemalsuan uang.\n- Penganiayaan.\n- Pemerasan dan pengancaman.\n- Pencurian.\n- Kehutanan.\n- Jinayat.\n- Kejahatan terhadap ketertiban umum.\n- Kejahatan terhadap asal usul perkawinan.\n- Perjudian.\n- Pemerasan dan pengancaman.\n- Kejahatan terhadap kemerdekaan orang lain.\n- Perusakan\n- Pra peradilan.\n- Penadahan"
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 21",
+      "patterns": [
+        "Bagaimana KUHP ini mengatur tentang tindak pidana terorisme?"
+      ],
+      "responses": [
+        "Dalam KUHP baru (UU no. 1 /2023), terorisme diatur dalam Pasal 600 hingga Pasal 602.\n\nPasal 600:\nSetiap Orang yang menggunakan Kekerasan atau Ancaman Kekerasan yang menimbulkan suasana teror atau rasa takut terhadap orErng secara meluas, menimbulkan Korban yang bersifat massal dengan cara merampas kemerdekaan atau hilangnya nyawa dan harta benda orang lain, atau mengalibatkan kerusakan atau kehancuran terhadap objek vital yang strategis, lingkungan hidup, fasilitas publik, atau fasilitas internasional, dipidana dengan pidana penjara paling singkat 5 (lima) tahun dan paling lama 20 (dua puluh) tahun, pidana penjara seumur hidup, atau pidana mati.\n\nPasal 601:\nSetiap Orang yang menggunakan Kekerasan atau Ancaman Kekerasan bermaksud untuk menimbulkan suasana teror atau rasa takut terhadap orang secara meluas atau menimbulkan Korban yang bersifat massal dengan cara merampas kemerdekaan atau hilangnya nyawa atau harta benda orang lain, atau untuk menimbulkan kerusakan atau kehancuran terhadap objek vital yang strategis, lingkungan hidup, fasilitas publik, atau fasilitas internasional, dipidana dengan pidana penjara paling singkat 3 (tiga) tahun dan paling lama 20 (dua puluh) tahun atau pidana penjara seumur hidup.\n\nPasal 602\nSetiap Orang yang menyediakan, mengumpulkan, memberikan, atau meminjamkan dana, baik langsung maupun tidak langsung, dengan maksud digunakan seluruhnya atau sebagian untuk melakukan Tindak Pidana terorisme, organisasi teroris, atau teroris, dipidana karena Tindak Pidana pendanaan terorisme dengan pidana penjara paling lama 15 (lima belas) tahun dan pidana denda paling banyak kategori V."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 22",
+      "patterns": [
+        "Bagaimana KUHP mengatur tentang tindak pidana terhadap anak?"
+      ],
+      "responses": [
+        "Tindak yang dilakukan terhadap anak diatur dalam KUHP baru (UU no. 1/2023) sebagai berikut:\n\nPasal 419 ayat (1) dan (2):\n(1) Setiap orang yang menghubungkan atau memudahkan orang lain berbuat cabul atau bersetubuh dengan anak, dipidana penjara paling lama 7 tahun.\n(2) Jika perbuatan tersebut dilakukan terhadap anak kandung, anak tiri, anak angkat, atau anak di bawah pengawasannya, pidana penjara paling lama 9 tahun.\n\nPasal 422 ayat (1) dan (2):\n(1) Setiap orang yang menggerakkan, membawa, menempatkan, atau menyerahkan anak kepada orang lain untuk melakukan percabulan, pelacuran, atau perbuatan melanggar kesusilaan lainnya, dipidana penjara paling lama 9 tahun.\n(2) Jika perbuatan tersebut dilakukan dengan menjanjikan anak memperoleh pekerjaan atau janji lainnya, pidana penjara paling lama 10 tahun.\n\nPasal 453:\nTindak pidana yang dilakukan dengan kekerasan atau ancaman kekerasan terhadap anak yang belum berumur 12 tahun dapat dikenakan pidana penjara lebih berat."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 23",
+      "patterns": [
+        "Bagaimana KUHP ini mengatur tentang tindak pidana lingkungan hidup?"
+      ],
+      "responses": [
+        "Tindak pidana mengenai lingkungan hidup diatur dalam KUHP baru (UU no. 1/2023) yang mengatur beberapa aspek berikut:\n\n1. Penggunaan Bioteknologi Modern yang Membahayakan\n     - Pasal 338 ayat (2): \nSetiap orang yang menerapkan bioteknologi modern untuk menghasilkan hewan atau produk hewan transgenik yang membahayakan kelestarian sumber daya hewan, kesehatan dan keselamatan masyarakat, dan kelestarian fungsi lingkungan hidup, dapat dikenakan pidana penjara paling lama 2 tahun atau pidana denda paling banyak kategori IV.\n\n2. Kecerobohan yang Membahayakan Lingkungan:\n     - Pasal 339:\nTindak pidana yang terkait dengan kecerobohan yang membahayakan umum termasuk tindakan yang dapat merusak lingkungan, seperti tidak menaruh tanda peringatan atau menerangi secukupnya pada lubang atau galian di jalan umum, dapat dikenakan pidana denda paling banyak kategori II.\n\n3. Gangguan Terhadap Ketentraman Lingkungan\n     - Pasal 265:\nSetiap orang yang mengganggu ketenteraman lingkungan dengan membuat hingar-bingar atau berisik pada malam hari dapat dikenakan pidana denda paling banyak kategori II."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "qna 24",
+      "patterns": [
+        "Bagaimana KUHP ini memastikan perlindungan hak asasi manusia dalam proses penegakan hukum pidana?"
+      ],
+      "responses": 
