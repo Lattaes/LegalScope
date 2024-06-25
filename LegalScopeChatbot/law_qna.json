@@ -49,74 +49,77 @@
             "context": [""]
         },
         {
-            "tag": "tujuan_pembentukan_kuhp",
+            "tag": "qna_1",
             "patterns": [
-                "Tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru",
-                "Apa tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru?",
-                "Jelaskan tujuan pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru"
+                "Tujuan pembentukan kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)",
+                "Apa tujuan pembentukan kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)?",
+                "Jelaskan tujuan pembentukan kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)",
+                "Tujuan dibuatnya Kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)",
+                "Bagaiamana tujuan dibuatnya kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)?",
+                "Jelaskan tujuan kitab undang-undang hukum pidana (kuhp) yang baru (uu no. 1/2023)"
             ],
             "responses":[
-
-            ],
-            "context":[""]
+                "Tujuan utama dari pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru adalah diperlukan adanya pembaharuan hukum, yaitu demokratisasi hukum pidana karena KUHP lama merupakan produk hukum pemerintahan zaman kolonial Hindia Belanda. Pada KUHP baru pemidanaannya berorientasi pada pencegahan bukan penjatuhan hukum. Salah satu contohnya, yaitu diperhatikannya atau diaturnya hak-hak korban disamping proses hukum terhadap kejahatan yang dilakukan pelaku. Pembaharuan ini dilakukan dengan alasan filosofis, politis, sosiologis, dan praktis.\n\nFilosofis: KUHP lama disusun oleh pemerintah kolonial Belanda dan tidak sesuai dengan landasan filosofis Indonesia.\n\nSosiologis: Banyak pasal KUHP lama yang tidak lagi sesuai dengan nilai-nilai yang berlaku dalam masyarakat Indonesia modern, dan adanya kemajuan ilmu pengetahuan dan teknologi membuat berbagai pengaturan dalam KUHP menjadi tidak memadai dan ketinggalan zaman."
+            ]
         },
         {
-            "tag": "prinsip_penyusunan_kuhp",
+            "tag": "qna_2",
             "patterns": [
-                "Prinsip dasar penyusunan hukum pidana KUHP?",
-                "Jelaskan prinsip dasar penyusunan hukum pidana KUHP",
-                "Apa saja prinsip dasar penyusunan hukum pidana KUHP?",
-                "Prinsip yang mendasari penyusunan hukum pidana KUHP",
-                "Apa saja prinsip-prinsip dasar yang mendasari penyusunan hukum pidana KUHP ini?"
+                "Apa yang dimaksud dengan kitab undang-undang hukum pidana (kuhp)?",
+                "Apa itu kuhp?",
+                "Jelaskan mengenai kuhp",
+                "Kuhp adalah"
             ],
             "responses":[
-                
-            ],
-            "context":[""]
+                "Kitab Undang-Undang Hukum Pidana (KUHP) adalah kumpulan peraturan yang mengatur tentang hukum pidana di Indonesia, seperti tindak pidana, pemidanaan, dan proses hukum terkait pelanggaran hukum pidana."
+            ]
         },
         {
-            "tag": "ruang_lingkup_ketentuan_waktu_kuhp",
+            "tag": "qna_3",
             "patterns": [
-                "Ruang lingkup berlakunya ketentuan peraturan hukum pidana KUHP menurut waktu",
-                "Jelaskan ruang lingkup ketentuan peraturan hukum pidana KUHP menurut waktu",
+                "Ruang lingkup berlakunya ketentuan peraturan hukum pidana kuhp menurut waktu",
+                "Jelaskan ruang lingkup ketentuan peraturan hukum pidana kuhp menurut waktu",
                 "Bagaimana ruang lingkup berlakunya ketentuan peraturan perundang-undangan pidana menurut waktu?",
-                "Ketentuan berlakunya hukum pidana KUHP menurut waktu"
+                "Ketentuan berlakunya hukum pidana kuhp menurut waktu",
+                "Ruang lingkup kuhp menurut waktu"
             ],
             "responses":[
-
+                "Ketentuan peraturan Perundang-undangan hukum pidana menurut waktu diatur dalam asas legalitas dan asas retroaktif.\n\nAsas legalitas ini berasal dari doktrin nullum delictum nulla poena sine praevia lege poenal yang berarti tiada tindak pidana dan hukuman pidana tanpa sebelumnya ditetapkan dalam suatu undang-undang. Sebagai mana diatur dalam Pasal 1 ayat (1) UU 1/2023 \"Suatu perbuatan tidak dipidana, kecuali berdasarkan kekuatan perundang-undangan pidana yang telah ada\".\n\nAsas retroaktif menyatakan bahwa peraturan perundang-undanganitu harus sudah ada sebelum tindak pidana itu terjadi, artinya peraturan pidana tidak boleh belaku surut (retroaktif)."
             ],
             "context":[""]
         },
         {
-            "tag": "asas_wilayah_teritorial_kuhp",
+            "tag": "qna_4",
             "patterns": [
-                "Asas wilayah atau teritorial hukum pidana KUHP",
-                "Jelaskan asas wilayah atau teritorial hukum pidana KUHP",
-                "Apa yang dimaksud dengan asas wilayah atau teritorial dalam hukum pidana KUHP?",
-                "Definisi asas wilayah atau teritorial hukum pidana KUHP"
+                "Asas wilayah atau teritorial hukum pidana kuhp",
+                "Jelaskan asas wilayah atau teritorial hukum pidana kuhp",
+                "Apa yang dimaksud dengan asas wilayah atau teritorial dalam hukum pidana kuhp?",
+                "Definisi asas wilayah atau teritorial hukum pidana kuhp",
+                "Bagaimana asas wilayah atau teritorial kuhp",
+                "Asas wilayah kuhp",
+                "Asas teritorial kuhp"
             ],
             "responses":[
-
+                "Asas wilayah atau teritorial adalah asas hubungan internasional yang mewajibkan suatu negara tetap berada dalam wilayah kekuasaannya. Hal ini juga berarti sebuah negara yang berdaulat bertanggung jawab untuk menjaga ketertiban hukum di wilayahnya. Negara berhak untuk memberlakukan hukuman pidana bagi siapa pun yang melakukan tindak pidana di wilayahnya. Sebagaimana diatur dalam Pasal 4 UU 1/2023 yang menyatakan bahwa hukuman pidana belaku bagi siapa pun yang melakukan tindak pidana:\n\n1. Di wilayah Negara Kesatuan Republik Indonesia (NKRI);\n. Kapal atau Pesawat Udara Indonesia; atau\n3. Di bidang teknologi informasi atau tindak pidana lainnya yang akibatnya dialami atau terjadi di wilayah Negara Kesatuan Republik Indonesia atau di Kapal Indonesia dan di Pesawat Udara Indonesia."
             ],
             "context":[""]
         },
         {
-            "tag": "pasal2_hukum_masyarakat_kuhp",
+            "tag": "qna_5",
             "patterns": [
-                "Ketentuan pasal 2 hukum pidana KUHP yang mengatur tentang hukum yang hidup dalam masyarakat",
-                "Isi pasal 2 hukum pidana KUHP",
-                "Isi pasal 2 ayat 1 hukum pidana KUHP",
-                "Isi pasal 2 ayat 2 hukum pidana KUHP",
+                "Ketentuan pasal 2 hukum pidana kuhp yang mengatur tentang hukum yang hidup dalam masyarakat",
                 "Jelaskan pasal dalam hukum pidana KUHP tentang hukum yang hidup dalam masyarakat",
-                "Bagaimana ketentuan dalam Pasal 2 ayat (1) dan (2) dalam hukum pidana KUHP yang mengatur tentang hukum yang hidup dalam masyarakat?"
+                "Bagaimana ketentuan dalam Pasal 2 tentang hukum pidana KUHP yang mengatur tentang hukum yang hidup dalam masyarakat?",
+                "Peraturan tentang hukum yang hidup dalam masyarakat dalam hukum pidana kuhp",
+                "Hukum pidana kuhp hukum yang hidup dalam masyarakat"
             ],
             "responses": [
-                
+                "Hukum yang hidup dalam masyarakat yang terdapat dalam Pasal 2 menjelaskan bahwa sebagaimana dimaksud pada ayat (1) berlaku dalam tempat hukum itu hidup dan sepanjang tidak diatur dalam Undang-Undang ini dan sesuai dengan nilai-nilai yang terkandung dalam Pancasila, Undang-Undang Dasar Negara Republik Indonesia Tahun 1945, hak asasi manusia, dan asas hukum umum yang diakui masyarakat beradab."
             ],
             "context":[""]
         },
         {
-            "tag": "perubahan_peraturan_perundang_undangan",
+            "tag": "qna_6",
             "patterns": [
                 "Apa yang terjadi jika terdapat perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan?",
                 "Bagaimana jika peraturan perundang-undangan dirubah setelah suatu perbuatan dilakukan?"
@@ -127,7 +130,7 @@
             "context":[""]
         },
         {
-            "tag": "asas_pelindungan_asas_nasional_pasif_kuhp",
+            "tag": "qna_7",
             "patterns": [
                 "Definisi asas pelindungan dalam hukum pidana KUHP",
                 "Definisi asas nasional pasif dalam hukum pidana KUHP",
@@ -141,7 +144,7 @@
             "context":[""]
         },
         {
-            "tag": "asas_nasional_aktif_warga_negara_tindak_pidana_luar_negeri_kuhp",
+            "tag": "qna_8",
             "patterns": [
                 "Bagaimana asas nasional aktif menurut hukum pidana KUHP bagi warga negara Indonesia yang melakukan kejahatan tindak pidana di luar negeri?",
                 "Ketentuan asas nasional aktif menurut hukum pidana KUHP bagi warga negara Indonesia di luar negeri",
@@ -154,7 +157,7 @@
             "context":[""]
         },
         {
-            "tag": "definisi_tindak_pidana_kuhp",
+            "tag": "qna_9",
             "patterns": [
                 "Definisi tindak pidana menurut KUHP",
                 "Apa definisi tindak pidana menurut KUHP",
@@ -167,7 +170,7 @@
             "context":[""]
         },
         {
-            "tag": "pemufakatan_jahat_kuhp",
+            "tag": "qna_10",
             "patterns": [
                 "Pemufakatan jahat menurut hukum pidana KUHP",
                 "Bagaimana permufakatan jahat diatur dalam KUHP?"
@@ -178,7 +181,7 @@
             "context":[""]
         },
         {
-            "tag": "persiapan_tindak_pidana_kuhp",
+            "tag": "qna_11",
             "patterns": [
                 "Apa saja yang termasuk dalam persiapan melakukan tindak pidana?",
                 "Jelaskan hal yang termasuk dalam persiapan melakukan tindak pidana",
@@ -190,7 +193,7 @@
             "context":[""]
         },
         {
-            "tag": "percobaan_tindak_pidana_kuhp",
+            "tag": "qna_12",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur tentang percobaan melakukan tindak pidana?",
                 "Percobaan melakukan tindak pidana menurut hukum pidana KUHP",
@@ -203,7 +206,7 @@
             "context":[""]
         },
         {
-            "tag": "pasal20_pelaku_tindak_pidana_kuhp",
+            "tag": "qna_13",
             "patterns": [
                 "Pelaku tindak pidana menurut Pasal 20 hukum pidana KUHP",
                 "Yang dipidana sebagai pelaku tindak pidana menurut Pasal 20 hukum pidana KUHP",
@@ -216,7 +219,7 @@
             "context":[""]
         },
         {
-            "tag": "pembantuan_tindak_pidana_kuhp",
+            "tag": "qna_14",
             "patterns": [
                 "Peraturan yang mengatur mengenai pembantuan dalam melakukan tindak pidana",
                 "Jelaskan peraturan yang mengatur mengenai pembantuan dalam melakukan tindak pidana",
@@ -229,7 +232,7 @@
             "context":[""]
         },
         {
-            "tag": "pengulangan_tindak_pidana_kuhp",
+            "tag": "qna_15",
             "patterns": [
                 "Peraturan yang mengatur mengenai pengulangan tindak pidana",
                 "Jelaskan peraturan yang mengatur mengenai pengulangan tindak pidana",
@@ -243,7 +246,7 @@
             "context":[""]
         },
         {
-            "tag": "jenis_sanksi_pidana_kuhp",
+            "tag": "qna_16",
             "patterns": [
                 "Jelaskan jenis sanksi pidana yang diatur dalam hukum pidana KUHP",
                 "Jenis sanksi pidana menurut hukum pidana KUHP",
@@ -255,7 +258,7 @@
             "context":[""]
         },
         {
-            "tag": "pembebasan_pelaku_perubahan_peraturan_kuhp",
+            "tag": "qna_17",
             "patterns": [
                 "Bagaimana pembebasan pelaku tindak pidana diatur jika terjadi perubahan peraturan yang menguntungkan pelaku?"
             ],
@@ -265,7 +268,7 @@
             "context":[""]
         },
         {
-            "tag": "pasal5_tindak_pidana_kuhp",
+            "tag": "qna_18",
             "patterns": [
                 "Peraturan tindak pidana di luar wilayah Indonesia",
                 "Bagaimana hukum pidana KUHP mengatur tindak pidana di luar wilayah Indonesia",
@@ -277,7 +280,7 @@
             "context":[""]
         },
         {
-            "tag": "tindak_pidana_korupsi_kuhp",
+            "tag": "qna_19",
             "patterns": [
                 "Peraturan mengenai tindak pidana korupsi",
                 "Bagaimana KUHP mengatur tentang tindak pidana korupsi?",
@@ -289,7 +292,7 @@
             "context":[""]
         },
         {
-            "tag": "tindak_pidana_terorisme_kuhp",
+            "tag": "qna_20",
             "patterns": [
                 "Peraturan mengenai tindak pidana terorisme",
                 "Bagaimana KUHP mengatur tentang tindak pidana terorisme?",
@@ -301,7 +304,7 @@
             "context":[""]
         },
         {
-            "tag": "tindak_pidana_terhadap_anak_kuhp",
+            "tag": "qna_21",
             "patterns": [
                 "Peraturan mengenai tindak pidana terhadap anak",
                 "Bagaimana KUHP mengatur tentang tindak pidana terhadap anak?",
@@ -313,7 +316,7 @@
             "context":[""]
         },
         {
-            "tag": "tindak_pidana_lingkungan_hidup_kuhp",
+            "tag": "qna_22",
             "patterns": [
                 "Peraturan mengenai tindak pidana lingkungan hidup",
                 "Bagaimana KUHP mengatur tentang tindak pidana dalam lingkungan hidup?",
@@ -325,7 +328,7 @@
             "context":[""]
         },
         {
-            "tag": "perlindungan_ham_kuhp",
+            "tag": "qna_23",
             "patterns": [
                 "Bagaimana KUHP memastikan perlindungan hak asasi manusia dalam proses penegakan hukum pidana?",
                 "Jelaskan perlindungan hak asasi manusia dalam hukum pidana",
@@ -337,7 +340,7 @@
             "context":[""]
         },
         {
-            "tag": "hak_tersangka_terdakwa_kuhp",
+            "tag": "qna_24",
             "patterns": [
                 "Hak-hak tersangka atau terdakwa dalam hukum pidana KUHP",
                 "Hak-hak tersangka dalam hukum pidana KUHP",
@@ -350,7 +353,7 @@
             "context":[""]
         },
         {
-            "tag": "prosedur_penyidikan_kuhp",
+            "tag": "qna_25",
             "patterns": [
                 "Bagaimana prosedur penyidikan dalam KUHP diatur?",
                 "Alur prosedur penyidikan tindak pidana",
@@ -362,7 +365,7 @@
             "context":[""]
         },
         {
-            "tag": "proses_penuntutan_kuhp",
+            "tag": "qna_26",
             "patterns": [
                 "Bagaimana KUHP mengatur proses penuntutan terhadap tindak pidana?",
                 "Jelaskan proses penuntutan terhadap tindak pidana",
@@ -374,7 +377,7 @@
             "context":[""]
         },
         {
-            "tag": "aturan_persidangan_kuhp",
+            "tag": "qna_27",
             "patterns": [
                 "Jelaskan aturan persidangan untuk kasus tindak pidana KUHP",
                 "Aturan persidangan kasus tindak pidana KUHP",
@@ -386,7 +389,7 @@
             "context":[""]
         },
         {
-            "tag": "pembuktian_persidangan_kuhp",
+            "tag": "qna_28",
             "patterns": [
                 "Aturan pembuktian dalam persidangan tindak pidana menurut KUHP",
                 "Bagaimana aturan mengenai pembuktian dalam persidangan pidana menurut KUHP?"
@@ -397,7 +400,7 @@
             "context":[""]
         },
         {
-            "tag": "penjatuhan_hukuman_kuhp",
+            "tag": "qna_29",
             "patterns": [
                 "Bagaimana ketentuan mengenai penjatuhan hukuman dalam KUHP?",
                 "Aturan penjatuhan hukuman dalam KUHP"
@@ -408,7 +411,7 @@
             "context":[""]
         },
         {
-            "tag": "prosedur_eksekusi_hukuman_kuhp",
+            "tag": "qna_30",
             "patterns": [
                 "Bagaimana prosedur eksekusi hukuman diatur dalam KUHP?",
                 "Jelaskan prosedur eksekusi hukuman kasus tindak pidana menurut hukum pidana KUHP",
@@ -420,7 +423,7 @@
             "context":[""]
         },
         {
-            "tag": "pemidanaan_anak_kuhp",
+            "tag": "qna_31",
             "patterns": [
                 "Pemidanaan anak menurut hukum pidana KUHP",
                 "Bagaimana ketentuan mengenai pemidanaan anak diatur dalam KUHP ini?",
@@ -432,7 +435,7 @@
             "context":[""]
         },
         {
-            "tag": "alternatif_hukuman_penjara_kuhp",
+            "tag": "qna_32",
             "patterns": [
                 "Bagaimana KUHP mengatur mengenai alternatif hukuman selain penjara?",
                 "Jelaskan alternatif hukuman penjara untuk kasus tindak pidana",
@@ -444,7 +447,7 @@
             "context":[""]
         },
         {
-            "tag": "pelaksanaan_hukuman_mati_kuhp",
+            "tag": "qna_33",
             "patterns": [
                 "Bagaimana pelaksanaan hukuman mati menurut hukum pidana KUHP",
                 "Aturan pelaksanaan hukuman mati menurut hukum pidana KUHP",
@@ -456,7 +459,7 @@
             "context":[""]
         },
         {
-            "tag": "hukuman_penjara_kuhp",
+            "tag": "qna_34",
             "patterns": [
                 "Bagaimana ketentuan mengenai hukuman penjara diatur dalam KUHP?",
                 "Hukuman penjara untuk kasus tindak pidana dalam KUHP",
@@ -468,7 +471,7 @@
             "context":[""]
         },
         {
-            "tag": "hukuman_denda_kuhp",
+            "tag": "qna_35",
             "patterns": [
                 "Bagaimana ketentuan mengenai hukuman denda diatur dalam KUHP?",
                 "Ketentuan hukuman denda untuk kasus tindak pidana"
@@ -479,7 +482,7 @@
             "context":[""]
         },
         {
-            "tag": "hukuman_kerja_sosial_kuhp",
+            "tag": "qna_36",
             "patterns": [
                 "Apa yang diatur mengenai kerja sosial sebagai bentuk hukuman dalam KUHP?",
                 "Hukuman kerja sosial sebagai bentuk hukuman tindak pidana KUHP",
@@ -491,7 +494,7 @@
             "context":[""]
         },
         {
-            "tag": "hukuman_pengawasan_kuhp",
+            "tag": "qna_37",
             "patterns": [
                 "Bagaimana KUHP mengatur hukuman pengawasan?",
                 "Hukuman pengawasan untuk kasus tindak pidana",
@@ -503,7 +506,7 @@
             "context":[""]
         },
         {
-            "tag": "rehabilitasi_narapidana_kuhp",
+            "tag": "qna_38",
             "patterns": [
                 "Bagaimana KUHP mengatur mengenai rehabilitasi bagi narapidana?",
                 "Rehabilitasi bagi narapidana kasus tindak pidana",
@@ -515,7 +518,7 @@
             "context":[""]
         },
         {
-            "tag": "rehabilitasi_korban_tindak_pidana_kuhp",
+            "tag": "qna_39",
             "patterns": [
                 "Apa ketentuan mengenai rehabilitasi bagi korban tindak pidana dalam KUHP?",
                 "Rehabilitasi korban tindak pidana",
@@ -527,7 +530,7 @@
             "context":[""]
         },
         {
-            "tag": "penghapusan_pidana_kuhp",
+            "tag": "qna_40",
             "patterns": [
                 "Bagaimana ketentuan mengenai penghapusan pidana diatur dalam KUHP?",
                 "Peraturan mengenai penghapusan pidana menurut hukum pidana KUHP",
@@ -539,7 +542,7 @@
             "context":[""]
         },
         {
-            "tag": "kodisi_penghapusan_pidana_kuhp",
+            "tag": "qna_41",
             "patterns": [
                 "Apa saja kondisi yang dapat menyebabkan penghapusan pidana menurut KUHP?",
                 "Jelaskan ketentuan kondisi yang menyebabkan penghapusan pidana"
@@ -550,7 +553,7 @@
             "context":[""]
         },
         {
-            "tag": "grasi_kuhp",
+            "tag": "qna_42",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur mengenai grasi?",
                 "Grasi dalam kasus tindak pidana",
@@ -562,7 +565,7 @@
             "context":[""]
         },
         {
-            "tag": "amnesti_kuhp",
+            "tag": "qna_43",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur mengenai amnesti?",
                 "Amnesti dalam kasus hukum pidana",
@@ -574,7 +577,7 @@
             "context":[""]
         },
         {
-            "tag": "peradilan_pidana_khusus_kuhp",
+            "tag": "qna_44",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur mengenai peradilan pidana khusus?",
                 "Peraturan mengenai peradilan pidana khusus",
@@ -586,7 +589,7 @@
             "context":[""]
         },
         {
-            "tag": "korupsi_peradilan_pidana_khusus_kuhp",
+            "tag": "qna_45",
             "patterns": [
                 "Bagaimana ketentuan mengenai tindak pidana korupsi diatur dalam peradilan pidana khusus menurut KUHP ini?",
                 "Korupsi dalam peradilan pidana khusus",
@@ -598,7 +601,7 @@
             "context":[""]
         },
         {
-            "tag": "pidana_narkotika_kuhp",
+            "tag": "qna_46",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur tindak pidana narkotika?",
                 "Tindak pidana narkotika",
@@ -610,7 +613,7 @@
             "context":[""]
         },
         {
-            "tag": "perdagangan_orang_kuhp",
+            "tag": "qna_47",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur tindak pidana perdagangan orang?",
                 "Tindak pidana perdagangan orang",
@@ -622,7 +625,7 @@
             "context":[""]
         },
         {
-            "tag": "pencucian_uang_kuhp",
+            "tag": "qna_48",
             "patterns": [
                 "Bagaimana hukum pidana KUHP mengatur tindak pidana pencucian uang?",
                 "Tindak pidana pencucian uang",
