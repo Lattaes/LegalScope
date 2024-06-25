@@ -49,7 +49,7 @@ function PrediksiHukuman() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className="bg-gray-100 flex flex-col items-center mb-6">
       {/* Section Judul */}
       <div className="container mx-auto mb-6 md:mb-0 md:mt-6 relative">
         <div className="py-4 bg-gradient-to-r from-red-900 to-purple-900 rounded">
