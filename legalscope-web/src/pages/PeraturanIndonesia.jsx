@@ -1,16 +1,16 @@
-import React from 'react';
+import React from "react";
 
 function PeraturanIndonesia() {
   // Dummy data untuk konten peraturan Indonesia
   const peraturanList = [
-    { id: 1, title: 'Undang-Undang' },
-    { id: 2, title: 'PERPPU' },
-    { id: 3, title: 'Peraturan Pemerintah' },
-    { id: 4, title: 'Peraturan Presiden' },
-    { id: 5, title: 'Peraturan Menteri' },
-    { id: 6, title: 'Peraturan Badan atau Lembaga' },
-    { id: 7, title: 'Peraturan Daerah' },
-    { id: 8, title: 'Peraturan Lainnya' },
+    { id: 1, title: "Undang-Undang" },
+    { id: 2, title: "PERPPU" },
+    { id: 3, title: "Peraturan Pemerintah" },
+    { id: 4, title: "Peraturan Presiden" },
+    { id: 5, title: "Peraturan Menteri" },
+    { id: 6, title: "Peraturan Badan atau Lembaga" },
+    { id: 7, title: "Peraturan Daerah" },
+    { id: 8, title: "Peraturan Lainnya" },
   ];
 
   return (
@@ -20,7 +20,9 @@ function PeraturanIndonesia() {
         <div className="py-4 bg-gradient-to-r from-red-900 to-purple-900 rounded">
           <div className="md:hidden bg-gray-900/75 top-0 left-0 w-full h-full absolute"></div>
           <div className="m-8 z-20">
-            <h1 className="text-4xl font-bold text-white">Peraturan Indonesia</h1>
+            <h1 className="text-4xl font-bold text-white">
+              Peraturan Indonesia
+            </h1>
             <div className="max-w-2xl">
               <p className="mt-2 text-gray-100">
                 Informasi mengenai peraturan-peraturan di Indonesia.
@@ -70,7 +72,7 @@ function PeraturanIndonesia() {
               <p className="text-gray-800 font-semibold">{item.title}</p>
             </div>
             <button className="text-blue-500 hover:text-blue-700">
-              Baca Selengkapnya
+              <a href="/peraturan">Baca Selengkapnya</a>
             </button>
           </div>
         ))}

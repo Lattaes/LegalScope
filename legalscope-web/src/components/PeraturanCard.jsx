@@ -9,7 +9,10 @@ const PeraturanCard = ({ title, subtitle, document, tags, year }) => {
         <div className="text-sm font-bold">{year}</div>
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
-      <p className="text-blue-500">{subtitle}</p>
+      <a href="/PeraturanDetail">
+        <p className="text-blue-500">{subtitle}</p>
+      </a>
+
       {tags && (
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
