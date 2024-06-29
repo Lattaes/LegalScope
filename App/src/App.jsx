@@ -8,6 +8,8 @@ import PrediksiHukuman from './pages/PrediksiHukuman';
 import Chatbot from './pages/Chatbot';
 import AboutUs from './pages/AboutUs';
 import Navbar from './components/Navbar';
+import Peraturan from './pages/Peraturan';
+import PeraturanDetail from './pages/PeraturanDetail';
 
 function App() {
     const location = useLocation();
@@ -22,6 +24,8 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/peraturan-indonesia" element={<PeraturanIndonesia />} />
+                    <Route path='/peraturan' element={<Peraturan />} />
+                    <Route path='/peraturan-detail' element={<PeraturanDetail />} />
                     <Route path="/prediksi-hukuman" element={<PrediksiHukuman />} />
                     <Route path="/chatbot" element={<Chatbot />} />
                     <Route path="/about-us" element={<AboutUs />} />
