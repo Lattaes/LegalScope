@@ -9,7 +9,7 @@ const PeraturanCard = ({ title, subtitle, document, tags, year }) => {
         <div className="text-sm font-bold">{year}</div>
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
-      <a href="/PeraturanDetail">
+      <a href="/Peraturan-Detail">
         <p className="text-blue-500">{subtitle}</p>
       </a>
 
