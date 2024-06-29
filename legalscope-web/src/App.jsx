@@ -6,6 +6,8 @@ import EditProfile from "./pages/EditProfile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import PeraturanIndonesia from "./pages/PeraturanIndonesia";
+import Peraturan from "./pages/Peraturan";
+import PeraturanDetail from "./pages/PeraturanDetail";
 import PrediksiHukuman from "./pages/PrediksiHukuman";
 import Chatbot from "./pages/Chatbot";
 import AboutUs from "./pages/AboutUs";
@@ -29,6 +31,8 @@ function App() {
               element={<PeraturanIndonesia />}
             />
             <Route path="/prediksi-hukuman" element={<PrediksiHukuman />} />
+            <Route path="/Peraturan" element={<Peraturan />} />
+            <Route path="/Peraturan-detail" element={<PeraturanDetail />} />
             <Route path="/chatbot" element={<Chatbot />} />
             <Route path="/about-us" element={<AboutUs />} />
             {/* Tambahkan rute untuk halaman Blog dan Contact jika diperlukan */}
