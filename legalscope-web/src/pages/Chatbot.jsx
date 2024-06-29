@@ -1,26 +1,27 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Chatbot() {
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   // Chatbot profile information
   const botProfile = {
-    name: 'Scoppers',
-    profilePicUrl: 'https://thumbs.dreamstime.com/b/cartoon-judge-gavel-illustration-holding-51384196.jpg',
+    name: "Scoppers",
+    profilePicUrl:
+      "https://thumbs.dreamstime.com/b/cartoon-judge-gavel-illustration-holding-51384196.jpg",
   };
 
   const handleSend = () => {
     if (input.trim()) {
-      setMessages([...messages, { sender: 'user', text: input }]);
-      setInput('');
+      setMessages([...messages, { sender: "user", text: input }]);
+      setInput("");
       // Simulate chatbot response
       setTimeout(() => {
         setMessages((prevMessages) => [
           ...prevMessages,
-          { sender: 'bot', text: 'Ini adalah respon dari chatbot.' }
+          { sender: "bot", text: "Ini adalah respon dari chatbot." },
         ]);
       }, 1000);
     }
@@ -41,7 +42,8 @@ function Chatbot() {
           <h1 className="text-4xl font-bold text-white">Tanya Scopper!</h1>
           <div className="max-w-2xl">
             <p className="mt-2 text-gray-100">
-              Tanyakan masalah atau mencari hukum atau undang-undang peraturan mudah dan cepat dengan bantu KimAI kami!
+              Tanyakan masalah atau mencari hukum atau undang-undang peraturan
+              mudah dan cepat dengan bantu KimAI kami!
             </p>
           </div>
         </div>
@@ -81,8 +83,13 @@ function Chatbot() {
           </div>
           <div className="overflow-y-auto flex-1 mb-4">
             {messages.map((message, index) => (
-              <div key={index} className={`mb-2 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                {message.sender === 'bot' && (
+              <div
+                key={index}
+                className={`mb-2 flex ${
+                  message.sender === "user" ? "justify-end" : "justify-start"
+                }`}
+              >
+                {message.sender === "bot" && (
                   <div className="flex items-end">
                     <img
                       src={botProfile.profilePicUrl}
@@ -94,7 +101,7 @@ function Chatbot() {
                     </div>
                   </div>
                 )}
-                {message.sender === 'user' && (
+                {message.sender === "user" && (
                   <div className="bg-blue-500 text-white px-4 py-2 rounded-lg">
                     <p>{message.text}</p>
                   </div>
@@ -109,7 +116,7 @@ function Chatbot() {
               placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+              onKeyDown={(e) => e.key === "Enter" && handleSend()}
             />
             <button
               className="bg-red-900 text-white px-4 py-2 rounded-r-lg"
