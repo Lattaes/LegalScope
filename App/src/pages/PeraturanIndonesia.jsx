@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function PeraturanIndonesia() {
   // Dummy data untuk konten peraturan Indonesia
@@ -69,9 +70,9 @@ function PeraturanIndonesia() {
             <div className="flex-1">
               <p className="text-gray-800 font-semibold">{item.title}</p>
             </div>
-            <button className="text-blue-500 hover:text-blue-700">
+            <Link to="/peraturan" className="text-blue-500 hover:text-blue-700">
               Baca Selengkapnya
-            </button>
+            </Link>
           </div>
         ))}
       </div>
