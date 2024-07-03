@@ -1,27 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        required: true,
-        unique: true,
-    },
-    username: { 
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
+    username: { type: String, required: true},
+    email: {type: String, required: true},
+    password: {type: String, required: true }
 });
 
 // hash user's password
-UserSchema.pre("save", function (next) {
+userSchema.pre("save", function (next) {
     const user = this;
 
     if (!user.isModified("password")) return next();
@@ -39,4 +26,4 @@ UserSchema.pre("save", function (next) {
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;

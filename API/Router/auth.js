@@ -1,7 +1,8 @@
 import express from "express";
-import { Register } from "../controllers/auth.js";
+import { Register, Login } from "../controller/auth.js";
 import Validate from "../middleware/validate.js";
 import { check } from "express-validator";
+
 
 const router = express.Router();
 
@@ -11,7 +12,7 @@ router.post(
     check("username")
         .not()
         .isEmpty()
-        .withMessage("You first name is required")
+        .withMessage("Your username is required")
         .trim()
         .escape(),
     check("email")
@@ -33,7 +34,7 @@ router.post(
         .isEmail()
         .withMessage("Enter a valid email address")
         .normalizeEmail(),
-    check("password").not().isEmpty(),
+    check("password").not().isEmpty().withMessage('Password is required!'),
     Validate,
     Login
 );
