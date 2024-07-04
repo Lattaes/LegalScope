@@ -10,8 +10,7 @@ const router = express.Router();
 router.post(
     "/register",
     check("username")
-        .not()
-        .isEmpty()
+        .notEmpty()
         .withMessage("Your username is required")
         .trim()
         .escape(),

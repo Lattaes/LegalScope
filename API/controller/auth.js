@@ -27,7 +27,7 @@ export async function Register(req, res) {
         });
 
         const savedUser = await newUser.save();
-        const { password, role, ...user_data } = savedUser._doc; // Exclude password and role from response
+        const { password: dbPassword, role: dbRole, ...user_data } = savedUser._doc; // Exclude password and role from response
 
         sendResponse(res, 201, "success", [user_data], "Thank you for registering with us. Your account has been successfully created.");
 
@@ -51,7 +51,7 @@ export async function Login(req, res) {
             return sendResponse(res, 401, "failed", [], "Invalid email or password. Please try again.");
         }
 
-        const { password: pwd, ...user_data } = user._doc;
+        const { password: pwd, role:dbRole, ...user_data } = user._doc;
 
         sendResponse(res, 200, "success", [user_data], "You have successfully logged in.");
     } catch (err) {
