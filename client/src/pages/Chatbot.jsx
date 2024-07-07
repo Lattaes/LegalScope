@@ -56,7 +56,7 @@ const Chatbot = () => {
             className="w-full relative overflow-hidden rounded-lg p-4 bg-customBeige flex flex-col justify-end mt-24"
             style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           >
-            <div className="m-8 z-[20]">
+            <div className="m-8 z-20">
               <h1 className="text-4xl font-bold text-white">Chatbot Interaktif</h1>
               <div className="max-auto">
                 <p className="mt-8 text-gray-100">Chatbot kami siap membantu Anda dengan pertanyaan hukum yang Anda miliki. Mulai percakapan sekarang untuk mendapatkan bantuan langsung.</p>
@@ -68,7 +68,7 @@ const Chatbot = () => {
           <div>
             <div className="w-full relative overflow-hidden rounded-lg p-4 bg-customBeige text-white dark:text-gray-900">
               <div className="flex gap-3 items-start">
-                <span className="i-uil-info-circle flex-shrink-0 w-5 h-5"></span>
+                <span className="uil uil-info-circle flex-shrink-0 w-5 h-5"></span>
                 <div className="w-0 flex-1">
                   <div className="text-sm opacity-90 mt-0 leading-5">Data diambil dari sumber terpercaya</div>
                 </div>
@@ -83,7 +83,7 @@ const Chatbot = () => {
                 <div className="mt-2">
                   <div className="flex justify-between">
                     <span>Free Trial</span>
-                    <span>5</span>
+                    <span>{remainingChats}/5</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Tersisa</span>
@@ -94,7 +94,7 @@ const Chatbot = () => {
                     <span>{usedChats}</span>
                   </div>
                   <button 
-                    className={`mt-4 px-4 py-2 rounded-md ${remainingChats === 0 ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600'} text-white`} 
+                    className={`mt-4 px-4 py-2 rounded-md ${remainingChats === 0 ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600 text-white'}`} 
                     onClick={handleNewChat}
                     disabled={remainingChats === 0}
                   >
