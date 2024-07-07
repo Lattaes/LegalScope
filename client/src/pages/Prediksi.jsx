@@ -118,7 +118,7 @@ function Prediksi() {
                     </div>
 
                     {/* Content Section */}
-                    <div className="container mx-auto p-4 bg-white rounded-lg shadow gap-4">
+                    <div className="container mx-auto p-4 bg-white rounded-md shadow gap-4">
                         <form className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                             {Object.entries(categories).map(([label, options]) => (
                                 <div key={label} className="mb-4">
