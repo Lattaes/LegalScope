@@ -1,5 +1,6 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
+import blacklist from "../models/blacklist.js";
 
 // Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
@@ -39,23 +40,69 @@ export async function Register(req, res) {
 
 // Login function
 export async function Login(req, res) {
+    //get var
     const { username, password } = req.body;
     try {
+        //check wether usernme exist or not
         const user = await User.findOne({ username }).select("+password");
         if (!user) {
             return sendResponse(res, 401, "failed", [], "Invalid username or password. Please try again with the correct credentials.");
         }
-
+        //check if password is valid
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
             return sendResponse(res, 401, "failed", [], "Invalid email or password. Please try again.");
         }
 
+        let options = {
+            maxAge: 20 * 60 * 1000, // would expire in 20minutes
+            httpOnly: true, 
+            secure: true,
+            sameSite: "None",
+        };
+
+        const token = user.generateAccessJWT(); //generate token
+        res.cookie("SessionID", token, options); //set token to res header 
         const { password: pwd, role:dbRole, ...user_data } = user._doc;
 
         sendResponse(res, 200, "success", [user_data], "You have successfully logged in.");
+
+
     } catch (err) {
         console.error(err);
         sendResponse(res, 500, "error", [], "Internal Server Error");
     }
 }
+
+export async function Logout(req, res) {
+    try {
+        const authHeader = req.headers['cookie']; // get the session cookie from request header
+        if (!authHeader) return res.sendStatus(204); // No content
+        const cookie = authHeader.split('=')[1]; // If there is, split the cookie string to get the actual jwt token
+        const accessToken = cookie.split(';')[0];
+        const checkIfBlacklisted = await blacklist.findOne({ token: accessToken }); // Check if that token is blacklisted
+
+        // if true, send a no content response.
+        if (checkIfBlacklisted) return res.sendStatus(204);
+
+        // otherwise blacklist token
+        const newBlacklist = new blacklist({
+          token: accessToken,
+        });
+        await newBlacklist.save();
+
+        // Also clear request cookie on client
+        res.setHeader('Clear-Site-Data', '"cookies"');
+        res.status(200).json({ message: 'You are logged out!' });
+
+
+      } catch (err) { //catch error
+        res.status(500).json({
+          status: 'error',
+          message: 'Internal Server Error',
+        });
+      }
+      res.end();
+    
+}
+

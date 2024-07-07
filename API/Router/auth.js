@@ -38,4 +38,7 @@ router.post(
     Login
 );
 
+// Logout route ==
+router.get('/logout', Logout);
+
 export default router;
