@@ -15,19 +15,19 @@ function EditProfile() {
   };
 
   return (
-    <div className="bg-gray-100 flex justify-center">
-      <div className="w-full max-w-5xl p-5 bg-white rounded-lg shadow-md m-10">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800">Edit Profile</h2>
-        <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="flex justify-center bg-gray-100">
+      <div className="m-10 w-full max-w-5xl rounded-lg bg-white p-5 shadow-md">
+        <h2 className="mb-6 text-2xl font-bold text-gray-800">Edit Profile</h2>
+        <form className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="first-name"
             >
               First Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="first-name"
               type="text"
               placeholder="First Name"
@@ -36,13 +36,13 @@ function EditProfile() {
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="last-name"
             >
               Last Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="last-name"
               type="text"
               placeholder="Last Name"
@@ -51,13 +51,13 @@ function EditProfile() {
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="email"
             >
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="email"
               type="email"
               placeholder="Email"
@@ -66,13 +66,13 @@ function EditProfile() {
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="address"
             >
               Address
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="address"
               type="text"
               placeholder="Address"
@@ -81,13 +81,13 @@ function EditProfile() {
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="contact-number"
             >
               Contact Number
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="contact-number"
               type="text"
               placeholder="Contact Number"
@@ -96,28 +96,28 @@ function EditProfile() {
 
           <div className="mb-4">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="occupation"
             >
               Occupation
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
               id="occupation"
               type="text"
               placeholder="Occupation"
             />
           </div>
 
-          <div className="relative  md:col-span-2">
+          <div className="relative md:col-span-2">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="old-password"
             >
               Old Password
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline pr-10"
+              className="focus:shadow-outline mb-3 w-full appearance-none rounded border px-3 py-2 pr-10 leading-tight text-gray-700 shadow focus:outline-none"
               id="old-password"
               type={showOldPassword ? "text" : "password"}
               placeholder="Old Password"
@@ -125,7 +125,7 @@ function EditProfile() {
             <button
               type="button"
               onClick={toggleOldPasswordVisibility}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-700"
+              className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-700"
               style={{ right: "0.75rem" }}
             >
               {showOldPassword ? <FaEyeSlash /> : <FaEye />}
@@ -134,13 +134,13 @@ function EditProfile() {
 
           <div className="relative mb-4 md:col-span-2">
             <label
-              className="block text-gray-700 font-bold mb-2"
+              className="mb-2 block font-bold text-gray-700"
               htmlFor="new-password"
             >
               New Password
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline pr-10"
+              className="focus:shadow-outline mb-3 w-full appearance-none rounded border px-3 py-2 pr-10 leading-tight text-gray-700 shadow focus:outline-none"
               id="new-password"
               type={showNewPassword ? "text" : "password"}
               placeholder="New Password"
@@ -148,7 +148,7 @@ function EditProfile() {
             <button
               type="button"
               onClick={toggleNewPasswordVisibility}
-              className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-700"
+              className="absolute inset-y-0 bottom-0 right-0 top-0 flex items-center bg-red-500 pr-3 text-gray-700"
               style={{ right: "0.75rem" }}
             >
               {showNewPassword ? <FaEyeSlash /> : <FaEye />}
@@ -157,7 +157,7 @@ function EditProfile() {
 
           <div className="flex items-center justify-between md:col-span-2">
             <button
-              className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="focus:shadow-outline rounded bg-indigo-600 px-4 py-2 font-bold text-white hover:bg-indigo-500 focus:outline-none"
               type="button"
             >
               <a href="/Profile">Save Changes</a>

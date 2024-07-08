@@ -1,40 +1,72 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SearchForm from "../components/SearchForm";
 import PeraturanCard from "../components/PeraturanCard";
+import { useSearchParams } from "react-router-dom";
+import data from "./../../src/db/data.json";
 
 const App = () => {
-  const peraturanData = [
-    {
-      title: "Undang-Undang Nomor 2 Tahun 2024",
-      subtitle: "Provinsi Daerah Khusus Jakarta",
-      document: false,
-      tags: [],
-      year: 2024,
-    },
-    {
-      title: "Undang-Undang Nomor 3 Tahun 2024",
-      subtitle:
-        "Perubahan Kedua Atas Undang-undang Nomor 6 Tahun 2014 Tentang Desa",
-      document: false,
-      tags: [],
-      year: 2024,
-    },
-    {
-      title: "Undang-Undang Nomor 1 Tahun 2024",
-      subtitle:
-        "Perubahan Kedua Atas Undang-undang Nomor 11 Tahun 2008 Tentang Informasi dan Transaksi Elektronik",
-      document: false,
-      tags: ["Pelayanan Publik", "Pers", "Telekomunikasi & Informatika"],
-      year: 2024,
-    },
-  ];
+  const ITEMS_PER_PAGE = 10;
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const handleNextPage = () => {
+    const currentPage = Number(searchParams.get("page"));
+    searchParams.set("page", currentPage + 1);
+
+    setSearchParams(searchParams);
+  };
+
+  const handlePreviousPage = () => {
+    const currentPage = Number(searchParams.get("page"));
+    searchParams.set("page", currentPage - 1);
+
+    setSearchParams(searchParams);
+  };
+
+  useEffect(() => {
+    if (!searchParams.get("page")) {
+      searchParams.set("page", 1);
+
+      setSearchParams(searchParams);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const filteredData = data
+    .filter((law) => {
+      if (!searchParams.get("title")) {
+        return true;
+      }
+
+      return law.Title.toLowerCase().includes(
+        searchParams.get("title").toLocaleLowerCase(),
+      );
+    })
+    .filter((law) => {
+      if (!searchParams.get("year")) {
+        return true;
+      }
+
+      return law.Tahun === Number(searchParams.get("year"));
+    })
+    .filter((law) => {
+      if (!searchParams.get("type")) {
+        return true;
+      }
+
+      return law["Bentuk Peraturan"] === searchParams.get("type");
+    });
+
+  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+
+  console.log(new Set(data.map((law) => law["Bentuk Peraturan"])));
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-4">
         <div className="md:col-span-1">
           <SearchForm />
-          <div className="mt-4 p-4 bg-white shadow-md rounded-md">
+          <div className="mt-4 rounded-md bg-white p-4 shadow-md">
             <h3 className="text-lg font-bold">DATA UNDANG-UNDANG</h3>
             <div className="mt-2">
               <div className="flex justify-between">
@@ -52,10 +84,42 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-3 space-y-4">
-          {peraturanData.map((data, index) => (
-            <PeraturanCard key={index} {...data} />
-          ))}
+        <div className="space-y-4 md:col-span-3">
+          {filteredData
+            .slice(
+              (Number(searchParams.get("page")) - 1) * ITEMS_PER_PAGE,
+              ITEMS_PER_PAGE * Number(searchParams.get("page")),
+            )
+            .map((data, index) => (
+              <PeraturanCard
+                key={index}
+                title={data.Title}
+                subtitle={data.wrapper}
+                year={data.Tahun}
+              />
+            ))}
+
+          <div className="flex items-center justify-center gap-4">
+            <button
+              onClick={handlePreviousPage}
+              className="flex items-center justify-center rounded bg-blue-500 p-2 text-white disabled:bg-gray-400"
+              disabled={Number(searchParams.get("page")) === 1}
+            >
+              Previous
+            </button>
+
+            <span className="text-xl font-semibold">
+              {searchParams.get("page")}
+            </span>
+
+            <button
+              onClick={handleNextPage}
+              className="flex items-center justify-center rounded bg-blue-500 p-2 text-white disabled:bg-gray-400"
+              disabled={totalPages === Number(searchParams.get("page"))}
+            >
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </div>

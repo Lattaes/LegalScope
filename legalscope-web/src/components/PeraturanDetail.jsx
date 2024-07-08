@@ -3,8 +3,8 @@ import { FaFilePdf, FaLock } from "react-icons/fa";
 
 const PeraturanDetail = ({ detail }) => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-md">
-      <h1 className="text-2xl font-bold mb-4">{detail.title}</h1>
+    <div className="rounded-md bg-white p-4 shadow-md">
+      <h1 className="mb-4 text-2xl font-bold">{detail.title}</h1>
       <table className="w-full text-left">
         <tbody>
           <tr>
