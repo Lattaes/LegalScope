@@ -14,12 +14,12 @@ function PeraturanIndonesia() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className="flex min-h-screen flex-col items-center bg-gray-100">
       {/* Section Judul */}
-      <div className="container mx-auto mb-6 md:mb-0 md:mt-6 relative">
-        <div className="py-4 bg-gradient-to-r from-red-900 to-purple-900 rounded">
-          <div className="md:hidden bg-gray-900/75 top-0 left-0 w-full h-full absolute"></div>
-          <div className="m-8 z-20">
+      <div className="container relative mx-auto mb-6 md:mb-0 md:mt-6">
+        <div className="rounded bg-gradient-to-r from-red-900 to-purple-900 py-4">
+          <div className="absolute left-0 top-0 h-full w-full bg-gray-900/75 md:hidden"></div>
+          <div className="z-20 m-8">
             <h1 className="text-4xl font-bold text-white">
               Peraturan Indonesia
             </h1>
@@ -39,10 +39,10 @@ function PeraturanIndonesia() {
         <div className="relative">
           <input
             type="text"
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-blue-500 focus:outline-none"
             placeholder="Cari peraturan..."
           />
-          <button className="absolute right-0 top-0 mt-2 mr-2">
+          <button className="absolute right-0 top-0 mr-2 mt-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 text-gray-400"
@@ -62,14 +62,14 @@ function PeraturanIndonesia() {
       </div>
 
       {/* Daftar Konten Peraturan Indonesia */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {peraturanList.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow-lg p-4 flex items-center justify-between"
+            className="flex items-center justify-between rounded-lg bg-white p-4 shadow-lg"
           >
             <div className="flex-1">
-              <p className="text-gray-800 font-semibold">{item.title}</p>
+              <p className="font-semibold text-gray-800">{item.title}</p>
             </div>
             <button className="text-blue-500 hover:text-blue-700">
               <a href="/peraturan">Baca Selengkapnya</a>

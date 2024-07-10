@@ -32,7 +32,7 @@ function App() {
             />
             <Route path="/prediksi-hukuman" element={<PrediksiHukuman />} />
             <Route path="/Peraturan" element={<Peraturan />} />
-            <Route path="/Peraturan-detail" element={<PeraturanDetail />} />
+            <Route path="/peraturan-detail/:id" element={<PeraturanDetail />} />
             <Route path="/chatbot" element={<Chatbot />} />
             <Route path="/about-us" element={<AboutUs />} />
             {/* Tambahkan rute untuk halaman Blog dan Contact jika diperlukan */}

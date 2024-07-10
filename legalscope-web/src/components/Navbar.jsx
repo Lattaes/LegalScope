@@ -11,17 +11,17 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow">
-      <nav className="container mx-auto flex justify-between items-center py-4">
+      <nav className="container mx-auto flex items-center justify-between py-4">
         <div>
-          <h2 className="text-1xl md:text-3xl font-bold text-[#541212]">
+          <h2 className="text-1xl font-bold text-[#541212] md:text-3xl">
             LEGALSCOPE.
           </h2>
         </div>
-        <div className="hidden md:flex flex-grow items-center justify-center">
-          <ul className="flex justify-center items-center space-x-4">
+        <div className="hidden flex-grow items-center justify-center md:flex">
+          <ul className="flex items-center justify-center space-x-4">
             <li>
               <Link
-                className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4"
+                className="ml-4 rounded-md px-2 py-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900"
                 to="/"
               >
                 Home
@@ -29,15 +29,15 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4"
-                to="/peraturan-indonesia"
+                className="ml-4 rounded-md px-2 py-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900"
+                to="/peraturan"
               >
                 Peraturan Indonesia
               </Link>
             </li>
             <li>
               <Link
-                className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4"
+                className="ml-4 rounded-md px-2 py-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900"
                 to="/prediksi-hukuman"
               >
                 Prediksi Hukuman
@@ -45,7 +45,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4"
+                className="ml-4 rounded-md px-2 py-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900"
                 to="/chatbot"
               >
                 Chatbot
@@ -53,7 +53,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                className="text-gray-700 hover:text-gray-900 px-2 py-2 rounded-md hover:bg-gray-400 ml-4"
+                className="ml-4 rounded-md px-2 py-2 text-gray-700 hover:bg-gray-400 hover:text-gray-900"
                 to="/about-us"
               >
                 About Us
@@ -61,39 +61,37 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center ml-auto">
+        <div className="ml-auto flex items-center">
           <Link to="/login">
-            <button className="bg-customMaroon text-white px-4 py-2 rounded-md hover:bg-red-900">
+            <button className="rounded-md bg-customMaroon px-4 py-2 text-white hover:bg-red-900">
               Masuk
             </button>
           </Link>
           <Link to="/register">
-            <button className="text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 ml-4">
+            <button className="ml-4 rounded-md px-4 py-2 text-gray-700 hover:bg-gray-400">
               Daftar
             </button>
           </Link>
           <button
             onClick={toggleMenu}
-            className="md:hidden ml-4 focus:outline-none"
+            className="ml-4 focus:outline-none md:hidden"
           >
             {isMenuOpen ? (
               <ion-icon
                 name="close"
-                className="text-3xl cursor-pointer text-gray-700"
+                className="cursor-pointer text-3xl text-gray-700"
               ></ion-icon>
             ) : (
               <ion-icon
                 name="menu"
-                className="text-3xl cursor-pointer text-gray-700"
+                className="cursor-pointer text-3xl text-gray-700"
               ></ion-icon>
             )}
           </button>
         </div>
         {/* Mobile Menu */}
         <div
-          className={`md:hidden absolute top-16 left-0 w-full bg-white shadow-lg ${
-            isMenuOpen ? "block" : "hidden"
-          }`}
+          className={`absolute left-0 top-16 w-full bg-white shadow-lg md:hidden ${isMenuOpen ? "block" : "hidden"}`}
         >
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>

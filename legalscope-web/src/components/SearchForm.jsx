@@ -88,8 +88,10 @@ const SearchForm = () => {
             "PERMEN",
             "PERBAN",
             "PERDA",
-          ].map((type) => (
-            <option value={type}>{type}</option>
+          ].map((type, index) => (
+            <option key={index} value={type}>
+              {type}
+            </option>
           ))}
         </select>
         <div className="flex space-x-2">

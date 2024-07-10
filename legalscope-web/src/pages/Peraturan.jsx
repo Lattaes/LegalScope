@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import SearchForm from "../components/SearchForm";
 import PeraturanCard from "../components/PeraturanCard";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
 import data from "./../../src/db/data.json";
 
 const App = () => {
+  const navigate = useNavigate();
   const ITEMS_PER_PAGE = 10;
+
+  const handleNavigate = (urlId) => {
+    navigate(`/peraturan-detail/${urlId}`);
+  };
 
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -59,8 +64,6 @@ const App = () => {
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
 
-  console.log(new Set(data.map((law) => law["Bentuk Peraturan"])));
-
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-4">
@@ -84,19 +87,21 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="space-y-4 md:col-span-3">
+        <div className="flex flex-col space-y-4 md:col-span-3">
           {filteredData
             .slice(
               (Number(searchParams.get("page")) - 1) * ITEMS_PER_PAGE,
               ITEMS_PER_PAGE * Number(searchParams.get("page")),
             )
             .map((data, index) => (
-              <PeraturanCard
-                key={index}
-                title={data.Title}
-                subtitle={data.wrapper}
-                year={data.Tahun}
-              />
+              <Link to={`/peraturan-detail/${data.id}`}>
+                <PeraturanCard
+                  key={index}
+                  title={data.Title}
+                  subtitle={data.wrapper}
+                  year={data.Tahun}
+                />
+              </Link>
             ))}
 
           <div className="flex items-center justify-center gap-4">
