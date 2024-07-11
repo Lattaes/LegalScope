@@ -1,11 +1,7 @@
-from flask import Flask, jsonify
 import json
 import requests
 from bs4 import BeautifulSoup
 import re
-import os
-
-app = Flask(__name__)
 
 def clean_text(text):
     # Replace newline (\n), carriage return (\r), and multiple spaces with a single space
@@ -48,7 +44,7 @@ def extract_website_info(url):
         tanggal_penetapan = get_table_data('Ditetapkan Tanggal')
         pejabat_menetapkan = get_table_data('Pejabat yang Menetapkan')
         status = get_table_data('Status')
-        dokumen = get_table_data('Dokumen Peraturan')  # Update header name here
+        dokumen = get_table_data('Dokumen Peraturan')
         tahun_pengundangan = get_table_data('Tahun Pengundangan')
         no_pengundangan = get_table_data('Nomor Pengundangan')
         no_tambahan = get_table_data('Nomor Tambahan')
@@ -61,7 +57,6 @@ def extract_website_info(url):
         
         div_card_body = soup.find_all('div', class_='card-body')
         
-        # Print the index of each div.card-body
         for index, section in enumerate(div_card_body):
             if 'Mengubah :' in section.text:
                 for item in section.find_all('li'):
@@ -74,12 +69,11 @@ def extract_website_info(url):
                     else:
                         mengubah.append({'text': clean_text(item.text.strip()), 'link': None})
         
-        # Extract the second 'ul' element within the second 'div.card-body'
         if len(div_card_body) > 1:
             sec_div_card_body = div_card_body[2]
             ul_tags = sec_div_card_body.find_all('ul')
             if ul_tags:
-                sec_ul_tag = ul_tags[0]  # Second ul in the second div
+                sec_ul_tag = ul_tags[0]
                 li_tags = sec_ul_tag.find_all('li')
                 for item in li_tags:
                     link = item.find('a')
@@ -118,17 +112,17 @@ def extract_website_info(url):
         print(f"Error fetching the URL: {e}")
         return None
 
-@app.route('/extract_and_save', methods=['POST'])
-def extract_and_save():
+def main():
     # Load JSON file containing URLs
-    file_path = "Link Peraturan Indonesia.json"
+    file_path = "C:/Users/khalf/Code/LegalScope/Peraturan/Link Peraturan Indonesia.json"
     output_path = "C:/Users/khalf/Code/LegalScope/Peraturan/ExtractedLinkPeraturanIndonesia.json"
     
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
             url_data = json.load(file)
     except Exception as e:
-        return jsonify({"message": f"Error reading JSON file: {e}"}), 500
+        print(f"Error reading JSON file: {e}")
+        return
 
     # List to hold all extracted data
     extracted_data_list = []
@@ -147,10 +141,9 @@ def extract_and_save():
     try:
         with open(output_path, 'w', encoding='utf-8') as outfile:
             json.dump(extracted_data_list, outfile, ensure_ascii=False, indent=4)
+        print(f"Data successfully saved to {output_path}")
     except Exception as e:
-        return jsonify({"message": f"Error writing to JSON file: {e}"}), 500
-
-    return jsonify({"message": "Data extraction and saving completed"}), 200
+        print(f"Error writing to JSON file: {e}")
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    main()

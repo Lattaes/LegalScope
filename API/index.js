@@ -13,6 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(route);
 
+
 // Models
 import { create, findPeraturan, findPeraturanById } from './models/peraturan.model.js';
 
