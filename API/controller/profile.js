@@ -1,8 +1,6 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import User from '../models/user.model';
+import User from '../models/user.model.js';
 
-async function changeProfile(req, res){
+export async function updateProfile(req, res){
     const {firstName, lastName} = req.body;
     const profilePicture = req.file ? req.file.path : null;    
 
@@ -20,7 +18,7 @@ async function changeProfile(req, res){
     }
 }
 
-async function getProfile(req, res) {
+export async function readProfile(req, res) {
     try {
         const user = await user.findById(req.user._id,).select("-pass");
         if (!user){
@@ -32,3 +30,5 @@ async function getProfile(req, res) {
         sendResponse(res, 500, "failed", [], "internal server error")
     }
 }
+
+
