@@ -1,7 +1,6 @@
 import express from 'express';
 import multer from 'multer';
 import { updateProfile, readProfile } from '../controller/profile.js'
-// import isAuthenticated from '../middleware/auth.js';
 import { isAuthenticated } from '../middleware/auth.js';
 
 const router = express.Router();

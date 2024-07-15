@@ -40,39 +40,35 @@ export async function Register(req, res) {
 
 // Login function
 export async function Login(req, res) {
-    //get var
-    const { username, password } = req.body;
+    const { username, password } = req.body; 
     try {
-        //check wether usernme exist or not
-        const user = await User.findOne({ username }).select("+password");
+        const user = await User.findOne({ username }).select("+password"); 
         if (!user) {
             return sendResponse(res, 401, "failed", [], "Invalid username or password. Please try again with the correct credentials.");
         }
-        //check if password is valid
+
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return sendResponse(res, 401, "failed", [], "Invalid email or password. Please try again.");
+            return sendResponse(res, 401, "failed", [], "Invalid username or password. Please try again.");
         }
 
         let options = {
-            maxAge: 20 * 60 * 1000, // would expire in 20minutes
+            maxAge: 20 * 60 * 1000, // would expire in 20 minutes
             httpOnly: true, 
             secure: true,
             sameSite: "None",
         };
 
-        const token = user.generateAccessJWT(); //generate token
-        res.cookie("SessionID", token, options); //set token to res header 
-        const { password: pwd, role:dbRole, ...user_data } = user._doc;
-
+        const token = jwt.sign({ _id: user._id }, SECRET_ACCESS_TOKEN, { expiresIn: '20m' });
+        res.cookie("SessionID", token, options); // Set token in cookie
+        const { password: pwd, ...user_data } = user._doc;
         sendResponse(res, 200, "success", [user_data], "You have successfully logged in.");
-
-
     } catch (err) {
         console.error(err);
         sendResponse(res, 500, "error", [], "Internal Server Error");
     }
 }
+
 
 export async function Logout(req, res) {
     try {

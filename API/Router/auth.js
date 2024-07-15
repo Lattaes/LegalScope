@@ -3,7 +3,6 @@ import { Register, Login, Logout } from "../controller/auth.js";
 import Validate from "../middleware/validate.js";
 import { check } from "express-validator";
 
-
 const router = express.Router();
 
 // Register route -- POST request
@@ -29,11 +28,16 @@ router.post(
 // Login route
 router.post(
     "/login",
-    check("email")
-        .isEmail()
-        .withMessage("Enter a valid email address")
-        .normalizeEmail(),
-    check("password").not().isEmpty().withMessage('Password is required!'),
+    check("username")
+        .not()
+        .isEmpty()
+        .withMessage("Enter a valid username")
+        .trim()
+        .escape(),
+    check("password")
+        .not()
+        .isEmpty()
+        .withMessage('Password is required!'),
     Validate,
     Login
 );
