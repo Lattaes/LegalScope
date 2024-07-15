@@ -1,6 +1,8 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
 import blacklist from "../models/blacklist.js";
+import jwt from "jsonwebtoken";
+
 
 // Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
@@ -59,7 +61,7 @@ export async function Login(req, res) {
             sameSite: "None",
         };
 
-        const token = jwt.sign({ _id: user._id }, SECRET_ACCESS_TOKEN, { expiresIn: '20m' });
+        const token = jwt.sign({ _id: user._id }, process.env.SECRET_ACCESS_TOKEN, { expiresIn: '20m' });
         res.cookie("SessionID", token, options); // Set token in cookie
         const { password: pwd, ...user_data } = user._doc;
         sendResponse(res, 200, "success", [user_data], "You have successfully logged in.");
