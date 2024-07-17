@@ -206,7 +206,7 @@ function Prediksi() {
                         {/* Prediction Button Section */}
                         <div className="flex justify-end mt-4">
                             <button
-                                className="bg-customMaroon hover:bg-red-900 text-white font-bold py-2 px-8 rounded-lg focus:outline-none"
+                                className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-8 rounded-lg focus:outline-none"
                                 onClick={handleSubmit}
                             >
                                 Prediksi
