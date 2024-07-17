@@ -30,7 +30,7 @@ const Navbar = () => {
                 </Link>
                 <div className="hidden sm:flex">
                     <ul className="hidden sm:flex">
-                        <Link to="/peraturan">
+                        <Link to="/daftar-peraturan">
                             <li className="ml-10 hover:border-b text-l cursor-pointer hover:text-violet-600 duration-500 text-white">Peraturan Indonesia</li>
                         </Link>
                         <Link to="/prediksi">

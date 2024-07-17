@@ -75,8 +75,8 @@ function Peraturan() {
                                 >
                                     <div className="px-4 py-5 sm:p-6">
                                         <div className="font-bold text-l uppercase text-white">{item.title}</div>
-                                        <div className="text-xs text-gray-600 dark:text-gray-300 pr-4 lg:pr-4 xl:pr-8 text-center">
-                                            Deskripsi singkat peraturan
+                                        <div className="text-xs text-gray-600 dark:text-gray-300 text-center">
+                                            Baca Selengkapnya
                                         </div>
                                         <span
                                             className={`i-uil-book text-5xl absolute right-0 top-0 mt-6 mr-4 -z-1 ${item.bgColor}`}

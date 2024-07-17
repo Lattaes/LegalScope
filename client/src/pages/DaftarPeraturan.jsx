@@ -1,62 +1,128 @@
-import React from "react";
-import { Link, useParams } from "react-router-dom";
-import SearchForm from "../components/SearchForm";
-import peraturanData from "../pages/data.json";
-import PeraturanCard from "../components/PeraturanCard";
+import React, { useEffect } from "react";
+import SearchForm from '../components/SearchForm';
+import PeraturanCard from '../components/PeraturanCard';
+import { useSearchParams, useNavigate, Link } from 'react-router-dom';
+import data from '../db/data.json';
 
 const DaftarPeraturan = () => {
-  const { jenis } = useParams(); 
-  const filteredPeraturan = peraturanData.filter((peraturan) => peraturan.jenis === jenis);
+  const navigate = useNavigate();
+  const ITEMS_PER_PAGE = 10;
+
+  const handleNavigate = (urlId) => {
+    navigate(`/detail-peraturan/${urlId}`);
+  };
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const handleNextPage = () => {
+    const currentPage = Number(searchParams.get("page"));
+    const nextPage = currentPage + 1;
+    searchParams.set("page", nextPage);
+    setSearchParams(new URLSearchParams(searchParams));
+  };
+
+  const handlePreviousPage = () => {
+    const currentPage = Number(searchParams.get("page"));
+    const prevPage = currentPage - 1;
+    searchParams.set("page", prevPage);
+    setSearchParams(new URLSearchParams(searchParams));
+  };
+
+  useEffect(() => {
+    if (!searchParams.get("page")) {
+      searchParams.set("page", 1);
+      setSearchParams(searchParams);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const filteredData = data
+    .filter((law) => {
+      if (!searchParams.get("title")) {
+        return true;
+      }
+      return law.Title.toLowerCase().includes(
+        searchParams.get("title").toLowerCase()
+      );
+    })
+    .filter((law) => {
+      if (!searchParams.get("year")) {
+        return true;
+      }
+      return law.Tahun === Number(searchParams.get("year"));
+    })
+    .filter((law) => {
+      if (!searchParams.get("type")) {
+        return true;
+      }
+      return law["Bentuk Peraturan"] === searchParams.get("type");
+    });
+
+  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
 
   return (
     <div className="min-h-screen bg-customNavy p-6 pt-32">
       <div className="container mx-auto text-left">
-        {/* Breadcrumb Navigation */}
-        <nav className="text-sm font-medium text-gray-500 mb-4">
-          <ol className="list-none p-0 inline-flex">
-            <li className="flex items-center">
-              <Link to="/peraturan" className="text-blue-500 hover:underline">
-                Daftar Peraturan
-              </Link>
-              <svg className="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M10 17l5-5-5-5v10z" />
-              </svg>
-            </li>
-            <li className="flex items-center">
-              <span className="text-gray-600">{jenis}</span>
-            </li>
-          </ol>
-        </nav>
-        {/* End of Breadcrumb Navigation */}
-
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-1">
             <SearchForm />
             <div className="mt-4 p-4 bg-white shadow-md rounded-md">
-              <h3 className="text-lg font-bold">DATA {jenis.toUpperCase()}</h3>
+              <h3 className="text-lg font-bold">DATA</h3>
               <div className="mt-2">
                 <div className="flex justify-between">
                   <span>Jumlah Peraturan</span>
-                  <span>{filteredPeraturan.length}</span>
+                  <span>{filteredData.length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Berlaku</span>
-                  <span>{filteredPeraturan.filter((data) => data.Status === "Berlaku").length}</span>
+                  <span>{filteredData.filter((data) => data.Status === "Berlaku").length}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Tidak Berlaku</span>
-                  <span>{filteredPeraturan.filter((data) => data.Status !== "Berlaku").length}</span>
+                  <span>{filteredData.filter((data) => data.Status !== "Berlaku").length}</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* List of Peraturan */}
-          <div className="md:col-span-3 space-y-4">
-            {filteredPeraturan.map((peraturan) => (
-              <PeraturanCard key={peraturan.id} id={peraturan.id} />
-            ))}
+          <div className="flex flex-col space-y-4 md:col-span-3">
+            {filteredData
+              .slice(
+                (Number(searchParams.get("page")) - 1) * ITEMS_PER_PAGE,
+                ITEMS_PER_PAGE * Number(searchParams.get("page"))
+              )
+              .map((data) => (
+                <Link to={`/detail-peraturan/${data.id}`} key={data.id}>
+                  <PeraturanCard
+                    title={data.Title}
+                    subtitle={data.wrapper}
+                    year={data.Tahun}
+                  />
+                </Link>
+              ))}
+
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={handlePreviousPage}
+                className="flex items-center justify-center rounded bg-blue-500 p-2 text-white disabled:bg-gray-400"
+                disabled={Number(searchParams.get("page")) === 1}
+              >
+                Previous
+              </button>
+
+              <span className="text-xl font-semibold">
+                {searchParams.get("page")} of {totalPages}
+              </span>
+
+              <button
+                onClick={handleNextPage}
+                className="flex items-center justify-center rounded bg-blue-500 p-2 text-white disabled:bg-gray-400"
+                disabled={Number(searchParams.get("page")) === totalPages}
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </div>

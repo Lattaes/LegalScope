@@ -10,9 +10,9 @@ import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
 import { UserContextProvider } from './context/userContext';
 import Dashboard from './pages/Dashboard';
-import Peraturan from './pages/Peraturan'; // Import Peraturan
-import DaftarPeraturan from './pages/DaftarPeraturan'; // Import DaftarPeraturan
-import DetailPeraturan from './pages/DetailPeraturan'; // Import DetailPeraturan
+import Peraturan from './pages/Peraturan';
+import DaftarPeraturan from './pages/DaftarPeraturan';
+import DetailPeraturan from './pages/DetailPeraturan';
 
 axios.defaults.baseURL = 'http://localhost:5000';
 axios.defaults.withCredentials = true;
@@ -37,9 +37,8 @@ function App() {
           {/* Rute untuk komponen Peraturan */}
           <Route path='/peraturan' element={<Peraturan />} />
           {/* Rute untuk komponen DaftarPeraturan */}
-          <Route path='/peraturan/:jenis' element={<DaftarPeraturan />} />
-          {/* Rute untuk komponen DetailPeraturan */}
-          <Route path='/detail-peraturan/:id' element={<DetailPeraturan />} />
+          <Route path="/daftar-peraturan" element={<DaftarPeraturan />} />
+          <Route path="/detail-peraturan/:id" element={<DetailPeraturan />} />
           <Route path='/prediksi' element={<Prediksi />} />
           <Route path='/chatbot' element={<Chatbot />} />
         </Routes>
