@@ -79,7 +79,7 @@ const Chatbot = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="md:col-span-1">
               <div className="p-4 bg-white shadow-md rounded-md">
-                <h3 className="text-lg font-bold">Tanya Scoopie</h3>
+                <h3 className="text-lg font-bold text-left">Tanya Scoopie</h3>
                 <div className="mt-2">
                   <div className="flex justify-between">
                     <span>Free Trial</span>
@@ -93,14 +93,18 @@ const Chatbot = () => {
                     <span>Chat Terpakai</span>
                     <span>{usedChats}</span>
                   </div>
-                  <button 
-                    className={`mt-4 px-4 py-2 rounded-md ${remainingChats === 0 ? 'bg-gray-400' : 'bg-blue-500 hover:bg-blue-600 text-white'}`} 
-                    onClick={handleNewChat}
-                    disabled={remainingChats === 0}
-                  >
-                    New Chat
-                  </button>
+                  {remainingChats === 0 ? (
+                    <a href="/login" className="mt-4 px-4 py-2 rounded-md bg-red-500 hover:bg-red-600 text-white block">Login</a>
+                  ) : (
+                    <button 
+                      className="mt-4 px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white"
+                      onClick={handleNewChat}
+                    >
+                      New Chat
+                    </button>
+                  )}
                 </div>
+                <h3 className="text-lg font-bold mt-4 text-left">Riwayat Chat</h3>
               </div>
             </div>
 
@@ -141,6 +145,7 @@ const Chatbot = () => {
                 <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onClick={handleSend}>Send</button>
               </div>
             </div>
+            <br></br>
           </div>
         </div>
       </div>
