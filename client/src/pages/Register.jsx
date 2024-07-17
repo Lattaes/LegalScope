@@ -21,7 +21,7 @@ function Register() {
         e.preventDefault();
         const { name, email, password } = data;
         try {
-          const response = await axios.post('/register', { name, email, password });
+          const response = await axios.post('http://localhost:5000/register', { name, email, password });
           if (response.data.error) {
             toast.error(response.data.error);
           } else {
@@ -37,7 +37,7 @@ function Register() {
           }
           console.error('Registration Error:', error);
         }
-      };      
+      };          
 
     return (
         <section className="bg-gray-50 min-h-screen flex items-center justify-center">

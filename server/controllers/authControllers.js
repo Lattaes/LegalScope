@@ -10,10 +10,13 @@ const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if (!name) {
-      return res.status(400).json({ error: 'Name is required' });
+      return res.status(400).json({ error: 'Your name is required' });
     }
     if (!password || password.length < 6) {
       return res.status(400).json({ error: 'Password is required and should be at least 6 characters long' });
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      return res.status(400).json({ error: 'Enter a valid email address' });
     }
     const exist = await User.findOne({ email });
     if (exist) {
@@ -34,6 +37,13 @@ const registerUser = async (req, res) => {
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
   try {
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      return res.status(400).json({ error: 'Enter a valid email address' });
+    }
+    if (!password) {
+      return res.status(400).json({ error: 'Password is required!' });
+    }
+
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ error: 'User not found' });

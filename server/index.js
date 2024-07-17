@@ -14,19 +14,21 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     process.exit(1); // Exit the process if the database connection fails
   });
 
-// middleware
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
+// CORS configuration
 app.use(
   cors({
     credentials: true,
-    origin: 'http://localhost:5175' // Match the client port here
+    origin: 'http://localhost:5175' // Update with your frontend's URL during development
   })
 );
 
-app.use('/', require('./routes/authRoutes')); // Ensure this line is present
+// Routes
+app.use('/', require('./routes/authRoutes')); // Example route, replace with your actual routes
 
-const port = 5000;  // Change to the correct port
+const port = process.env.PORT || 5000; // Use process.env.PORT for deployment flexibility
 app.listen(port, () => console.log(`Server is running on port ${port}`));
