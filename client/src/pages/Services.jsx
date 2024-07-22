@@ -10,37 +10,37 @@ const services = [
   {
     imgSrc: serviceIcon,
     title: 'Pencarian Peraturan Hukum Indonesia',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Akses cepat dan mudah ke berbagai peraturan hukum Indonesia. Temukan informasi hukum terbaru dan relevan dengan efisien.',
     link: '#',
   },
   {
     imgSrc: serviceIcon2,
     title: 'Memprediksi Kasus Hukum Pencurian',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Analisis dan prediksi hasil kasus hukum pencurian menggunakan teknologi kecerdasan buatan untuk membantu persiapan kasus Anda.',
     link: '#',
   },
   {
     imgSrc: serviceIcon3,
     title: 'Bertanya Mengenai Hukum Pidana',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Ajukan pertanyaan seputar hukum pidana dan dapatkan jawaban yang akurat dan terpercaya dari para ahli hukum.',
     link: '#',
   },
   {
     imgSrc: serviceIcon4,
     title: 'Pemberitahuan Berita Terkini',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Dapatkan pemberitahuan berita hukum terkini langsung ke perangkat Anda. Tetap terinformasi dengan perkembangan hukum terbaru.',
     link: '#',
   },
   {
     imgSrc: serviceIcon5,
     title: 'Konsultasi Hukum dengan Pengacara',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Layanan konsultasi hukum dengan pengacara berpengalaman untuk membantu Anda memahami dan menyelesaikan masalah hukum.',
     link: '#',
   },
   {
     imgSrc: serviceIcon6,
     title: 'Menyimpan Hasil Pencarian dan Prediksi',
-    description: 'Lorem ipsum dolor sit amet, consectetur the adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.',
+    description: 'Simpan hasil pencarian dan prediksi kasus hukum Anda untuk referensi di masa mendatang dengan fitur penyimpanan yang aman dan mudah diakses.',
     link: '#',
   },
 ];
