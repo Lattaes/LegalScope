@@ -28,21 +28,16 @@ router.post(
 // Login route
 router.post(
     "/login",
-    check("username")
-        .not()
-        .isEmpty()
-        .withMessage("Enter a valid username")
-        .trim()
-        .escape(),
-    check("password")
-        .not()
-        .isEmpty()
-        .withMessage('Password is required!'),
+    check("email")
+        .isEmail()
+        .withMessage("Enter a valid email address")
+        .normalizeEmail(),
+    check("password").not().isEmpty().withMessage('Password is required!'),
     Validate,
     Login
 );
 
 // Logout route ==
-router.get('/logout', Logout);
+router.post('/logout', Logout);
 
 export default router;

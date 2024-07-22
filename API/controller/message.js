@@ -1,4 +1,4 @@
-import Message from "../models/message.model.js";
+import Chat from "../models/message.model.js";
 import User from "../models/user.model.js";
 
 const sendResponse = (res, statusCode, status, data, message) => {
@@ -9,54 +9,74 @@ const sendResponse = (res, statusCode, status, data, message) => {
     });
 };
 
-//send message function
+// Send message function
 export async function sendMessage(req, res) {
-    const {sender, receiver, content, timestamp} = req.body;
-    try{
-        const userExist = await User.findOne({email});
-        if(userExist){
-            const newMessage = await Message.create({
+    const { userId, sender, message } = req.body;
+    try {
+        const userExist = await User.findById(userId);
+        if (userExist) {
+            const chat = await Chat.findOne({ userId });
+
+            const newMessage = {
                 sender,
-                receiver,
-                content,
-                timestamp,
-            })
+                message,
+                timestamp: new Date()
+            };
 
-            const savedMessage = await newMessage.save();
-            sendResponse(res, 200, "success", savedMessage, "message sent successfully");
+            if (chat) {
+                chat.messages.push(newMessage);
+                chat.updatedAt = new Date();
+                await chat.save();
+            } else {
+                await Chat.create({
+                    userId,
+                    messages: [newMessage]
+                });
+            }
+
+            sendResponse(res, 200, "success", newMessage, "Message sent successfully");
+        } else {
+            sendResponse(res, 400, "error", [], "User not found");
         }
-        }catch(err){
-            sendResponse(res, 500, "error", [], "internal Server error!");
-        }
+    } catch (err) {
+        sendResponse(res, 500, "error", [], "Internal Server Error!");
+    }
 }
 
+// Get messages function
 export async function getMessages(req, res) {
-    const {email} = req.params;
-    try{
-        const messages = await Message.find({receiver: email}).or({sender: email});
-        sendResponse(
-            res,
-            200,
-            "sucess",
-            messages,
-            "messages retrieved"
-        );
-    }catch(err){
-        sendResponse(res, 500, "error", [], "internal server error!");  
+    const { userId } = req.params;
+    try {
+        const chat = await Chat.findOne({ userId });
+        if (chat) {
+            sendResponse(res, 200, "success", chat.messages, "Messages retrieved");
+        } else {
+            sendResponse(res, 404, "error", [], "Chat not found");
+        }
+    } catch (err) {
+        sendResponse(res, 500, "error", [], "Internal Server Error!");
     }
-    
 }
 
+// Delete message function
 export async function deleteMessage(req, res) {
-    const {id} = req.params;
-    try{
-        const message = await Message.findByIdAndDelete(id);
-        if (!message){
-            return sendResponse(res, 404, "Failed", [], "message not found");
+    const { userId, messageId } = req.params;
+    try {
+        const chat = await Chat.findOne({ userId });
+        if (chat) {
+            const messageIndex = chat.messages.findIndex(msg => msg._id.toString() === messageId);
+            if (messageIndex !== -1) {
+                chat.messages.splice(messageIndex, 1);
+                chat.updatedAt = new Date();
+                await chat.save();
+                sendResponse(res, 200, "success", [], "Message deleted successfully!");
+            } else {
+                sendResponse(res, 404, "error", [], "Message not found");
+            }
+        } else {
+            sendResponse(res, 404, "error", [], "Chat not found");
         }
-        sendResponse(res, 200, "Sucess", [], "Message deleted successfully!");
-    }catch(err){
-        sendResponse(res, 500, "Error", [], "Internal Server Error!");
+    } catch (err) {
+        sendResponse(res, 500, "error", [], "Internal Server Error!");
     }
-    
 }

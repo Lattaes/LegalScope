@@ -3,7 +3,6 @@ import bcrypt from "bcrypt";
 import blacklist from "../models/blacklist.js";
 import jwt from "jsonwebtoken";
 
-
 // Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
     res.status(statusCode).json({
@@ -40,48 +39,68 @@ export async function Register(req, res) {
     }
 }
 
-// Login function
 export async function Login(req, res) {
-    const { username, password } = req.body; 
+    // Get variables for the login process
+    const { email } = req.body;
     try {
-        const user = await User.findOne({ username }).select("+password"); 
-        if (!user) {
-            return sendResponse(res, 401, "failed", [], "Invalid username or password. Please try again with the correct credentials.");
-        }
-
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-        if (!isPasswordValid) {
-            return sendResponse(res, 401, "failed", [], "Invalid username or password. Please try again.");
-        }
+        // Check if user exists
+        const user = await User.findOne({ email }).select("+password");
+        if (!user)
+            return res.status(401).json({
+                status: "failed",
+                data: [],
+                message: "Account does not exist",
+            });
+            
+        // if user exists, validate password
+        const isPasswordValid = bcrypt.compare(req.body.password, user.password);
+        // if not valid, return unathorized response
+        if (!isPasswordValid)
+            return res.status(401).json({
+                status: "failed",
+                data: [],
+                message:
+                    "Invalid email or password. Please try again with the correct credentials.",
+            });
 
         let options = {
-            maxAge: 20 * 60 * 1000, // would expire in 20 minutes
-            httpOnly: true, 
+            maxAge: 20 * 60 * 1000, // would expire in 20minutes
+            httpOnly: true, // The cookie is only accessible by the web server
             secure: true,
             sameSite: "None",
         };
-
         const token = jwt.sign({ _id: user._id }, process.env.SECRET_ACCESS_TOKEN, { expiresIn: '20m' });
         res.cookie("SessionID", token, options); // Set token in cookie
+
         const { password: pwd, ...user_data } = user._doc;
-        sendResponse(res, 200, "success", [user_data], "You have successfully logged in.");
+
+        // Adding token to the response data
+        const responseData = { ...user_data, token };
+
+        sendResponse(res, 200, "success", [responseData], "You have successfully logged in.");
     } catch (err) {
-        console.error(err);
-        sendResponse(res, 500, "error", [], "Internal Server Error");
+        res.status(500).json({
+            status: "error",
+            code: 500,
+            data: [],
+            message: "Internal Server Error",
+        });
     }
+    res.end();
 }
+
 
 
 export async function Logout(req, res) {
     try {
         const authHeader = req.headers['cookie']; // get the session cookie from request header
-        if (!authHeader) return res.sendStatus(204); // No content
+        if (!authHeader) return sendResponse(res, 204, "No Content", [], "No Content"); // No content
         const cookie = authHeader.split('=')[1]; // If there is, split the cookie string to get the actual jwt token
         const accessToken = cookie.split(';')[0];
         const checkIfBlacklisted = await blacklist.findOne({ token: accessToken }); // Check if that token is blacklisted
 
         // if true, send a no content response.
-        if (checkIfBlacklisted) return res.sendStatus(204);
+        if (checkIfBlacklisted) return sendResponse(res, 204, "No Content", [], "No Content");
 
         // otherwise blacklist token
         const newBlacklist = new blacklist({
@@ -91,14 +110,11 @@ export async function Logout(req, res) {
 
         // Also clear request cookie on client
         res.setHeader('Clear-Site-Data', '"cookies"');
-        res.status(200).json({ message: 'You are logged out!' });
+        sendResponse(res, 200, "success", [], "You are logged out!");
 
 
       } catch (err) { //catch error
-        res.status(500).json({
-          status: 'error',
-          message: 'Internal Server Error',
-        });
+        sendResponse(res, 500, "error", [], "Internal Server Error");
       }
       res.end();
     
