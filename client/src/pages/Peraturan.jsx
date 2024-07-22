@@ -5,14 +5,14 @@ import backgroundImage from '../assets/purple-hero.jpg';
 
 function Peraturan() {
     const peraturanList = [
-        { id: 1, title: 'Undang-Undang', link: '/peraturan/uu', borderColor: 'border-orange-500', bgColor: 'text-orange-500' },
-        { id: 2, title: 'PERPPU', link: '/peraturan/perppu', borderColor: 'border-green-500', bgColor: 'text-green-500' },
-        { id: 3, title: 'Peraturan Pemerintah', link: '/peraturan/pp', borderColor: 'border-blue-500', bgColor: 'text-blue-500' },
-        { id: 4, title: 'Peraturan Presiden', link: '/peraturan/perpres', borderColor: 'border-red-500', bgColor: 'text-red-500' },
-        { id: 5, title: 'Peraturan Menteri', link: '/peraturan/permen', borderColor: 'border-lime-500', bgColor: 'text-lime-500' },
-        { id: 6, title: 'Peraturan Lembaga', link: '/peraturan/perban', borderColor: 'border-yellow-500', bgColor: 'text-yellow-500' },
-        { id: 7, title: 'Peraturan Daerah', link: '/peraturan/perda', borderColor: 'border-purple-500', bgColor: 'text-purple-500' },
-        { id: 8, title: 'Peraturan Lainnya', link: '/peraturan/permenkumham', borderColor: 'border-gray-500', bgColor: 'text-gray-500' },
+        { id: 1, title: 'Undang-Undang', link: '/daftar-peraturan', borderColor: 'border-orange-500', bgColor: 'text-orange-500' },
+        { id: 2, title: 'PERPPU', link: '/daftar-peraturan', borderColor: 'border-green-500', bgColor: 'text-green-500' },
+        { id: 3, title: 'Peraturan Pemerintah', link: '/daftar-peraturan', borderColor: 'border-blue-500', bgColor: 'text-blue-500' },
+        { id: 4, title: 'Peraturan Presiden', link: '/daftar-peraturan', borderColor: 'border-red-500', bgColor: 'text-red-500' },
+        { id: 5, title: 'Peraturan Menteri', link: '/daftar-peraturan', borderColor: 'border-lime-500', bgColor: 'text-lime-500' },
+        { id: 6, title: 'Peraturan Lembaga', link: '/daftar-peraturan', borderColor: 'border-yellow-500', bgColor: 'text-yellow-500' },
+        { id: 7, title: 'Peraturan Daerah', link: '/daftar-peraturan', borderColor: 'border-purple-500', bgColor: 'text-purple-500' },
+        { id: 8, title: 'Peraturan Lainnya', link: '/daftar-peraturan', borderColor: 'border-gray-500', bgColor: 'text-gray-500' },
     ];
 
     return (
