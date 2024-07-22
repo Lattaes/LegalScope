@@ -30,7 +30,7 @@ const Navbar = () => {
                 </Link>
                 <div className="hidden sm:flex">
                     <ul className="hidden sm:flex">
-                        <Link to="/daftar-peraturan">
+                        <Link to="/peraturan">
                             <li className="ml-10 hover:border-b text-l cursor-pointer hover:text-violet-600 duration-500 text-white">Peraturan Indonesia</li>
                         </Link>
                         <Link to="/prediksi">
@@ -48,7 +48,7 @@ const Navbar = () => {
                 {!user ? (
                     <div className="hidden sm:flex items-center ml-10">
                         <Link to="/login">
-                            <button className="text-white px-8 py-2 cursor-pointer duration-500 rounded-md hover:bg-gray-400 ml-4">Masuk</button>
+                            <button className="text-white px-8 py-2 cursor-pointer duration-100 rounded-md hover:bg-gray-400 ml-4">Masuk</button>
                         </Link>
                         <GradientButton to="/register" text="Daftar" />
                     </div>
