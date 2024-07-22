@@ -8,25 +8,36 @@ const test = (req, res) => {
 
 const registerUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
-    if (!name) {
-      return res.status(400).json({ error: 'Your name is required' });
+    const { name, firstName, lastName, email, password, repeatPassword } = req.body;
+
+    // Validate inputs
+    if (!name || !firstName || !lastName || !email || !password) {
+      return res.status(400).json({ error: 'All fields are required' });
     }
-    if (!password || password.length < 6) {
-      return res.status(400).json({ error: 'Password is required and should be at least 6 characters long' });
+    if (password !== repeatPassword) {
+      return res.status(400).json({ error: 'Passwords do not match' });
+    }
+    if (password.length < 6) {
+      return res.status(400).json({ error: 'Password should be at least 6 characters long' });
     }
     if (!/\S+@\S+\.\S+/.test(email)) {
       return res.status(400).json({ error: 'Enter a valid email address' });
     }
-    const exist = await User.findOne({ email });
-    if (exist) {
-      return res.status(400).json({ error: 'Email is taken already' });
+
+    const emailExist = await User.findOne({ email });
+    if (emailExist) {
+      return res.status(400).json({ error: 'Email is already taken' });
+    }
+
+    const usernameExist = await User.findOne({ name });
+    if (usernameExist) {
+      return res.status(400).json({ error: 'Username is already taken' });
     }
 
     const hashedPassword = await hashPassword(password);
 
-    // create user in database
-    const user = await User.create({ name, email, password: hashedPassword });
+    // Create user
+    const user = await User.create({ name, firstName, lastName, email, password: hashedPassword });
     return res.status(201).json(user);
   } catch (error) {
     console.error('Register User Error:', error);
@@ -49,7 +60,7 @@ const loginUser = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    // check if password match
+    // Check if password matches
     const match = await comparePassword(password, user.password);
     if (match) {
       jwt.sign({ email: user.email, id: user._id, name: user.name }, process.env.JWT_SECRET, (err, token) => {
@@ -67,6 +78,7 @@ const loginUser = async (req, res) => {
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 };
+
 
 const getProfile = async (req, res) => {
   try {
@@ -88,9 +100,27 @@ const getProfile = async (req, res) => {
   }
 };
 
-module.exports = {
-  test,
-  registerUser,
-  loginUser,
-  getProfile
+const updateProfile = async (req, res) => {
+  const { firstName, lastName, email } = req.body;
+  const userId = req.user.id;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    user.firstName = firstName || user.firstName;
+    user.lastName = lastName || user.lastName;
+    user.email = email || user.email;
+
+    await user.save();
+
+    return res.json({ user });
+  } catch (error) {
+    console.error('Update Profile Error:', error);
+    return res.status(500).json({ error: 'Internal Server Error' });
+  }
 };
+
+module.exports = { test, registerUser, loginUser, getProfile, updateProfile };
