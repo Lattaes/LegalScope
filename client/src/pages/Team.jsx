@@ -8,7 +8,7 @@ import Member4 from '../assets/kjw.jpg';
 const Team = () => {
   const teamMembers = [
     {
-      name: 'Ghalih Lanjar Pangastuti',
+      name: 'Galih Lanjar Pangastuti',
       position: 'Executive Officer',
       image: Member,
       instagram: 'https://www.instagram.com/lattae30/',
