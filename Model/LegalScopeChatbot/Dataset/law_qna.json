@@ -1,0 +1,1135 @@
+{
+    "intents": [
+        {
+          "tag": "greetings",
+          "patterns": [
+              "Hai",
+              "Halo",
+              "Hi",
+              "Assalamualaikum",
+              "Helo",
+              "Permisi"
+          ],
+          "responses": [
+              "Halo, ada yang bisa kami bantu?",
+              "Selamat datang di LegalScope! ada yang bisa kami bantu?",
+              "Selamat datang, apa yang membawamu ke sini?"
+          ]
+      },
+      {
+        "tag": "morning",
+          "patterns": [
+              "Pagi",
+              "Selamat pagi",
+              "Good morning",
+              "Morning"
+          ],
+          "responses": [
+              "Selamat pagi, ada yang bisa kami bantu?",
+              "Pagi, selamat datang di LegalScope! ada yang bisa kami bantu?",
+              "Halo selamat pagi, apa yang membawamu ke sini?"
+          ]
+      },
+      {
+        "tag": "afternoon",
+          "patterns": [
+              "Siang",
+              "Selamat siang",
+              "Good afternoon"
+          ],
+          "responses": [
+              "Selamat siang, ada yang bisa kami bantu?",
+              "Siang, selamat datang di LegalScope! ada yang bisa kami bantu?",
+              "Halo selamat siang, apa yang membawamu ke sini?"
+          ]
+      },
+      {
+        "tag": "evening",
+          "patterns": [
+              "Sore",
+              "Selamat sore",
+              "Good evening"
+          ],
+          "responses": [
+              "Selamat sore, ada yang bisa kami bantu?",
+              "sore, selamat datang di LegalScope! ada yang bisa kami bantu?",
+              "Halo selamat sore, apa yang membawamu ke sini?"
+          ]
+      },
+      {
+        "tag": "night",
+          "patterns": [
+              "Malam",
+              "Selamat malam"
+          ],
+          "responses": [
+              "Selamat malam, ada yang bisa kami bantu?",
+              "Malam, selamat datang di LegalScope! ada yang bisa kami bantu?",
+              "Halo selamat malam, apa yang membawamu ke sini?"
+          ]
+      },
+      {
+          "tag": "goodbye",
+          "patterns": [
+              "Sampai jumpa",
+              "Selamat tinggal",
+              "Dadah",
+              "Bye",
+              "Oke bye"
+          ],
+          "responses": [
+              "Sampai jumpa lagi!",
+              "Semoga hari mu menyenangkan",
+              "Terimakasih telah bertanya, sampai jumpa lagi"
+          ]
+      },
+      {
+          "tag": "thanks",
+          "patterns": [
+              "Terimakasih",
+              "Makasih",
+              "Terimakasih infonya",
+              "Trims",
+              "Terimakasih atas jawabannya",
+              "Terimakasih atas bantuannya",
+              "Thanks",
+              "Thankyou",
+              "Makasi",
+              "Tq ya"
+          ],
+          "responses": [
+              "Senang bisa membantu anda!",
+              "Tentu, senang bisa membantu",
+              "Terimakasih kembali telah bertanya"
+          ]
+      },
+      {
+        "tag": "about_chatbot",
+        "patterns": [
+          "Siapa kamu?",
+          "Siapa namamu?",
+          "Apa panggilanmu?",
+          "Aku harus manggil kamu apa?",
+          "Perkenalkan dirimu"
+        ],
+        "responses": [
+          "Halo, saya LegalGenie, chatbot hukum yang siap membantu Anda dalam menemukan informasi seputar Hukum Indonesia. Apakah ada yang bisa saya bantu?",
+          "Saya LegalGenie, asisten AI hukum yang dirancang untuk membantu Anda menemukan informasi hukum Indonesia. Silahkan tanyakan informasi hukum yang ingin anda cari",
+          "Anda bisa memanggil saya LegalGenie.",
+          "Halo, saya LegalGenie!"
+        ]
+      },
+      {
+        "tag": "skill_chatbot",
+        "patterns": [
+          "Apa yang bisa kamu lakukan",
+          "Informasi apa yang bisa saya tanyakan di sini?",
+          "Informasi apa yang kamu sediakan?",
+          "Kamu bisa ngapain aja?",
+          "Informasi hukum apa yang tersedia di sini?",
+          "Hal apa saja yang bisa saya tanyakan di sini?"
+        ],
+        "responses": [
+          "Saya dapat memberikan informasi terkait Hukum Indonesia. Namun, pada versi saya sekarang saya hanya bisa memberikan informasi hukum terbatas hanya pada Hukum Pidana atau KUHP, khususnya KUHP baru (UU No. 1 Tahun 2023) dan juga beberapa informasi mengenai KUHAP."
+        ]
+      },
+      {
+        "tag":"creation",
+        "patterns": [
+          "Siapa yang membuatmu?",
+          "Siapa yang menciptakanmu?",
+          "Bagaimana kamu dibuat?",
+          "Kamu dibuat dengan apa?",
+          "Apa yang membuatmu bisa berbicara?",
+          "Teknologi apa yang digunakan untuk membuatmu?"
+        ],
+        "responses": [
+          "Saya merupakan asisten Hukum AI yang dibuat oleh tim pengembang aplikasi LegalScope.",
+          "Saya dibuat menggunakan teknologi canggih yang disebut deep learning dan pemrosesan bahasa alami atau Natural Language Processing (NLP)."
+        ]
+      },
+      {
+        "tag": "casual",
+        "patterns": [
+          "Begitu yaa",
+          "Oh begitu",
+          "Oke, baik",
+          "Oh gitu yaa",
+          "Owalah begitu"
+        ],
+        "responses": [
+          "Benar! Silahkan bertanya kembali jika masih ada yang ditanyakan...",
+          "Betul! Apa masih ada yang ingin ditanyakan? Silahkan bertanya kembali..."
+        ]
+      },
+      {
+        "tag": "ask_question",
+        "patterns": [
+          "Mau nanya dong",
+          "Bolehkah saya bertanya?",
+          "Apakah saya bisa bertanya?",
+          "Saya mau nanya mengenai",
+          "Saya bertanya tentang"
+        ],
+        "responses": [
+          "Tentu! Saya akan berusaha untuk menjawabmu.",
+          "Tentu! Silahkan tanyakan pertanyaan seputar hukum Indonesia di sini.",
+          "Tentu saja! Jangan ragu untuk menanyakan informasi hukum kepada saya..."
+        ]
+      },
+      {
+        "tag": "help",
+        "patterns": [
+          "Saya butuh bantuan",
+          "Tolong bantu saya",
+          "Bisakah kamu menolong saya?",
+          "Bisakah kamu membantu saya?"
+        ],
+        "responses": [
+          "Tentu bisa. Jelaskan kepada saya apa yang ingin kamu ketahui?",
+          "Ya, tentu saja! Apa yang ingin kamu tanyakan?"
+        ]
+      },
+      {
+        "tag": "no_need_help",
+        "patterns": [
+          "Saya tidak membutuh bantuanmu",
+          "Saya tidak membutuh pertolonganmu"
+        ],
+        "responses": [
+          "Baik. Jika kamu butuh bantuan nanti, jangan ragu untuk bertanya ya..."
+        ]
+      },
+      {
+        "tag": "wrong",
+        "patterns": [
+          "Responnya salah",
+          "Jawabannya salah",
+          "Kayaknya bukan itu jawabannya",
+          "Jawabannya bukan itu",
+          "Jawabannya ga sesuai",
+          "Responnya ga sesuai"
+        ],
+        "responses": [
+          "Maaf jika jawaban saya salah. Saya akan mencoba menjawab kembali. Mari tanyakan kembali pertanyaannya kepada saya"
+        ]
+      },
+      {
+        "tag": "location",
+        "patterns": [
+          "Dimana kamu?",
+          "Dimana kamu tinggal?",
+          "Dimana lokasimu?",
+          "Kamu ada dimana sih?"
+        ],
+        "responses": [
+          "Saya tinggal di dalam website LegalScope! Jangan lupa mengunjungi saya ya!"
+        ]
+      },
+      {
+        "tag": "done",
+        "patterns": [
+          "Saya rasa cukup",
+          "Itu saja",
+          "Tidak ada lagi yang ingin saya tanyakan",
+          "Hanya itu saja yang ingin saya tanyakan",
+          "Saya tidak punya pertanyaan lagi",
+          "Tidak, itu saja",
+          "Sekian dari saya",
+          "Tidak ada lagi, terimakasih",
+          "Cukup, terimakasih"
+        ],
+        "responses": [
+          "Baiklah, terimakasih sudah bertanya!",
+          "Baiklah kalo begitu, terimakasih sudah bertanya. Sampai jumpa lagi!"
+        ]
+      },
+      {
+        "tag": "1_tujuan_kuhp",
+        "patterns": [
+          "Apa tujuan utama dari pembentukan Kitab Undang-Undang Hukum Pidana KUHP yang baru?",
+          "Mengapa diperlukan pembentukan Kitab Undang-Undang Hukum Pidana KUHP yang baru?",
+          "Apa alasan utama di balik revisi Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Apa yang mendorong pembaruan Kitab Undang-Undang Hukum Pidana KUHP di Indonesia?",
+          "Apa motivasi utama dalam menyusun KUHP yang baru?",
+          "Apa saja tujuan dari pembaruan Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Kenapa kuhp yang baru dibentuk?",
+          "Kenapa kitab hukum pidana kuhp dirubah?",
+          "Tujuan kuhp baru?",
+          "Tujuan dibuat kuhp?"
+        ],
+        "responses": [
+          "Tujuan utama dari pembentukan Kitab Undang-Undang Hukum Pidana (KUHP) yang baru adalah diperlukan adanya pembaharuan hukum yaitu demokratisasi hukum pidana karena KUHP lama merupakan produk hukum pemerintahan zaman kolonial Hindia Belanda. Pada KUHP baru pemidanaannya berorientasi pada pencegahan bukan penjatuhan hukum. Salah satu contohnya, yaitu diperhatikannya atau diaturnya hak-hak korban disamping proses hukum terhadap kejahatan yang dilakukan pelaku. Pembaharuan ini dilakukan dengan alasan filosofis, politis, sosiologis, dan praktis.  \n\nFilosofis: KUHP lama disusun oleh pemerintah kolonial Belanda dan tidak sesuai dengan landasan filosofis Indonesia.\n\nSosiologis: Banyak pasal KUHP lama yang tidak lagi sesuai dengan nilai-nilai yang berlaku dalam masyarakat Indonesia modern, dan adanya kemajuan ilmu pengetahuan dan teknologi membuat berbagai pengaturan dalam KUHP menjadi tidak memadai dan ketinggalan zaman."
+        ]
+      },
+      {
+        "tag": "2_pengertian_kuhp",
+        "patterns": [
+          "Apa yang dimaksud dengan Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Apa itu Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Bagaimana definisi dari Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Apa pengertian Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Bisakah Anda menjelaskan apa yang dimaksud dengan KUHP?",
+          "Apa arti dari Kitab Undang-Undang Hukum Pidana KUHP?",
+          "Sebutkan pengertian KUHP",
+          "Definisikan KUHP",
+          "KUHP adalah",
+          "Apa itu kuhp?"
+        ],
+        "responses": [
+          "Kitab Undang-Undang Hukum Pidana (KUHP) adalah kumpulan peraturan yang mengatur tentang hukum pidana di Indonesia, seperti tindak pidana, pemidanaan, dan proses hukum terkait pelanggaran hukum pidana. "
+        ]
+      },
+      {
+        "tag": "3_lingkup_waktu_kuhp",
+        "patterns": [
+          "Bagaimana ruang lingkup berlakunya ketentuan peraturan perundang-undangan hukum pidana kuhp menurut waktu?",
+          "Apa saja ketentuan perundang-undangan hukum pidana kuhp yang berlaku sesuai dengan waktu?",
+          "Bagaimana ketentuan hukum pidana kuhp diberlakukan berdasarkan waktu?",
+          "Bagaimana aturan perundang-undangan hukum pidana kuhp diterapkan dalam konteks waktu?",
+          "Apa saja yang diatur mengenai ruang lingkup waktu dalam ketentuan perundang-undangan hukum pidana kuhp?",
+          "Ruang lingkup waktu hukum pidana kuhp",
+          "Jelaskan ruang lingkup menurut waktu dalam hukum pidana kuhp"
+        ],
+        "responses": [
+          "Ketentuan peraturan Perundang-undangan hukum pidana menurut waktu diatur dalam asas legalitas dan asas retroaktif. \n\nAsas legalitas ini berasal dari doktrin nullum delictum nulla poena sine praevia lege poenal yang berarti tiada tindak pidana dan hukuman pidana tanpa sebelumnya ditetapkan dalam suatu undang-undang. Sebagai mana diatur dalam Pasal 1 ayat (1) UU 1/2023 \"Suatu perbuatan tidak dipidana, kecuali berdasarkan kekuatan perundang-undangan pidana yang telah ada\". \n\nAsas retroaktif menyatakan bahwa peraturan perundang-undanganitu harus sudah ada sebelum tindak pidana itu terjadi, artinya peraturan pidana tidak boleh belaku surut (retroaktif)."
+        ]
+      },
+      {
+        "tag": "4_asas_wilayah_kuhp",
+        "patterns": [
+          "Apa yang dimaksud dengan asas wilayah atau teritorial dalam KUHP?",
+          "Bagaimana definisi asas wilayah atau teritorial dalam KUHP?",
+          "Apakah yang dimaksud dengan asas wilayah atau teritorial menurut KUHP?",
+          "Jelaskan konsep asas wilayah atau teritorial yang terdapat dalam KUHP.",
+          "Apa yang dimaksud dengan prinsip wilayah atau teritorial dalam konteks KUHP?",
+          "Maksudnya prinsip wilayah di kuhp itu gimana?",
+          "Asas wilayah hukum pidana kuhp adalah",
+          "Asas teritorial hukum pidana kuhp adalah",
+          "Definisi asas wilayah atau teritorial dalam hukum pidana kuhp"
+        ],
+        "responses": [
+          "Asas wilayah atau teritorial adalah asas hubungan internasional yang mewajibkan suatu negara tetap berada dalam wilayah kekuasaannya. Hal ini juga berarti sebuah negara yang berdaulat bertanggung jawab untuk menjaga ketertiban hukum di wilayahnya. Negara berhak untuk memberlakukan hukuman pidana bagi siapa pun yang melakukan tindak pidana di wilayahnya. Sebagaimana diatur dalam Pasal 4 UU 1/2023 yang menyatakan bahwa hukuman pidana belaku bagi siapa pun yang melakukan tindak pidana:\n1. Di wilayah Negara Kesatuan Republik Indonesia (NKRI); \n2. Kapal atau Pesawat Udara Indonesia; atau\n3. Di bidang teknologi informasi atau tindak pidana lainnya yang akibatnya dialami atau terjadi di wilayah Negara Kesatuan Republik Indonesia atau di Kapal Indonesia dan di Pesawat Undara Indonesia."
+        ]
+      },
+      {
+        "tag": "5_pasal-2_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan Pasal 2 ayat (1) dan (2) dalam hukum pidana mengatur tentang hukum yang hidup dalam masyarakat?",
+          "Apa isi dari Pasal 2 ayat 1 dan 2 dalam hukum pidana terkait dengan hukum yang hidup dalam masyarakat?",
+          "Bagaimana Pasal 2 ayat 1 dan 2 dalam hukum pidana membahas tentang norma-norma yang hidup dalam masyarakat?",
+          "Jelaskan bagaimana ketentuan Pasal 2 ayat 2 dan 1 mengatur hukum yang berlaku dalam masyarakat dalam konteks hukum pidana.",
+          "Pasal 2 ayat 1 dan 2 di KUHP mengatur apa sih?",
+          "Hukum yang hidup dalam masyarakat",
+          "Peraturan tentang atau mengenai hukum yang hidup dalam masyarakat"
+        ],
+        "responses": [
+          "Hukum yang hidup dalam masyarakat yang terdapat dalam Pasal 2 menjelaskan bahwa sebagaimana dimaksud pada ayat (1) berlaku dalam tempat hukum itu hidup dan sepanjang tidak diatur dalam Undang-Undang ini dan sesuai dengan nilai-nilai yang terkandung dalam Pancasila, Undang-Undang Dasar Negara Republik Indonesia Tahun 1945, hak asasi manusia, dan asas hukum umum yang diakui masyarakat beradab."
+        ]
+      },
+      {
+        "tag": "6_revisi_uu_setelah_kejahatan_dilakukan",
+        "patterns": [
+          "Apa yang terjadi jika terdapat perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan?",
+          "Bagaimana implikasi perubahan peraturan perundang-undangan terhadap suatu perbuatan yang telah dilakukan?",
+          "Apakah konsekuensi hukumnya jika terjadi perubahan peraturan setelah suatu perbuatan dilakukan?",
+          "Jelaskan apa yang terjadi jika setelah suatu perbuatan dilakukan, ada perubahan dalam peraturan perundang-undangan yang terkait.",
+          "Kalo uu nya berubah setelah kejadian gimana?",
+          "Gimana kalo uu direvisi setelah sebuah kejahatan dilakukan?"
+        ],
+        "responses": [
+          "Jika terjadi perubahan peraturan perundang-undangan setelah suatu perbuatan dilakukan, maka akan diberlakukan peraturan perundang-undangan yang baru, kecuali ketentuan peraturan perundang-undangan yang lama menguntungkan bagi pelaku dan pembantu tindak pidana."
+        ]
+      },
+      {
+        "tag": "7_asas_perlindungan_nasional_pasif",
+        "patterns": [
+          "Apa yang dimaksud dengan asas perlindungan dan asas nasional pasif dalam KUHP?",
+          "Jelaskan konsep asas perlindungan dan asas nasional pasif dalam KUHP.",
+          "Bagaimana definisi asas perlindungan dan asas nasional pasif menurut KUHP?",
+          "Apa yang dimaksud dengan prinsip perlindungan dan prinsip nasional pasif dalam konteks KUHP?",
+          "Apa itu asas perlindungan?",
+          "Apa itu asas nasional pasif?"
+        ],
+        "responses": [
+          "Asas perlindungan atau asas nasional pasif merupakan asas yang menekankan pada perlindungan unsur nasional terhadap siapa pun dan dimana pun. Prinsip ini dijelaskan dalam Pasal 5 KHUHP 2023 yang menyatakan bahwa hukum pidana berlaku bagi siapapun di luar wilayah NKRI yang melakukan tindak pidana yang berhubungan dengan kepentingan NKRI, seperti keamanan negara, martabat Presiden, Wakil Presiden, pejabat Indonesia, atau kredit yang dikeluarkan oleh perbankan Indonesia, prekonomian, perdagangan, perbankan Indonesia, keselamatan pelayaran dan penerbangan, keselamatan bangunan, peralatan, dan aset nasional atau negara Indonesia, serta keselamatan sistem komunikasi elektronik."
+        ]
+      },
+      {
+        "tag": "8_asas_nasional_aktif",
+        "patterns": [
+          "Bagaimana asas nasional aktif diterapkan bagi warga negara Indonesia yang melakukan tindak pidana di luar negeri?", 
+          "Bagaimana penerapan asas nasional aktif terhadap warga negara Indonesia yang melakukan tindak pidana di luar negeri?",
+          "Jelaskan bagaimana prinsip asas nasional aktif berlaku bagi warga negara Indonesia yang terlibat dalam tindak pidana di luar negeri.",
+          "Bagaimana konsep asas nasional aktif diterapkan terhadap warga negara Indonesia yang melakukan kejahatan di negara lain?",
+          "Kalo lagi di luar negeri lalu melakukan kejahatan gimana?",
+          "Gimana kalo lagi di luar negeri? KUHP berlaku ga?"
+        ],
+        
+        "responses": [
+          "Asas nasional aktif diterapkan di Indonesia sebagaimana dalam Pasal 8 UU 1/2023 yang menyatakan bahwa hukum pidana Indonesia berlaku bagi warga negara Indonesia yang melakuka tindak pidana di luar wilayah Indonesia, selama tindak pidana tersebut juga merupakan pelanggaran hukum di negara tempat kejadian pidana tersebut terjadi. Namun, terdapat pengecualian pemberlakuan untuk tindak pidana yang hanya diancam dengan pidana denda kategori III.\nWarga negara Indonesia yang melakukan tindak pidana di luar negeri tidak dapat dihukum mati jika hukum negara tempat kejadian tersebut tidak mengancam dengan hukuman mati."
+        ]
+      },
+      {
+        "tag": "9_definisi_tindak_pidana",
+        "patterns": [
+          "Apa definisi dari tindak pidana atau kejahatan pidana?",
+          "Definisi tindak pidana atau kejahatan pidana??",
+          "definisi pidana atau kejahatan pidana??",
+          "apa itu tindak pidana atau kejahatan pidana??",
+          "Bagaimana definisi tindak pidana atau kejahatan pidana??",
+          "Apakah pengertian dari tindak pidana atau kejahatan pidana??",
+          "Jelaskan apa yang dimaksud dengan tindak pidana atau kejahatan pidana?"
+        ],
+        "responses": [
+          "Istilah tindak pidana atau kejahatan pidana? berasal dari bahasa Belanda \"Strafbaar feit\" yang memiliki banyak istilah lain, yaitu delik yang jika disimpulkan kedua istilah tersebut memiliki arti yang sama dengan perbuatan yang dapat/boleh dihukum, peristiwa pidana, perbuatan pidana, dan tindak pidana.\n\nJadi, tindak pidana merupakan perbuatan yang dilakukan seseoran dengan melakukan suatu kejahatan atau pelanggaran pidana yang merugikan kepentingan orang lain atau merugikan kepentingan umum.",
+          "Tindak pidana atau kejahatan pidana merupakan perbuatan yang dilakukan seseoran dengan melakukan suatu kejahatan atau pelanggaran pidana yang merugikan kepentingan orang lain atau merugikan kepentingan umum."
+        ]
+      },
+      {
+        "tag": "10_pemufakatan_jahat",
+        "patterns": [
+          "Bagaimana permufakatan jahat diatur dalam hukum pidana KUHP?",
+          "Apa itu pemufaktan jahat?",
+          "Pemufakatan jahat? apa itu?",
+          "Pemufakatan jahat adalah",
+          "Bagaimana ketentuan mengenai permufakatan jahat dalam hukum pidana KUHP?",
+          "Jelaskan bagaimana hukum pidana KUHP mengatur tentang permufakatan jahat.",
+          "Apa yang diatur dalam hukum pidana KUHP tentang tindak pidana permufakatan jahat?",
+          "Peraturan tentang atau mengenai pemufakatan jahat"
+        ],
+        "responses": [
+          "Pemufakatan jahat diatur dalam Pasal 13 UU 1/2023 baru, pasal ini berisikan:\n(1) Permufakatan jahat terjadi jika 2 (dua) orang atau lebih bersepakat untuk melakukan Tindak Pidana.\n(2) Pemufakatan jahat melakukan Tindak Pidana dipidana jika ditentukan secara tegas dalam Undang-Undang.\n(3) Pidana untuk pemufakatan jahat melakukan tindak pidana paling banyak 1/3 (satu per tiga) dari maksimum ancaman pidana pokok untuk tindak pidana yang bersangkutan.\n(4) Permufakatan jahat melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup dipidana dengan pidana penjara paling lama 7 (tujuh) tahun.\n(5) Pidana tambahan untuk permufakatan jahat melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan."
+        ]
+      },
+      {
+        "tag": "11_persiapan_tindak_pidana",
+        "patterns": [
+          "Apa saja yang termasuk dalam persiapan melakukan tindak pidana?",
+          "Bagaimana KUHP mengartikan persiapan melakukan tindak pidana?",
+          "Jelaskan apa yang termasuk dalam persiapan tindak pidana menurut KUHP.",
+          "Apa yang diatur dalam KUHP tentang persiapan untuk melakukan tindak pidana?",
+          "Kalo tiba tiba nyopet termasuk persiapan tindak pidana ga?",
+          "Kalo tiba tiba maling termasuk persiapan tindak pidana ga?",
+          "Persiapan tindak pidana apa aja?",
+          "Peraturan tentang atau mengenai persiapan tindak pidana"
+        ],
+        "responses": [
+          "Yang termasuk dalam persiapan melakukan tindak pidana sebagaimana tercantum dalam pasal 15 ayat (1) UU 1/2023baru yang berbunyi \"Persiapan melakukan Tindak Pidana terjadi jika pelaku berusaha untuk mendapatkan atau menyiapkan sarana berupa alat, mengumpulkan informasi atau menyusun perencanaan tindakan, atau melakukan tindakan serupa yang dimaksudkan untuk menciptakan kondisi untuk dilakukannya suatu perbuatan yang secara langsung ditujukan bagi penyelesaian Tindak Pidana\"."
+        ]
+      },
+      {
+        "tag": "12_percobaan_tindak_pidana",
+        "patterns": [
+          "Bagaimana KUHP mengatur tentang percobaan melakukan tindak pidana?",
+          "Bagaimana ketentuan mengenai percobaan tindak pidana dalam KUHP?",
+          "Jelaskan bagaimana KUHP mengatur tentang percobaan melakukan tindak pidana.",
+          "Apa yang diatur dalam KUHP tentang tindak pidana percobaan?",
+          "Percobaan tindak pidana",
+          "Peraturan tentang atau mengenai percobaan tindak pidana"
+        ],
+        "responses": [
+          "Terkait percobaan melakukan tindak pidana diatur dalam Pasal 17 UU 1/2023 baru:\n(1) Percobaan melakukan Tindak Pidana terjadi jika niat pelaku telah nyata dari adanya permulaan pelaksanaan dari Tindak Pidana yang dituju, tetapi pelaksanaannya tidak selesai, tidak mencapai hasil, atau tidak menimbulkan akibat yang dilarang, bukan karena semata-mata atas kehendaknya sendiri.\n(2) Permulaan pelaksanaan sebagaimana dimaksud pada ayat (1) terjadi jika: \n      a. Perbuatan yang dilakukan itu diniatkan atau ditujukan untuk terjadinya Tindak Pidana; dan\n      b. Perbuatan yang dilakukan langsung berpotensi menimbulkan Tindak Pidana yang dituju.\n(3) Pidana untuk percobaan melakukan Tindak Pidana paling banyak 2/3 (dua per tiga) dari maksimum ancaman pidana pokok untuk Tindak Pidana yang bersangkutan.\n(4) Percobaan melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup, dipidana dengan pidana penjara paling lama 15 (lima belas) tahun.\n(5) Pidana tambahan untuk percobaan melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan"
+        ]
+      },
+      {
+        "tag": "13_pelaku_tindak_pidana",
+        "patterns": [
+          "Siapa saja yang dapat dipidana sebagai pelaku tindak pidana menurut Pasal 20 KUHP?",
+          "Bagaimana penjelasan tentang siapa yang dapat dipidana sebagai pelaku tindak pidana menurut Pasal 20 KUHP?",
+          "Jelaskan siapa yang dapat dituntut sebagai pelaku tindak pidana berdasarkan Pasal 20 KUHP.",
+          "Apa yang diatur dalam Pasal 20 KUHP mengenai siapa yang dapat dipidana sebagai pelaku tindak pidana?",
+          "Pelaku tindak pidana",
+          "Peraturan tentang atau mengenai orang yang dapat menjadi pelaku tindak pidana"
+        ],
+        "responses": [
+          "Dalam Pasal 20 UU 1/2023 baru menyebutkan mengenai setiap orang dipidana sebagai pelaku Tindak Pidana jika:\na. Melakukan sendiri Tindak Pidana;\nb. Melakukan Tindak Pidana dengan perantaraan alat atau menyuruh orang lain yang tidak dapat dipertanggungjawabkan;\nc. Turut serta melakukan Tindak Pidana; atau\nd. Menggerakkan orang lain supaya melakukan Tindak Pidana dengan cara memberi atau menjanjikan sesuatu, menyalahgunakan kekuasaan atau martabat, melakukan Kekerasan, menggunakan ancaman kekerasan, melakukan penyesatan, atau dengan memberi kesempatan, sarana, atau keterangan."
+        ]
+      },
+      {
+        "tag": "14_pembantuan_tindak_pidana",
+        "patterns": [
+          "Bagaimana KUHP mengatur tentang pembantuan dalam melakukan tindak pidana?",
+          "Jelaskan peraturan yang mengatur tentang pembantuan dalam tindak pidana menurut KUHP.",
+          "Apa yang diatur dalam KUHP mengenai keterlibatan dalam pembantuan tindak pidana?",
+          "Bagaimana aturan mengenai pembantuan dalam melakukan tindak pidana?",
+          "Pembantuan tindak pidana",
+          "Peraturan tentang atau mengenai pembantuan tindak pidana"
+        ],
+        "responses": [
+          "Pembantuan dalam melakukan tindak pidana diatur dalam Pasal 21 KUHP baru (UU 1/2023), yang berbunyi:\n(1) Setiap orang dipidana sebagai pembantu tindak pidana jika dengan sengaja:\n     a. memberi kesempatan, sarana, atau keterangan untuk melakukan tindak pidana; atau \n     b. memberi bantuan pada waktu tindak pidana dilakukan.\n(2) Ketentuan sebagaimana dimaksud pada ayat (1) tidak berlaku untuk pembantuan melakukan Tindak Pidana yang hanya diancam dengan pidana denda paling banyak kategori II.\n(3) Pidana untuk pembantuan melakukan Tindak Pidana paling banyak 213 (dua per tiga) dari maksimum ancarnan pidana pokok untuk Tindak Pidana yang bersangkutan.\n(4) Pembantuan melakukan Tindak Pidana yang diancam dengan pidana mati atau pidana penjara seumur hidup, dipidana dengan pidana penjara paling lama 15 (lima belas) tahun.\n(5) Pidana tambahan untuk pembantuan melakukan Tindak Pidana sama dengan pidana tambahan untuk Tindak Pidana yang bersangkutan.\n\nDalam pembantuan melakukan tindak pidana, element \"sengaja\" harus ada, sehingga orang yang secara kebetulan dengan tidak mengetahui telah memberikan kesempatan, daya upaya, atau keterangan untuk melakukan kejahatan itu tidak dihukum."
+        ]
+      },
+      {
+        "tag": "15_pengulangan_tindak_pidana",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur tentang pengulangan tindak pidana?",
+          "Bagaimana ketentuan mengenai pengulangan tindak pidana dalam KUHP?",
+          "Jelaskan bagaimana KUHP mengatur tentang pengulangan tindak pidana.",
+          "Apa yang diatur dalam KUHP tentang pengulangan tindak pidana?",
+          "Kalo kena pidana lagi gimana?",
+          "Tindak pidana yang berulang",
+          "Ngulangin tindak pidana",
+          "Peraturan tentang atau mengenai pengulangan tindak pidana atau kejahatan"
+        ],
+        "responses": [
+          "Pengulangan melakukan tindak pidana diatur dalam Pasal 23 UU 1/2023, yang menyatakan bahwa:\n(1) Pengulangan Tindak Pidana terjadi jika Setiap Orang:\n      a. Melakukan Tindak Pidana kembali dalam waktu 5 (lima) tahun setelah menjalani seluruh atau sebagian pidana pokok yang dijatuhkan atau pidana pokok yang dijatuhkan telah dihapuskan; atau\n      b. Pada waktu melakukan Tindak Pidana, kewajiban menjalani pidana pokok yang dijatuhkan terdahulu belum kedaluwarsa.\n(2) Tindak Pidana sebagaimana dimaksud pada ayat (1) mencakup Tindak Pidana yang diancam dengan pidana minimum khusus, pidana penjara 4 (empat) tahun atau lebih, atau pidana denda paling sedikit kategori III.\n(3) Ketentuan sebagaimana dimaksud pada ayat (1) juga berlaku untuk Tindak Pidana mengenai penganiayaan."
+        ]
+      },
+      {
+        "tag": "16_jenis_sanksi_kuhp",
+        "patterns": [
+          "Apa saja jenis sanksi pidana yang diatur dalam KUHP?",
+          "Jelaskan jenis-jenis sanksi pidana yang ada dalam KUHP.",
+          "Bagaimana KUHP mengatur mengenai berbagai jenis sanksi pidana?",
+          "Apa saja bentuk hukuman yang diatur dalam KUHP?",
+          "kuhp ngatur sanksi apa aja sih",
+          "Jenis sanksi dalam hukum pidana kuhp",
+          "Jenis hukuman untuk kejahatan tindak pidana dalam hukum pidana kuhp",
+          "Macam-macam hukuman untuk kejahatan tindak pidana dalam hukum pidana kuhp"
+        ],
+        "responses": [
+          "Jenis sanksi pidana diatur dalam Pasal 64, Pasal 65 ayat (1), Pasal 66 ayat (1), dan Pasal 67 UU 1/2023.\n\nPasal 64:\nPidana terdiri atas:\na. Pidana pokok;\nb. Pidana tambahan; dan\nc. Pidana yang bersifat khusus untuk Tindak Pidana tertentu yang ditentukan dalam Undang-Undang.\n\nPasal 65:\n(1) Pidana pokok sebagaimana dimaksud dalam Pasal 64 huruf a terdiri atas:\n      a. Pidana penjara;\n      b. Pidana tutupan;\n      c. Pidana pengawasan;\n      d. Pidana denda; dan\n      e. Pidana kerja sosial.\n\nPasal 66:\n(1) Pidana tambahan sebagaimana dimaksud dalam Pasal 64 huruf b terdiri atas:\n      a. Pencabutan hak tertentu;\n      b. Perampasan Barang tertentu dan/ atau tagihan;\n      c. Pengumuman putusan hakim;\n      d. Pembayaran ganti nrgi;\n      e. Pencabutan izin tertentu; dan\n      f.  Pemenuhan kewajiban adat setempat.\n\nPasal 67\nPidana yang bersifat khusus sebagaimana dimaksud dalam Pasal 64 huruf c merupakan pidana mati yang selalu diancamkan secara alternatif."
+        ]
+      },
+      {
+        "tag": "17_perubahan_peraturan_yang_menguntungkan_pelaku",
+        "patterns": [
+          "Bagaimana pembebasan pelaku tindak pidana diatur jika terjadi perubahan peraturan yang menguntungkan pelaku?",
+          "Bagaimana KUHP mengatur tentang pembebasan pelaku tindak pidana jika ada perubahan peraturan yang menguntungkan?",
+          "Jelaskan aturan pembebasan pelaku tindak pidana ketika terjadi perubahan peraturan yang menguntungkan pelaku menurut KUHP.",
+          "Apa yang diatur dalam KUHP mengenai pembebasan pelaku tindak pidana saat ada perubahan peraturan yang berpihak kepada pelaku?",
+          "Kalo ada perubahan peraturan yang menguntungkan pelaku, gimana?",
+          "Perubahan peraturan yang menguntungkan pelaku"
+        ],
+        "responses": [
+          "Jika terjadi perubahan peraturan, maka akan diterapkan asas retroaktif yang mengatur bahwa peraturan baru yang lebih menguntungkan pelaku tindak pidana harus diterapkan, sebagaimana diatur dalam Pasal 3 ayat (1) UU 1/2023.\n\nPasal 3:\n(1) Dalam hal terdapat perubahan peraturan perundang undangan sesudah perbuatan terjadi, diberlakukan peraturan perundang-undangan yang baru, kecuali ketentuan peraturan perundang-undangan yang lama menguntungkan bagi pelaku dan pembantu Tindak Pidana."
+        ]
+      },
+      {
+        "tag": "18_pasal-5_kuhp",
+        "patterns": [
+          "Apa yang diatur dalam Pasal 5 mengenai tindak pidana di luar wilayah Indonesia?",
+          "Bagaimana ketentuan Pasal 5 mengatur tentang tindak pidana di luar wilayah Indonesia?",
+          "Jelaskan isi Pasal 5 terkait dengan tindak pidana di luar wilayah Indonesia.",
+          "Apa yang diatur dalam Pasal 5 KUHP tentang kejahatan yang dilakukan di luar wilayah Indonesia?",
+          "Kalo tindak pidananya di luar negeri gimana?",
+          "Apa pasal yang mengatur soal tindak pidana di luar wilayah indonesia?",
+          "Apa pasal yang mengatur soal tindak pidana di luar negeri?",
+          "Pasal 5 hukum pidana kuhp",
+          "Kejahatan pidana yang dilakukan di luar negeri",
+          "Peraturan tentang atau mengenai kejahatan di luar negeri"
+        ],
+        "responses": [
+          "Dalam pasal 5 UU No. 1 Tahun 2023 dalam KUHP baru mengatur tentang, ketentuan pidana dalam Undang-Undang berlaku bagi setiap orang di luar wilayah Negara Kesatuan Republik Indonesia yang melakukan Tindak Pidana terhadap kepentingan Negara Kesatuan Republik Indonesia yang berhubungan dengan:\n- Keamanan negara atau proses kehidupan ketatanegaraan;\n- Martabat Presiden, Wakil Presiden, dan/atau Pejabat Indonesia di luar negeri;\n- Mata uang, segel, cap negara, meterai, atau surat berharga yang dikeluarkan oleh Pemerintah Indonesia, atau kartu kredit yang dikeluarkan oleh perbankan Indonesia;\n- Perekonomian, perdagangan, dan perbankan Indonesia;\n- Keselamatan atau keamanan pelayaran dan penerbangan;\n- Keselamatan atau keamanan bangunan, peralatan, dan aset nasional atau negara Indonesia;\n- keselamatan atau keamanan sistem komunikasi elektronik;\n- kepentingan nasional Indonesia sebagaimana ditetapkan dalam Undang-Undang; atau\n-  warga negara Indonesia berdasarkan perjanjian internasional dengan negara tempat terjadinya Tindak Pidana."
+        ]
+      },
+      {
+        "tag": "19_pasal-17_kuhp",
+        "patterns": [
+          "Bagaimana Pasal 17 mengatur tentang percobaan tindak pidana?",
+          "Bagaimana ketentuan Pasal 17 KUHP mengatur tentang percobaan tindak pidana?",
+          "Jelaskan isi Pasal 17 KUHP terkait dengan percobaan tindak pidana.",
+          "Apa yang diatur dalam Pasal 17 KUHP tentang percobaan melakukan tindak pidana?",
+          "Apa pasal yang mengatur soal tindak percobaan pidana",
+          "Pasal 17 hukum pidana kuhp",
+          "Percobaan tindak pidana",
+          "Peraturan tentang atau mengenai percobaan kejahatan"
+        ],
+        "responses": [
+          "Dalam pasal 17 ayat (1) UU 1/2023 baru tertulis bahwa: \nPercobaan melakukan Tindak Pidana terjadi jika niat pelaku telah nyata dari adanya permulaan pelaksanaan dari Tindak Pidana yang dituju, tetapi pelaksanaannya tidak selesai, tidak mencapai hasil, atau tidak menimbulkan akibat yang dilarang, bukan karena semata-mata atas kehendaknya sendiri."
+        ]
+      },
+      {
+        "tag": "20_kasus_pidana_umum",
+        "patterns": [
+          "Sebutkan kasus pidana yang termasuk ke dalam pidana umum",
+          "Apa saja kasus pidana yang masuk ke dalam pidana umum?",
+          "Jelaskan jenis-jenis kasus pidana yang termasuk ke dalam pidana umum.",
+          "Kasus pidana apa yang dianggap sebagai pidana umum dalam hukum?",
+          "Mencuri pidana umum atau bukan?",
+          "Kalo merampok pidana umum atau bukan?",
+          "Kalo nyopet masuknya pidana apa?"
+        ],
+        "responses": [
+          "Berikut merupakan beberapa kasus yang termasuk ke dalam tindak pidana umum:\n- Pelanggaran lalu lintas.\n- Sumpah palsu dan keterangan palsu.\n- Senjata api.\n- Kejahatan terhadap kesusilaan.\n- Penghinaan.\n- Penipuan.\n- Pemalsuan.\n- Pembunuhan.\n- Kejahatan terhadap keamanan negara.\n- Penggelapan.\n- Kealfaan mengakibatkan kematianluka.\n- Pemalsuan uang.\n- Penganiayaan.\n- Pemerasan dan pengancaman.\n- Pencurian.\n- Kehutanan.\n- Jinayat.\n- Kejahatan terhadap ketertiban umum.\n- Kejahatan terhadap asal usul perkawinan.\n- Perjudian.\n- Pemerasan dan pengancaman.\n- Kejahatan terhadap kemerdekaan orang lain.\n- Perusakan\n- Pra peradilan.\n- Penadahan"
+        ]
+      },
+      {
+        "tag": "21_terorisme_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur tentang tindak pidana terorisme?",
+          "Bagaimana pengaturan tindak pidana terorisme dalam KUHP?",
+          "Jelaskan bagaimana KUHP mengatur tentang tindak pidana terorisme.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana terorisme?",
+          "Tindakan terorisme",
+          "Peraturan tentang atau mengenai perbuatan teror atau yang meneror"
+        ],
+        "responses": [
+          "Dalam KUHP baru (UU no. 1 /2023), terorisme diatur dalam Pasal 600 hingga Pasal 602.\n\nPasal 600:\nSetiap Orang yang menggunakan Kekerasan atau Ancaman Kekerasan yang menimbulkan suasana teror atau rasa takut terhadap orang secara meluas, menimbulkan Korban yang bersifat massal dengan cara merampas kemerdekaan atau hilangnya nyawa dan harta benda orang lain, atau mengalibatkan kerusakan atau kehancuran terhadap objek vital yang strategis, lingkungan hidup, fasilitas publik, atau fasilitas internasional, dipidana dengan pidana penjara paling singkat 5 (lima) tahun dan paling lama 20 (dua puluh) tahun, pidana penjara seumur hidup, atau pidana mati.\n\nPasal 601:\nSetiap Orang yang menggunakan Kekerasan atau Ancaman Kekerasan bermaksud untuk menimbulkan suasana teror atau rasa takut terhadap orang secara meluas atau menimbulkan Korban yang bersifat massal dengan cara merampas kemerdekaan atau hilangnya nyawa atau harta benda orang lain, atau untuk menimbulkan kerusakan atau kehancuran terhadap objek vital yang strategis, lingkungan hidup, fasilitas publik, atau fasilitas internasional, dipidana dengan pidana penjara paling singkat 3 (tiga) tahun dan paling lama 20 (dua puluh) tahun atau pidana penjara seumur hidup.\n\nPasal 602\nSetiap Orang yang menyediakan, mengumpulkan, memberikan, atau meminjamkan dana, baik langsung maupun tidak langsung, dengan maksud digunakan seluruhnya atau sebagian untuk melakukan Tindak Pidana terorisme, organisasi teroris, atau teroris, dipidana karena Tindak Pidana pendanaan terorisme dengan pidana penjara paling lama 15 (lima belas) tahun dan pidana denda paling banyak kategori V."
+        ]
+      },
+      {
+        "tag": "22_tindak_pidana_terhadap_anak",
+        "patterns": [
+          "Bagaimana KUHP mengatur tentang tindak pidana terhadap anak?",
+          "Bagaimana ketentuan KUHP mengatur tindak pidana terhadap anak?",
+          "Jelaskan pengaturan KUHP terkait dengan tindak pidana yang melibatkan anak.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana terhadap anak?",
+          "Tindak pidana atau kejahatan yang dilakukan terhadap anak",
+          "Peraturan tentang atau mengenai tindak pidana terhadap anak"
+        ],
+        "responses": [
+          "Tindak pidana yang dilakukan terhadap anak diatur dalam KUHP baru (UU no. 1/2023) sebagai berikut:\n\nPasal 419 ayat (1) dan (2):\n(1) Setiap orang yang menghubungkan atau memudahkan orang lain berbuat cabul atau bersetubuh dengan anak, dipidana penjara paling lama 7 tahun.\n(2) Jika perbuatan tersebut dilakukan terhadap anak kandung, anak tiri, anak angkat, atau anak di bawah pengawasannya, pidana penjara paling lama 9 tahun.\n\nPasal 422 ayat (1) dan (2):\n(1) Setiap orang yang menggerakkan, membawa, menempatkan, atau menyerahkan anak kepada orang lain untuk melakukan percabulan, pelacuran, atau perbuatan melanggar kesusilaan lainnya, dipidana penjara paling lama 9 tahun.\n(2) Jika perbuatan tersebut dilakukan dengan menjanjikan anak memperoleh pekerjaan atau janji lainnya, pidana penjara paling lama 10 tahun.\n\nPasal 453:\nTindak pidana yang dilakukan dengan kekerasan atau ancaman kekerasan terhadap anak yang belum berumur 12 tahun dapat dikenakan pidana penjara lebih berat."
+        ]
+      },
+      {
+        "tag": "23_tindak_pidana_lingkungan_hidup",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur tentang tindak pidana lingkungan hidup?",
+          "Bagaimana ketentuan KUHP mengatur tindak pidana terkait lingkungan hidup?",
+          "Jelaskan pengaturan KUHP tentang tindak pidana yang melibatkan lingkungan hidup.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana terhadap lingkungan hidup?",
+          "Tindak pidana lingkungan hidup",
+          "Peraturan tentang atau mengenai kejahatan pada lingkungan hidup"
+        ],
+        "responses": [
+          "Tindak pidana mengenai lingkungan hidup diatur dalam KUHP baru (UU no. 1/2023) yang mengatur beberapa aspek berikut:\n\n1. Penggunaan Bioteknologi Modern yang Membahayakan\n     - Pasal 338 ayat (2): \nSetiap orang yang menerapkan bioteknologi modern untuk menghasilkan hewan atau produk hewan transgenik yang membahayakan kelestarian sumber daya hewan, kesehatan dan keselamatan masyarakat, dan kelestarian fungsi lingkungan hidup, dapat dikenakan pidana penjara paling lama 2 tahun atau pidana denda paling banyak kategori IV.\n\n2. Kecerobohan yang Membahayakan Lingkungan:\n     - Pasal 339:\nTindak pidana yang terkait dengan kecerobohan yang membahayakan umum termasuk tindakan yang dapat merusak lingkungan, seperti tidak menaruh tanda peringatan atau menerangi secukupnya pada lubang atau galian di jalan umum, dapat dikenakan pidana denda paling banyak kategori II.\n\n3. Gangguan Terhadap Ketentraman Lingkungan\n     - Pasal 265:\nSetiap orang yang mengganggu ketenteraman lingkungan dengan membuat hingar-bingar atau berisik pada malam hari dapat dikenakan pidana denda paling banyak kategori II."
+        ]
+      },
+      {
+        "tag": "24_ham_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini memastikan perlindungan hak asasi manusia dalam proses penegakan hukum pidana?",
+          "Bagaimana ketentuan KUHP memastikan perlindungan hak asasi manusia dalam penegakan hukum pidana?",
+          "Jelaskan bagaimana KUHP menjamin perlindungan hak asasi manusia dalam proses penegakan hukum pidana.",
+          "Apa yang diatur dalam KUHP untuk melindungi hak asasi manusia dalam penegakan hukum pidana?",
+          "Hak Asasi Manusia HAM",
+          "Bagaiman KUHP mengatur Hak Asasi Manusia atau HAM",
+          "Peraturan tentang atau mengenai perlindungan HAM"
+        ],
+        "responses": [
+          "Perlindungan Hak Asasi Manusia (HAM) diatur dan dilindungi melalui berbagai ketentuan peraturan. Berikut merupakan beberapa hal mengenai HAM yang diatur dalam KUHP baru (UU no. 1/2023):\n\n1. Tindak Pidana Berat Terhadap Hak Asasi Manusia\n     - Pasal 598 dan Padal 599:\nMengatur tentang genosida dan kejahatan terhadap kemanusiaan. Tindakan seperti pembunuhan, penganiayaan berat, pemindahan paksa, dan lainnya yang termasuk ke dalam kategori kejahatan berat terhadap hak asasi manusia dijatuhi sanksi berat, termasuk pidana mati, penjara seumur hidup, atau penjara paling lama 20 tahun.\n\n2. Pembedaan, Pengecualian Pembatasan, atau Pemilihan Berdasarkan Ras dan Etnis\n     - Pasal 244:\nMengatur bahwa setiap orang yang melakukan diskriminasi berdasarkan ras dan etnis yang mengurangi hak asasi manusia dan kebebasan dasar dipidana dengan penjara paling lama 1 tahun atau denda kategori III. Selain itu, Pasal 245 memberikan tambahan pidana 1/3 bagi pelaku yang melakukan tindak pidana berdasarkan diskriminasi ras dan etnis.\n\n3. Konvensi Internasional dan Perlindungan HAM:\nKUHP ini juga mengadopsi berbagai konvensi internasional terkait hak asasi manusia, seperti Konvensi Menentang Penyiksaan dan Perlakuan atau Penghukuman Lain yang Kejam, Tidak Manusiawi, atau Merendahkan Martabat Manusia. Hal ini menunjukkan komitmen KUHP untuk menyesuaikan dengan standar internasional dalam perlindungan hak asasi manusia.\n\n4. Kewenagan Khusus Lembaga Penegak Hukum:\nKUHP menegaskan bahwa lembaga penegak hukum seperti Komisi Nasional Hak Asasi Manusia (Komnas HAM) tetap memiliki kewenangan khusus dalam menangani tindak pidana berat terhadap hak asasi manusia. Ini bertujuan untuk memastikan adanya lembaga khusus yang fokus pada perlindungan dan penegakan hak asasi manusia​."
+        ]
+      },
+      {
+        "tag": "25_hak_tersangka_terdakwa_kuhap",
+        "patterns": [
+          "Bagaimana pengaturan mengenai hak-hak tersangka atau terdakwa dalam KUHAP?",
+          "Bagaimana KUHAP mengatur mengenai hak-hak tersangka atau terdakwa?",
+          "Jelaskan pengaturan hak-hak tersangka atau terdakwa menurut KUHAP.", 
+          "Apa yang diatur dalam KUHAP tentang hak-hak tersangka atau terdakwa?",
+          "Hak tersangka dan terdakwa",
+          "Peraturan tentang atau mengenai hak tersangka dan terdakwa"
+        ],
+        "responses": [
+          "Berdasarkan UU No. 8 tahun 1981 tentang KItab Undang-undang Hukum Acara Pidana (KUHAP), hak-hak tersangka dan terdakwa diatur dalam:\n\nPasal 50:\n(1) Tersangka berhak segera mendapat pemeriksaan oleh penyidik dan selanjutnya dapat diajukan kepada penuntut umum.\n(2) Tersangka berhak perkaranya segera dimajukan ke pengadilan oleh penuntut umum.\n(3) Terdakwa berhak segera diadili oleh pengadilan.\n\nPasal 51:\nUntuk mempersiapkan pembelaan :\n1. Tersangka berhak untuk diberitahukan dengan jelas dalam bahasa yang dimengerti olehnya tentang apa yang disangkakan kepadanya pada waktu pemeriksaan dimulai;\n2. Terdakwa berhak untuk diberitahukan dengan jelas dalam bahasa yang dimengerti olehnya tentang apa yang didakwakan kepadanya.\n\nPasal 52:\nDalam pemeriksaan pada tingkat penyidikan dan pengadilan, tersangka atau terdakwa berhak memberikan keterangan secara bebas kepada penyidik atau hakim.\n\nPasal 53:\n(1) Dalam pemeriksaan pada tingkat penyidikan dan pengadilan, tersangka atau terdakwa berhak untuk setiap waktu mendapat bantuan juru bahasa sebagaimana dimaksud dalam Pasal 177.\n(2) Dalam hal tersangka atau terdakwa bisu dan atau tuli diberlakukan ketentuan sebagaimana dimaksud dalam Pasal 178.\n\nPasal 54:\nGuna kepentingan pembelaan, tersangka atau terdakwa berhak mendapat bantuan hukum dari seorang atau lebih penasihat hukum selama dalam waktu dan pada setiap tingkat pemeriksaan, menurut tatacara yang ditentukan dalam undang-undang ini.\n\n\nPasal 55:\nUntuk mendapatkan penasihat hukum tersebut dalam Pasal 54, tersangka atau terdakwa berhak memilih sendiri penasihat hukumnya.\n\nPasal 56:\n(1) Dalam hal tersangka atau terdakwa disangka atau didakwa melakukan tindak pidana yang diancam dengan pidana mati atau ancaman pidana lima belas tahun atau lebih atau bagi mereka yang tidak mampu yang diancam dengan pidana lima tahun atau lebih yang tidak mempunyai penasihat hukum sendiri, pejabat yang bersangkutan pada semua tingkat pemeriksaan dalam proses peradilan wajib menunjuk penasihat hukum bagi mereka.\n(2) Setiap penasihat hukum yang ditunjuk untuk bertindak sebagaimana dimaksud dalam ayat (1), memberikan bantuannya dengan cuma-cuma.\n\nPasal 57:\n(1) Tersangka atau terdakwa yang dikenakan penahanan berhak menghubungi penasihat hukumnya sesuai dengan ketentuan undang-undang ini.\n(2) Tersangka atau terdakwa yang berkebangsaan asing yang dikenakan penahanan berhak menghubungi dan berbicara dengan perwakilan negaranya dalam menghadapi proses perkaranya.\n\nPasal 58:\nTersangka atau terdakwa yang dikenakan penahanan berhak menghubungi dan menerima kunjungan dokter pribadinya untuk kepentingan kesehatan baik yang ada hubungannya dengan proses perkara maupun tidak.\n\nPasal 59:\nTersangka atau terdakwa yang dikenakan penahanan berhak diberitahukan tentang penahanan atas dirinya oleh pejabat yang berwenang, pada semua tingkat pemeriksaan dalam proses peradilan, kepada keluarganya atau orang lain yang serumah dengan tersangka atau terdakwa ataupun orang lain yang bantuannya dibutuhkan oleh tersangka atau terdakwa untuk mendapatkan bantuan hukum atau jaminan bagi penangguhannya.\n\nPasal 60:\nTersangka atau terdakwa berhak menghubungi dan menerima kunjungan dari pihak yang mempunyai hubungan kekeluargaan atau lainnya dengan tersangka atau terdakwa guna mendapatkan jaminan bagi penangguhan penahanan ataupun untuk usaha mendapatkan bantuan hukum.\n\nPasal 61:\nTersangka atau terdakwa berhak secara langsung atau dengan perantaraan penasihat hukumnya menghubungi dan menerima kunjungan sanak keluarganya dalam hal yang tidak ada hubungannya dengan perkara tersangka atau terdakwa untuk kepentingan pekerjaan atau untuk kepentingan kekeluargaan.\n\nPasal 62:\n(1) Tersangka atau terdakwa berhak mengirim surat kepada penasihat hukumnya, dan menerima surat dari penasihat hukumnya dan sanak keluarga setiap kali yang diperlukan olehnya, untuk keperluan itu bagi tersangka atau terdakwa disediakan alat tulis menulis.\n(2) Surat-menyurat antara tersangka atau terdakwa dengan penasihat hukumnya atau sanak keluarganya tidak diperiksa oleh penyidik, penuntut umum, hakim atau pejabat rumah tahanan negara kecuali jika terdapat cukup alasan untuk diduga bahwa surat menyurat itu disalahgunakan.\n(3) Dalam hal surat untuk tersangka atau terdakwa itu ditilik atau diperiksa oleh penyidik, penuntut umum, hakim atau pejabat rumah tahanan negara, hal itu diberitahukan kepada tersangka atau terdakwa dan surat tersebut dikirim kembali kepada pengirimnya setelah dibubuhi cap yang berbunyi \"telah ditilik\".\n\nPasal 63:\nTersangka atau terdakwa berhak menghubungi dan menerima kunjungan dari rohaniwan.\n\nPasal 64:\nTerdakwa berhak untuk diadili di sidang pengadilan yang terbuka untuk umum.\n\nPasal 65:\nTersangka atau terdakwa berhak untuk mengusahakan dan mengajukan saksi dan atau seseorang yang memiliki keahlian khusus guna memberikan keterangan yang menguntungkan bagi dirinya.\n\nPasal 66:\nTersangka atau terdakwa tidak dibebani kewajiban pembuktian.\n\nPasal 67:\nTerdakwa atau penuntut umum berhak untuk minta banding terhadap putusan pengadilan tingkat pertama kecuali terhadap putusan bebas, lepas dari segala tuntutan hukum yang menyangkut masalah kurang tepatnya penerapan hukum dan putusan pengadilan dalam acara cepat.\n\nPasal 68:\nTersangka atau terdakwa berhak menuntut ganti kerugian dan rehabilitasi sebagaimana diatur dalam Pasal 95 dan selanjutnya."
+        ]
+      },
+      {
+        "tag": "26_prosedur_penyidikan_kuhap",
+        "patterns": [
+          "Bagaimana prosedur penyidikan dalam KUHAP ini diatur?",
+          "Bagaimana KUHAP mengatur mengenai prosedur penyidikan?",
+          "Jelaskan pengaturan prosedur penyidikan menurut KUHAP",
+          "Apa yang diatur dalam KUHAP tentang prosedur penyidikan?",
+          "Prosedur penyidikan",
+          "Peraturan tentang atau mengenai prosedur penyidikan"
+        ],
+        "responses": [
+          "Berikut merupakan prosedur penyidikan tindak pidana secara umum:\n\n1. Pemeriksaan Awal\n     - Penyidik melakukan pemeriksaan terhadap tersangka dan saksi untuk mendapatkan keterangan yang diperlukan.\n     - Penyidik juga dapat melakukan penggeledahan dan penyitaan barang bukti jika diperlukan.\n\n2. Penahanan\n     - Penyidik dapat menahan tersangka jika terdapat cukup bukti yang kuat.\n     - Penahanan dapat dilakukan dalam bentuk penahanan rumah, penahanan kota, atau penahanan dalam rumah tahanan negara (Rutan).\n\n3. Pemberitahuan Kepada Penuntut Umum\n     - Setelah selesai melakukan penyidikan, penyidik wajib menyampaikan pemberitahuan kepada penuntut umum mengenai hasil penyidikan.\n\n4. Penyerahan Berkas Perkara\n     - Penyidik menyerahkan berkas perkara kepada penuntut umum dalam bentuk berkas perkara tahap pertama (P-18).\n     - Penuntut umum meneliti berkas perkara dan memberikan petunjuk kepada penyidik jika terdapat kekurangan (P-19).\n     - Penyidik melengkapi berkas perkara sesuai petunjuk dan menyerahkan kembali kepada penuntut umum (P-21).\n\n5. Penerbitan Surat Dakwaan\n     - Setelah berkas perkara dinyatakan lengkap, penuntut umum menyusun surat dakwaan dan mengajukan perkara ke pengadilan untuk disidangkan.\n\n6. Sidang Pengadilan\n     - Perkara dilanjutkan ke proses persidangan di pengadilan untuk diadili oleh hakim."
+        ]
+      },
+      {
+        "tag": "27_penuntutan_tindak_pidana",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur proses penuntutan terhadap tindak pidana?",
+          "Bagaimana prosedur penuntutan diatur dalam KUHP terkait tindak pidana?",
+          "Jelaskan bagaimana KUHP mengatur proses penuntutan terhadap tindak pidana.",
+          "Apa yang diatur dalam KUHP mengenai tahapan penuntutan terhadap pelaku tindak pidana?",
+          "Bagaimana mekanisme penuntutan terhadap tindak pidana diatur menurut KUHP?",
+          "Bagaimana KUHP mengatur langkah-langkah penuntutan terhadap pelaku kejahatan?",
+          "Tahapan menuntut pelaku kejahatan"
+        ],
+        "responses": [
+          "Tahapan Penuntutan\n1. Penerimaan Berkas Perkara: Penuntut umum menerima berkas perkara dari penyidik.\n2. Penyusunan Dakwaan: Penuntut umum menyusun surat dakwaan berdasarkan bukti-bukti yang ada.\n3. Pelimpahan Perkara ke Pengadilan: Penuntut umum melimpahkan perkara ke pengadilan negeri yang berwenang beserta surat dakwaan.\n4. Persidangan di Pengadilan: Dilakukan pemeriksaan terhadap terdakwa, saksi-saksi, dan barang bukti.\n5. Tuntutan (Requisitoir): Penuntut umum menyampaikan tuntutan pidana terhadap terdakwa.\n6. Pembelaan (Pledoi): Terdakwa dan/atau kuasa hukumnya memberikan pembelaan.\n7. Replik dan Duplik: Penuntut umum memberikan tanggapan terhadap pembelaan terdakwa (replik), dan terdakwa/kuasa hukumnya memberikan tanggapan kembali (duplik).\n8. Putusan Hakim: Hakim membacakan putusan yang berisi pertimbangan hukum, fakta yang terbukti, serta sanksi atau hukuman yang dijatuhkan kepada terdakwa jika dinyatakan bersalah.\n9. Upaya Hukum: Terdakwa atau penuntut umum dapat mengajukan banding, kasasi, atau peninjauan kembali jika tidak puas dengan putusan pengadilan."
+        ]
+      },
+      {
+        "tag": "28_aturan_persidangan_kuhap",
+        "patterns": [
+          "Apa saja aturan mengenai persidangan dalam KUHAP?",
+          "Bagaimana KUHAP mengatur mengenai persidangan?",
+          "Jelaskan peraturan-peraturan dalam KUHAP tentang persidangan.",
+          "Apa yang diatur dalam KUHAP mengenai prosedur persidangan?",
+          "Bagaimana prosedur persidangan diatur dalam KUHAP?",
+          "Sebutkan beberapa aturan terkait persidangan menurut KUHAP",
+          "Aturan sidang"
+        ],
+        "responses": [
+          "Berikut aturan mengenai persidangan dalam Kitab Undang-undang Hukum Acara Pidana:\n1. Hak Terdakwa:\n     - Pasal 54: Mengatur hak terdakwa untuk mendapatkan bantuan hukum.\n     - Pasal 152: Mengatur hak terdakwa untuk hadir dalam persidangan.\n\n2. Prosedur Persidangan:\n     - Pasal 153: Mengatur tentang persidangan terbuka untuk umum.\n     - Pasal 154: Mengatur tentang persidangan tertutup untuk kasus tertentu.\n     - Pasal 160: Mengatur tentang pemeriksaan saksi dan barang bukti di persidangan.\n\n3. Hakim dan Putusan:\n     - Pasal 182: Mengatur bahwa putusan harus didasarkan pada fakta yang terungkap di persidangan.\n     - Pasal 233: Mengatur hak terdakwa untuk mengajukan banding.\n\n4. Pembelaan dan Pledoi:\n     - Pasal 182 ayat (6): Mengatur bahwa terdakwa atau penasihat hukumnya berhak menyampaikan pembelaan setelah tuntutan jaksa.\n\n5. Penegakan Hak Asasi Manusia (HAM):\n     - Pasal 18: Melarang penyiksaan atau perlakuan yang merendahkan martabat manusia selama proses hukum.\n     - Pasal 50: Mengatur hak atas peradilan yang cepat dan adil.\n\n6. Penyelesaian alternatif:\n     - Pasal 100: Mengatur tentang penggabungan perkara perdata dan pidana.\n     - Pasal 108: Mengatur tentang program diversi untuk tindak pidana ringan atau yang melibatkan anak.\n\n7. Penggunaan Teknologi:\n     - Pasal 154 ayat (2): Mengatur tentang kemungkinan persidangan dilakukan secara elektronik dalam kondisi tertentu.\n\n8. Keamanan dan Ketertiban Persidangan:\n     - Pasal 153 ayat (3): Mengatur pengamanan dan ketertiban dalam persidangan.\n     - Pasal 153 ayat (4): Mengatur sanksi bagi pelanggaran ketertiban dalam persidangan."
+        ]
+      },
+      {
+        "tag": "29__pembuktian_persidangan_kuhap",
+        "patterns": [
+          "Bagaimana aturan mengenai pembuktian dalam persidangan pidana menurut KUHAP ini?",
+          "Bagaimana KUHAP mengatur mengenai pembuktian dalam persidangan pidana?",
+          "Jelaskan ketentuan KUHAP tentang pembuktian dalam persidangan pidana.",
+          "Apa yang diatur dalam KUHAP mengenai proses pembuktian dalam persidangan pidana?",
+          "Bagaimana prosedur pembuktian diatur dalam KUHP dalam konteks persidangan pidana?",
+          "Sebutkan beberapa aturan terkait pembuktian dalam persidangan pidana menurut KUHAP",
+          "Pembuktian dalam persidangan",
+          "Peraturan tentang atau mengenai memberikan bukti dalam persidangan"
+        ],
+        "responses": [
+          "Pembuktian menurut Kitab Undang-undang Hukum Acara Pidana berdasarkan pasal 183 KUHAP, sistem yang dianut oleh KUHAP adalah sistem pembuktian  menurut Undang-Undang secara  negatif  dimana  dalam  isinya berbunyi: \n\"Hakim tidak boleh menjatuhkan pidana kepada seseorang kecuali apabila dengan sekurang-kurangnya  dua alat bukti yang sah ia memperoleh keyakinan bahwa suatu tindakan pidana benar-benar terjadi dan bahwa terdakwalah yang bersalah melakukannya.\" \nDengan kata lain untuk menjatuhkan pidana kepada terdakwa harus memenuhi hal-hal berikut:\n- Dua alat bukti sah.\n- Ada keyakinan hakim akan terjadinya tindak pidana dan terdakwalah yang bersalah melakukannya."
+        ]
+      },
+      {
+        "tag": "30_penjatuhan_hukuman_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan mengenai penjatuhan hukuman dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai penjatuhan hukuman?",
+          "Jelaskan peraturan-peraturan dalam KUHP tentang penjatuhan hukuman.",
+          "Apa yang diatur dalam KUHP mengenai prosedur penjatuhan hukuman?",
+          "Bagaimana prosedur penjatuhan hukuman diatur dalam KUHP?",
+          "Sebutkan beberapa aturan terkait penjatuhan hukuman menurut KUHP.",
+          "Peraturan tentang atau mengenai penjatuhan atau penetapan hukuman pidana"
+        ],
+        "responses": [
+          "Ketentuan Pasal 64 UU No. 1 Tahun 2023 menerangkan bahwa sanksi pidana dalam KUHP baru atau UU 1/2023 terdiri atas pidana pokok, pidana tambahan, dan pidana yang bersifat khusus untuk tindak pidana tertentu yang ditentukan dalam undang-undang.\n\nMasih terkait pidana pokok, ketentuan Pasal 65 ayat (2) UU 1/2023 menerangkan bahwa urutan pidana tersebut menentukan berat atau ringannya pidana. Kemudian, terkait penjatuhannya, bagian penjelasan Pasal 65 ayat (2) UU 1/2023 menerangkan bahwa hakim mempunyai pilihan untuk menjatuhkan salah satu pidana yang bersifat alternatif dengan orientasi tujuan pemidanaan."
+        ]
+      },
+      {
+        "tag": "31_prosedur_pidana_mati_kuhap",
+        "patterns": [
+          "Bagaimana prosedur eksekusi hukuman pidana mati diatur dalam KUHAP?",
+          "Bagaimana KUHAP mengatur prosedur eksekusi hukuman pidana mati?",
+          "Jelaskan peraturan dalam KUHAP tentang eksekusi hukuman pidana mati.",
+          "Apa yang diatur dalam KUHAP mengenai prosedur eksekusi hukuman mati?",
+          "Bagaimana prosedur eksekusi hukuman mati diatur dalam KUHAP?",
+          "Sebutkan beberapa aturan terkait eksekusi hukuman pidana mati menurut KUHAP",
+          "Bagaimana KUHAP mengatur mekanisme eksekusi hukuman mati?",
+          "Peraturan tentang atau mengenai prosedur pidana mati"
+        ],
+        "responses": [
+          "Berikut merupakan prosedur eksekusi hukuman pidana mati:\n\n1. Permohonan Eksekusi;\n\n2. Telaah terhadap permohonan eksekusi dilaksanakan oleh Panitera Muda atau Tim yang ditugaskan oleh Ketua Pengadilan Negeri dan dituangkan dalam resume telaah eksekusi;\n\n3. Apabila hasil resume telaah eksekusi permohonan tersebut dapat dilaksanakan, maka dilakukan penghitungan panjar biaya eksekusi dan  pemohon eksekusi dipersilahkan untuk melakukan pembayaran;\n\n4. Ketua Pengadilan Negeri mengeluarkan penetapan peringatan eksekusi/Aanmaning setelah lebih dahulu ada permintaan eksekusi dari Pemohon Eksekusi (Penggugat/Pihak yang menang perkara), dengan mendasarkan pada Pasal 196 HIR atau Pasal 207 RBg. Penetapan peringatan eksekusi berisi perintah kepada Panitera/Juru sita/Juru sita Pengganti untuk memanggil pihak termohon eksekusi (Tergugat/Pihak yang kalah) untuk diperingatkan agar supaya memenuhi atau  menjalankan putusan.\n\n5. Apabila termohon eksekusi (Tergugat/Pihak yang kalah) tidak hadir tanpa alasan setelah dipanggil secara sah dan patut, maka proses eksekusi dapat langsung diperintahkan oleh Ketua Pengadilan Negeri tanpa sidang insidentil untuk memberi peringatan, kecuali Ketua Pengadilan menganggap perlu untuk dipanggil sekali lagi.\n\n6. Peringatan eksekusi dipimpin oleh Ketua Pengadilan Negeri harus dilakukan dalam pemeriksaan sidang insidentil, dibantu oleh Panitera, dengan dihadiri pihak termohon eksekusi (Tergugat/pihak yang kalah), serta apabila dipandang perlu dapat menghadirkan pemohon eksekusi (penggugat/pihak yang menang perkara).\n\n7. Peringatan eksekusi dalam sidang insidentil tersebut dicatat dalam Berita Acara yang ditandatangani oleh Ketua Pengadilan Negeri dan Panitera.\n\n8. Dalam peringatan eksekusi tersebut Ketua Pengadilan Negeri memperingatkan termohon eksekusi (tergugat/pihak yang kalah) agar memenuhi atau melaksanakan isi putusan paling lama 8 (delapan) hari terhitung sejak diberikan peringatan.\n\n9. Apabila tenggang waktu terlampaui, dan tidak ada keterangan atau pernyataan dari pihak yang kalah tentang pemenuhan putusan, maka sejak saat itu pemohon dapat memohon kepada Ketua Pengadilan Negeri untuk\nmenindak lanjuti permohonan eksekusi tanpa harus mengajukan permohonan ulang dari pihak yang menang (Pasal 197 ayat 1 HIR/Pasal 208 ayat 1 RBg).\n\n10. Apabila perkara sudah dilakukan sita jaminan (conservatoir beslaag), maka tidak perlu diperintahkan lagi sita eksekusi (executorial beslaag). Dan apabila dalam perkara tersebut tidak dilakukan sita jaminan sebelumnya, maka Ketua Pengadilan Negeri dapat mengeluarkan penetapan sita eksekusi. Dalam hal eksekusi pengosongan tidak selalu diletakkan sita eksekusi, dapat langsung dilaksanakan pengosongan tanpa penyitaan.\n\n11. Dalam hal melaksanakan putusan yang memerintahkan untuk melakukan pengosongan (eksekusi riil), maka hari dan tanggal pelaksanaan pengosongan ditetapkan oleh Ketua Pengadilan Negeri, setelah dilakukan rapat koordinasi dengan aparat keamanan.\n\n12. Apabila termohon eksekusi merupakan unsur TNI (yang masih aktif atau yang telah purnawirawan), maka harus melibatkan pengamanan Polisi Militer (PM).\n\n13. Sebelum melakukan eksekusi pengosongan, terlebih dahulu dilakukan peninjauan lokasi tanah atau bangunan yang akan dikosongkan dengan melakukan pencocokan (konstatering) guna memastikan batas-batas dan\nluas tanah yang bersangkutan sesuai dengan penetapan sita atau yang tertuang dalam amar putusan dengan dihadiri oleh panitera, jurusita/jurusita pengganti, pihak berkepentingan, aparat setempat dan jika diperlukan\nmenghadirkan petugas Badan Pertanahan Nasional, serta dituangkan dalam Berita Acara.\n\n14. Dalam hal melakukan pemberitahuan eksekusi pengosongan dilakukan melalui surat (Surat Pemberitahuan) kepada pihak termohon eksekusi, harus dengan memperhatikan jangka waktu yang memadai dari tanggal pemberitahuan sampai pelaksanaan pengosongan.\n\n15. Pengosongan dilaksanakan dan dilakukan dengan memperhatikan nilai kemanusiaan dan keadilan, dengan cara yang persuasif dan tidak arogan. Misalnya dengan memerintahkan pemohon eksekusi menyiapkan gudang penampungan guna menyimpan barang milik termohon eksekusi dalam waktu yang ditentukan, atas biaya pemohon.\n\n16. Setelah pengosongan selesai dilaksanakan, tanah atau bangunan yang dikosongkan, maka pada hari itu juga segera diserahkan kepada pemohon eksekusi atau kuasanya yang dituangkan berita acara penyerahan, dengan dihadiri oleh aparat."
+        ]
+      },
+      {
+        "tag": "32_tindak_pidana_oleh_anak",
+        "patterns": [
+          "Bagaimana ketentuan mengenai pemidanaan anak diatur dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai pemidanaan anak?",
+          "Jelaskan peraturan dalam KUHP tentang pemidanaan anak.",
+          "Apa yang diatur dalam KUHP mengenai prosedur pemidanaan terhadap anak?",
+          "Bagaimana prosedur pemidanaan anak diatur dalam KUHP?",
+          "Sebutkan beberapa aturan terkait pemidanaan anak menurut KUHP",
+          "Tindak pidana yang dilakukan anak",
+          "Anak sebagai pelaku tindak pidana",
+          "Tindak pidana yang dilakukan oleh anak",
+          "Peraturan tentang atau mengenai tindak pidana yang dilakukan oleh anak"
+        ],
+        "responses": [
+          "Pemidanaan tindak pidana yang dilakukan anak diatur dalam KUHP baru (UU no. 1/2023) sebagai berikut:\n\nPasal 112:\nAnak yang melakukan tindak pidana yang diancam dengan pidana penjara di bawah 7 (tujuh) tahun dan bukan merupakan pengulangan tindak pidana wajib diupayakan diversi.\n\nPasal 113:\n(1) Setiap anak dapat dikenai tindakan berupa:\n      a. Pengembalian kepada orang tua/wali.\n      b. Penyerahan kepada seseorang.\n      c. Perawatan di rumah sakit jiwa.\n      d. Perawatan di lembaga.\n      e. Kewajiban mengikuti pendidikan formal dan/atau pelatihan yang                     diadakan oleh pemerintah atau badan swasta.\n      f. Pencabutan Surat Izin Mengemudi (SIM).\n      g. Perbaikan akibat tindak pidana.\n(2) Tindakan tersebut pada huruf d, e, dan f dikenakan paling lama 1 (satu) tahun.\n(3) Anak di bawah umur 14 (empat belas) tahun tidak dapat dijatuhi pidana dan hanya dapat dikenai tindakan.\n\nPasal 114:\nPidana yang dapat dijatuhkan terhadap anak berupa pidana pokok dan pidana tambahan.\n\nPasal 115:\nPidana pokok terdiri atas:\na. Pidana peringatan.\nb. Pidana dengan syarat:\n     1. Pembinaan di luar lembaga.\n     2. Pelayanan masyarakat.\n     3. Pengawasan.\nc. Pelatihan kerja.\nd. Pembinaan dalam lembaga.\ne. Pidana penjara.\n\nPasal 116:\nPidana tambahan sebagaimana dimaksud dalam Pasal 114\n huruf b terdiri atas:\n a. Perampasan keuntungan yang diperoleh dari Tindak\n Pidana; atau\n b. Pemenuhan kewajiban adat.\n\nPasal 117:\nKetentuan mengenai diversi, tindakan, dan pidana dilaksanakan sesuai dengan ketentuan peraturan perundang-undangan."
+        ]
+      },
+      {
+        "tag": "33_alternatif_hukuman_penjara",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur mengenai alternatif hukuman selain penjara?",
+          "Bagaimana KUHP mengatur mengenai hukuman alternatif selain penjara?",
+          "Jelaskan peraturan dalam KUHP tentang pilihan hukuman selain penjara.",
+          "Apa yang diatur dalam KUHP mengenai alternatif hukuman bagi pelaku tindak pidana?",
+          "Bagaimana KUHP mengatur prosedur penerapan hukuman alternatif?",
+          "Sebutkan beberapa aturan terkait hukuman alternatif selain penjara menurut KUHP",
+          "Alternatif hukuman selain penjara"
+        ],
+        "responses": [
+          "Alternatif hukuman selain penjara dalam KUHP baru (UU no. 1/2023) diatur dalam penjelasan Pasal 65 ayat (1) bahwa KUHP baru tidak hanya berorientasi pada pidana penjara dan pidana denda semata. Adapun, pidana tutupan, pidana pengawasan, dan pidana kerja sosial merupakan pelaksanaan pidana alternatif."
+        ]
+      },
+      {
+        "tag": "34_hukuman_mati_kuhp",
+        "patterns": [
+          "Bagaimana hukuman mati diatur dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai hukuman mati?",
+          "Jelaskan peraturan dalam KUHP tentang hukuman mati",
+          "Apa yang diatur dalam KUHP mengenai hukuman mati?",
+          "Sebutkan beberapa aturan terkait hukuman mati menurut KUHP",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan hukuman mati"
+        ],
+        "responses": [
+          "Hukuman mati dalam KUHP baru atau UU no. 1 tahun 2023 diatur dalam Pasal 100, pada ayat (1) disebutkan bahwa, Hakim menjatukan pidana mati dengan masa percobaan selama 10 (sepuluh) tahun dengan memperhatikan:\na. Rasa penyesalan terdakwa dan ada harapan untuk memperbaiki diri.\nb. Peran terdakwa dalam tindak pidana.\n\nAkan tetapi, dalam pasal 100 ayat (6) juga menekankan bahwa, Jika terpidana selama masa percobaan sebagaimana dimaksud pada ayat (1) tidak menunjukkan sikap dan perbuatan yang terpuji serta tidak ada harapan untuk diperbaiki, pidana mati dapat dilaksanakan atas perintah Jaksa Agung."
+        ]
+      },
+      {
+        "tag": "35_hukuman_penjara_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan mengenai hukuman penjara diatur dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai hukuman penjara?",
+          "Jelaskan peraturan dalam KUHP tentang hukuman penjara.",
+          "Apa yang diatur dalam KUHP mengenai prosedur hukuman penjara?",
+          "Bagaimana KUHP mengatur berbagai jenis hukuman penjara?",
+          "Sebutkan beberapa aturan terkait hukuman penjara menurut KUHP",
+          "Hukuman penjara dalam kitab hukum pidana kuhp",
+          "Hukuman penjara kejahatan tindak pidana",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan hukuman penjara"
+        ],
+        "responses": [
+          "Hukuman penjara atau pidana penjara diatur dalam KUHP baru (UU no. 1/2023), tepatnya dijelaskan pada Pasal 68 hingga Pasal 70.\n\nPasal 68:\n(1) Pidana penjara dijatuhkan untuk seumur hidup atau untuk waktu tertentu.\n(2) Pidana penjara untuk waktu tertentu dijatuhkan paling lama 15 (lima belas) tahun berturut turut atau paling singkat 1 (satu) Hari, kecuali ditentukan minimum khusus. \n(3) Dalam hal terdapat pilihan antara pidana mati dan pidana penjara seumur hidup atau terdapat pemberatan pidana atas Tindak Pidana yang dijatuhi pidana penjara 15 (lima belas) tahun, pidana penjara untuk waktu tertentu dapat dijatuhkan untuk waktu 20 (dua puluh) tahun berturut turut.\n(4) Pidana penjara untuk waktu tertentu tidak boleh dijatuhkan lebih dari 20 (dua puluh) tahun.\n\nPasal 69:\n(1) Jika narapidana yang menjalani pidana penjara seumur hidup telah menjalani pidana penjara paling singkat 15 (lima belas) tahun, pidana penjara seumur hidup dapat diubah menjadi pidana penjara 20 (dua puluh) tahun dengan Keputusan Presiden setelah mendapatkan pertimbangan Mahkamah Agung.\n(2) Ketentuan mengenai tata cara perubahan pidana penjara seumur hidup menjadi pidana penjara 20 (dua puluh) tahun sebagaimana dimaksud pada ayat (1) diatur dengan Peraturan Pemerintah.\n\nPasal 70:\n(1) Dengan tetap mempertimbangkan ketentuan sebagaimana dimaksud dalam Pasal 51 sampai dengan Pasal 54, pidana penjara sedapat mungkin tidak dijatuhkan jika ditemukan keadaan:\n       a. Terdakwa adalah Anak;\n       b. Terdakwa berumur di atas 75 (tujuh puluh lima) tahun;\n       c. Terdakwa baru pertama kali melakukan Tindak Pidana;\n       d. Terugian dan penderitaan Korban tidak terlalu besar;\n       e. Terdakwa telah membayar ganti rugi kepada Korban;\n       f.  Terdakwa tidak menyadari bahwa Tindak Pidana yang dilakukan akan menimbulkan kerugian yang besar;\n       g. Tindak Pidana terjadi karena hasutan yang sangat kuat dari orang lain;\n       h. Korban Tindak Pidana mendorong atau menggerakkan terjadinya Tindak Pidana tersebut;\n       i.  Tindak Pidana tersebut merupakan akibat dari suatu keadaan yang tidak mungkin terulang lagi;\n       j.  Kepribadian dan perilaku terdakwa meyakinkan bahwa ia tidak akan melakukan Tindak Pidana yang lain;\n       k. Pidana penjara akan menimbulkan penderitaan yang besar bagi terdakwa atau keluarganya;\n       l. Pembinaan di luar lemb\"ga pemasyarakatan diperkirakan akan berhasil untuk diri terdakwa;\n       m. Penjatuhan pidana yang lebih ringan tidak akan mengurangi sifat berat Tindak Pidana yang dilakukan terdakwa;\n       n. Tindak Pidana terjadi di kalangan keluarga; dan/ atau\n       o. Tindak Pidana terjadi karena kealpaan.\n(2) Ketentuan sebagaimana dimaksud pada ayat (1) tidak berlaku bagi:\n       a. Tindak Pidana yang diancam dengan pidana penjara 5 (lima) tahun atau lebih;\n       b. Tindak Pidana yang diancam dengan pidana minimum khusus;\n       c. Tindak Pidana tertentu yang sangat membahayakan atau merugikan masyarakat; atau\n       d. Tindak Pidana yang merugikan keuangan atau perekonomian negara."
+        ]
+      },
+      {
+        "tag": "36_hukuman_denda_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan mengenai hukuman denda diatur dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai hukuman denda?",
+          "Jelaskan peraturan dalam KUHP tentang hukuman denda.",
+          "Apa yang diatur dalam KUHP mengenai prosedur hukuman denda?",
+          "Bagaimana KUHP menentukan besar dan cara pemberian hukuman denda?",
+          "Sebutkan beberapa aturan terkait hukuman denda menurut KUHP",
+          "Hukuman denda dalam kitab hukum pidana kuhp",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan denda dalam kasus hukum pidana"
+        ],
+        "responses": [
+          "Hukuman denda atau pidana denda diatur dalam KUHP baru (UU no. 1/2023), tepatnya dijelaskan pada Pasal 71 hingga Pasal 72.\n\nPasal 71:\n(1) Jika seseorang melakukan Tindak Pidana yang hanya diancam dengan pidana penjara di bawah 5 (lima) tahun, sedangkan hakim berpendapat tidak perlu menjatuhkan pidana penjara setelah mempertimbangkan tujuan pemidanaan dan pedoman pemidanaan sebagaimana dimaksud dalam Pasal 51 sampai dengan Pasal 54, orang tersebut dapat dijatuhi pidana denda.\n(2) Pidana denda sebagaimana dimaksud pada ayat (1) hanya dapat dijatuhkan jika:\n      a. Tanpa Korban;\n      b. Korban tidak mempermasalahkan; atau\n      c. Bukan pengulangan Tindak Pidana.\n(3) Pidana denda yang dapat dijatuhkan berdasarkan ketentuan sebagaimana dimaksud pada ayat (1) adalah pidana denda paling banyak kategori V dan pidana denda paling sedikit kategori III.\n(4) Ketentuan sebagaimana dimaksud pada ayat (2) huruf c tidak berlaku bagi orang yang pernah dijatuhi pidana penjara untuk Tindak Pidana yang dilakukan\n sebelum berumur 18 (delapan belas) tahun.\n\nPasal 72:\n(1) Narapidana yang telah menjalani paling singkat 2/3 (dua per tiga) dari pidana penjara yang dijatuhkan dengan ketentuan 213 ldua per tiga) tersebut tidak kurang dari 9 (sembilan) Bulan dapat diberi pembebasan bersyarat.\n(2) Narapidana yang menjalani beberapa pidana penjara berturut turut rlianggap jumlah pidananya sebagai 1 (satu) pidana.\n(3) Dalam memberikan pembebasan bersyarat sebagaimana dimaksud pada ayat (1), ditentukan masa percobaan dan syarat yang harus dipenuhi selama masa percobaan.\n(4) Masa percobaan sebagaimana dimaksud pada ayat (3) sama dengan sisa waktu pidana penjara yang belum dijalani ditambah dengan 1 (satu) tahun.\n(5) Narapidana sebagaimana dimaksud pada ayat (1) yang ditahan sebagai tersangka atau terdakwa dalam perkara lain tidak diperhitungkan waktu penahanannya sebagai masa percobaan."
+        ]
+      },
+      {
+        "tag": "37_kerja_sosial_kuhp",
+        "patterns": [
+          "Apa yang diatur mengenai kerja sosial sebagai bentuk hukuman dalam KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai kerja sosial sebagai hukuman?",
+          "Jelaskan peraturan dalam KUHP tentang kerja sosial sebagai bentuk hukuman.",
+          "Apa yang diatur dalam KUHP mengenai prosedur pemberian hukuman kerja sosial?",
+          "Bagaimana KUHP menentukan jenis-jenis kerja sosial sebagai hukuman?",
+          "Sebutkan beberapa aturan terkait hukuman kerja sosial menurut KUHP",
+          "Kerja sosial kitab hukum pidana kuhp",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan hukuman kerja sosial"
+        ],
+        "responses": [
+          "Hukum Pidana KUHP baru (UU NO. 1/2023) mengatur hukuman kerja sosial atau pidana kerja sosial dengan ketentuan tertentu melalui Pasal 85.\n\nPasal 85:\n(1) Pidana kerja sosial dapat dijatuhkan kepada terdakwa yang melakukan Tindak Pidana yang diancam dengan pidana penjara kurang dari 5 (lima) tahun dan hakim menjatuhkan pidana penjara paling lama 6 (enam) Bulan atau pidana denda paling banyak kategori II.\n(2) Dalam menjatuhkan pidana kerja sosial sebagaimana dimaksud pada ayat (1) hakim wajib mempertimbangkan:\n      a. Pengakuan terdakwa terhadap Tindak Pidana yang dilakukan;\n      b. Kemampuan kerja terdakwa;\n      c. Persetqjuan terdakwa sesudah dijelaskan mengenai tujuan dan segala hal yang berhubungan dengan pidana kerja sosial;\n      d. Riwayat sosial terdakwa;\n      e. Pelindungan keselamatan kerja terdalwa;\n      f.  Agama, kepercayaan, dan keyakinan politik terdakwa; dan\n      g. Kemampuan terdakwa membayar pidana denda.\n(3) Pelaksanaan pidana kerja sosial tidak boleh dikomersialkan.\n(4) Pidana kerja sosial dijatuhkan paling singkat 8 (delapan) jam dan paling lama 240 (d:ua ratus empat puluh) jam.\n(5) Pidana kerja sosial dilaksanakan paling lama 8 (delapan) jam dalam 1 (satu) Hari dan dapat diangsur dalam waktu paling lama 6 (enam) Bulan dengan memperhatikan kegiatan terpidana dalam menjalankan mata pencahariannya dan/ atau kegiatan lain yang bermanfaat.\n(6) Pelaksanaan pidana kerja sosial sebagaimana dimaksud pada ayat (5) dimuat dalam putusan pengadilan.\n(7) Putusan pengadilan sebagaimana dimaksud pada ayat (6) juga memuat perintah jika terpidana tanpa alasan yang sah tidak melaksanakan seluruh atau sebagian pidana kerja sosial, terpidana wajib:\n      a. Mengulangi seluruh atau sebagian pidana kerja sosial tersebut;\n      b. Menjalani seluruh atau sebagian pidana penjara yang diganti dengan pidana kerja sosial tersebut; atau\n      c. Membayar seluruh atau sebagran pidana denda yang diganti dengan pidana keda sosial atau menjalani pidana penjara sebagai pengganti pidana denda yang tidak dibayar.\n(8) Pengawasan terhadap pelaksanaan pidana kerja sosial dilakukan oleh jaksa dan pembimbingan dilakukan oleh pembimbing kemasyarakatan.\n(9) Putusan pengadilan mengenai pidana kerja sosial juga harus memuat:\n      a. lama pidana penjara atau besarnya denda yang sesungguhnya dijatuhkan oleh hakim;\n      b. lama pidana kerja sosial harus dijalani, dengan mencantumkan jumlah jam per Hari dan jangka waktu penyelesaian pidana kerja sosial; dan\n      c. sanksi jika terpidana tidak menjalani pidana kerja sosial yang dijatuhkan."
+        ]
+      },
+      {
+        "tag": "38_hukuman_pengawasan_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur hukuman pengawasan?",
+          "Bagaimana KUHP mengatur mengenai hukuman pengawasan?",
+          "Jelaskan peraturan dalam KUHP tentang hukuman pengawasan.",
+          "Apa yang diatur dalam KUHP mengenai prosedur pemberian hukuman pengawasan?",
+          "Bagaimana KUHP menentukan jenis-jenis hukuman pengawasan?",
+          "Sebutkan beberapa aturan terkait hukuman pengawasan menurut KUHP.",
+          "Hukuman pengawasan",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan hukuman pengawasan"
+        ],
+        "responses": [
+          "Hukum Pidana KUHP baru (UU NO. 1/2023) mengatur hukuman pengawasan atau pidana pengawasan dengan ketentuan tertentu melalui Pasal 75 hingga Pasal 77.\n\nPasal 75:\nPasal ini mengatur bahwa terdakwa yang melakukan tindak pidana dengan ancaman pidana penjara maksimal lima tahun dapat dijatuhi pidana pengawasan.\n\nPasal 76:\n(1) Pidana pengawasan dijatuhkan palinglama sama dengan pidana penjara yang diancamkan, namun tidak lebih dari tiga tahun.\n(2) Dalam putusan pidana pengawasan ditetapkan syarat umum, yaitu terpidana tidak akan melakukan tindak pidana lagi.\n(3) Selain syarat umum, dapat ditetapkan syarat khusus seperti mengganti kerugian yang timbul akibat tindak pidana atau melakukan/tidak melakukan sesuatu tanpa mengurangi kebebasan beragama, berkepercayaan, dan berpolitik.\n(4) Jika terpidana melanggar syarat umum, maka harus menjalani pidana penjara yang lamanya tidak lebih dari ancaman pidana penjara bagi tindak pidana itu.\n(5) Jika terpidana melanggar syarat khusus tanpa alasan yang sah, jaksa dapat mengusulkan kepada hakim agar terpidana menjalani pidana penjara atau memperpanjang masa pengawasan.\n\nPasal 77:\n(1) Jika terpidana selama menjalani pidana pengawasan melakukan tindak pidana dan dijatuhi pidana yang bukan pidana mati atau pidana penjara, maka pidana pengawasan tetap dilaksanakan.\n(2) Jika terpidana dijatuhi pidana penjara, pidana pengawasan ditunda dan dilaksanakan kembali setelah terpidana selesai menjalani pidana penjara."
+        ]
+      },
+      {
+        "tag": "39_rehabilitasi_narapidana_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur mengenai rehabilitasi bagi narapidana?",
+          "Bagaimana KUHP mengatur mengenai rehabilitasi bagi narapidana?",
+          "Jelaskan peraturan dalam KUHP tentang rehabilitasi bagi narapidana.",
+          "Apa yang diatur dalam KUHP mengenai prosedur rehabilitasi narapidana?",
+          "Bagaimana KUHP menentukan syarat-syarat dan mekanisme rehabilitasi narapidana?",
+          "Sebutkan beberapa aturan terkait rehabilitasi bagi narapidana menurut KUHP",
+          "Rehab narapidana",
+          "Rehabilitasi narapidana kencaduan alkohol",
+          "Rehabilitasi narapidana kecanduan narkotika",
+          "Rehabilitasi narapidana kecanduan psikotropika",
+          "Rehabilitasi narapidana kecanduan narkoba",
+          "Peraturan tentang atau mengenai rehabilitasi narapidana"
+        ],
+        "responses": [
+          "Rehabilitasi narapidana diatur dalam KUHP (UU no. 1/2023), sebagai berikut:\n\nPasal 103:\nMenjelaskan bahwa hakim dapat mengenakan tindakan rahabilitasi bersama-sama dengan pidana pokok yang dijatuhkan kepada terdakwa.\n\nPasal 105:\n- Dijelaskan bahwa rehabilitasi dikenakan kepada terdakwa yang kecanduan alkohol, narkotika, psikotropika, dan zat adiktif lainnya, serta kepada terdakwa yang menyandang disabilitas mental dan/atau disabilitas intelektual.\n   a. Rehabilitasi ini terdiri atas:\n   b. Rehabilitasi medis;\n   c. Rehabilitasi sosial; dan\n   d. Rehabilitasi psikososial​"
+        ]
+      },
+      {
+        "tag": "40_definisi_penyidikan",
+        "patterns": [
+          "Apa yang dimaksud dengan penyidikan?",
+          "Definisikan penyidikan menurut hukum pidana.",
+          "Jelaskan pengertian dari penyidikan dalam konteks hukum pidana.",
+          "Apa yang diartikan dengan penyidikan dalam KUHP?",
+          "Bagaimana konsep penyidikan dijelaskan dalam KUHP?",
+          "Apa yang dimaksud dengan istilah penyidikan dalam hukum pidana?",
+          "Penyidikan adalah"
+        ],
+        "responses": [
+          "Berdasarkan Pasal 1 butir 2 KUHAP (UU no. 8/1981), penyidikan merupakan serangkaian tindakan penyidik dalam hal dan menurut cara yang diatur dalam undang-undang ini untuk mencari serta mengumpulkan bukti yang dengan bukti itu membuat terang tentang tindak pidana yang terjadi dan guna menemukan tersangkanya. "
+        ]
+      },
+      {
+        "tag": "41_definisi_penyelidikan",
+        "patterns": [
+          "Apa yang dimaksud dengan penyelidikan?",
+          "Definisikan penyelidikan menurut hukum pidana.",
+          "Jelaskan pengertian dari penyelidikan dalam konteks hukum pidana.",
+          "Apa yang diartikan dengan penyelidikan dalam KUHP?",
+          "Bagaimana konsep penyelidikan dijelaskan dalam KUHP?",
+          "Apa yang dimaksud dengan istilah penyelidikan dalam hukum pidana?",
+          "Penyelidikan adalah"
+        ],
+        "responses": [
+          "Penyelidikan merupakan serangkaian tindakan penyelidik untuk mencari dan menemukan suatu peristiwa yang diduga sebagai tindak pidana guna menentukan dapat atau tidaknya dilakukan penyidikan menurut cara yang diatur dalam KUHAP (UU no. 8/1981)i. \n"
+        ]
+      },
+      {
+        "tag": "42_penghapusan_pidana_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan mengenai penghapusan pidana diatur dalam KUHP ini?",
+          "Apa saja kondisi yang dapat menyebabkan penghapusan pidana menurut KUHP ini?",
+          "Bagaimana KUHP mengatur mengenai penghapusan pidana?",
+          "Jelaskan peraturan dalam KUHP tentang penghapusan pidana.",
+          "Apa yang diatur dalam KUHP mengenai prosedur penghapusan pidana?",
+          "Apa saja syarat atau kondisi yang dapat menyebabkan penghapusan pidana menurut KUHP?",
+          "Sebutkan beberapa kondisi atau alasan yang dapat menyebabkan penghapusan pidana menurut KUHP.",
+          "Penghapusan hukuman pidana",
+          "Hukuman pidana dihapus",
+          "Peraturan tentang atau mengenai penghapusan pidana"
+        ],
+        "responses": [
+          "Dalam KUHAP ( UU no. 1/2023) terdapat beberapa kondisi yang dapat menentukan penghapusan pidana. Kondisi ini merliputi alasan pembenar, alasan pemaaf, serta ketentuan lain seperti daluwarsa penuntutan dan pemberian pengampunan. Berikut penjelasan selengkapnya:\n\n1. Alasan Pembenar\n    a. Keadaan Darurrat atau Daya Paksa (Overmatch)\n         - Pasal 42: Seseorang tidak dapat dipidana jika melakukan perbuatan karena adanya daya paksa atau keadaan darurat yang tidak dapat dihindari.\n     b. Pembelaan Terpaksa (Noodweer)\n          - Pasal 34: Seseorang tidak dapat dipidana jika melakukan perbuatan pidana untuk mempertahankan diri, kehormatan, atau harta benda dari serangan yang melawan hukum.\n     c. Pelaksanaan Perintah Jabatan yang Sah\n          - Pasal 44: Seseorang tidak dapat dipidana jika melakukan perbuatan pidana atas perintah jabatan yang sah dari penguasa yang berwenang.\n\n2. Alasan Pemaaf\n    a. Pembelaan Terpaksa yang Melampaui Batas (Noodweer Excess)\n         - Pasal 43: Seseorang yang melakukan pembelaan diri melampaui batas yang disebabkan oleh keguncangan jiwa yang hebat karena serangan atau ancaman serangan  seketika yang melawan hukum, tidak dipidana.\n     b. Gangguan JIwa atau Perkembangan Jiwa yang Terganggu\n          - Pasal 38:  Setiap Orang yang pada waktu melakukan Tindak Pidana menyandang disabilitas mental dan/atau disabilitas intelektual dapat dikurangi pidananya dan/atau dikenai tindakan.\n\n3. Kondisi Lain:\n     Pasal 140: \n     Kewenangan pelaksanaan pidana dinyatakan gugur, jika:\n     a. Terpidana meninggal dunia;\n     b. Kedaluwarsa;\n     c. Terpidana mendapat grasi atau amnesti; atau\n     d. Penyerahan untuk pelaksanaan pidana ke negara lain."
+        ]
+      },
+      {
+        "tag": "43_grasi_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur mengenai grasi?",
+          "Bagaimana KUHP mengatur tentang grasi?",
+          "Jelaskan peraturan dalam KUHP mengenai grasi.",
+          "Apa yang diatur dalam KUHP tentang prosedur pemberian grasi?",
+          "Bagaimana KUHP menentukan syarat-syarat dan mekanisme grasi?",
+          "Sebutkan beberapa aturan terkait grasi menurut KUHP.",
+          "Grasi kuhp",
+          "Peraturan tentang atau mengenai grasi"
+        ],
+        "responses": [
+          "Dalam KUHP (UU no. 1/2023), tepatnya pada Pasal 62 ayat (1)  hanya menjelaskan bahwa permohonan grasi tidak menunda pelaksanaan putusan pemidanaan bagi terpidana, kecuali dalam hal putusan pidana mati.\n\nPidana mati dapat dilaksanakan setelah permohonan grasi bagi terpidana ditolak presiden sebagaimana yang dijelaskan dalam Pasal 99 ayat (1)."
+        ]
+      },
+      {
+        "tag": "44_perbedaan_penyidikan_penyelidikan",
+        "patterns": [
+          "Apa perbedaan penyelidikan dan penyidikan?",
+          "Apa bedanya penyelidikan dan penyidikan dalam konteks hukum pidana?",
+          "Jelaskan perbedaan antara penyelidikan dan penyidikan menurut hukum pidana.",
+          "Apa yang membedakan penyelidikan dan penyidikan dalam KUHP?",
+          "Bagaimana konsep penyelidikan dibandingkan dengan penyidikan dalam hukum pidana?",
+          "Apa perbedaan istilah penyelidikan dan penyidikan dalam konteks hukum pidana?",
+          "Perbedaan penyelidikan dan penyidikan"
+        ],
+        "responses": [
+          "Penyelidikan berfungsi sebagai tahap awal untuk mengidentifikasi apakah ada indikasi tindak pidana, sedangkan penyidikan adalah tahap yang lebih mendalam dengan tujuan mengumpulkan bukti yang cukup untuk menuntut sesorang atas tindak pidana yang diduga dilakukan."
+        ]
+      },
+      {
+        "tag": "45_pidana_khusus_kuhp",
+        "patterns": [
+          "Bagaimana KUHP mengatur mengenai pidana khusus?",
+          "Bagaimana KUHP mengatur tentang pidana khusus?",
+          "Jelaskan peraturan dalam KUHP tentang pidana khusus.",
+          "Apa yang diatur dalam KUHP mengenai jenis-jenis pidana khusus?",
+          "Bagaimana KUHP mengatur prosedur pemberian pidana khusus?",
+          "Sebutkan beberapa aturan terkait pidana khusus menurut KUHP.",
+          "Tindak pidana khusus",
+          "Peraturan tentang atau mengenai pidana khusus"
+        ],
+        "responses": [
+          "Dalam KUHP (UU no. 1/2023) pidana khusus atau pidana yang bersifat khusus sebagaimana yang diatur dalam Pasal 67 merupakan pidana mati yang selalu diancamkan secara alternatif. \n\nPada bagian penjelasan Pasal 67 juga diatur bahwa tindak pidana yang bisa diancam dengan pidana yang bersifat khusus adalah tindak pidana yang sangat serius atau yang luar biasa, antara lain tindak pidana narkotika, terorisme, korupsi, dan tindak pidana berat terhadap hak asasi manusia.\n\nJika dibandingkan dengan jenis pidana yang lain, pidana mati merupakan jenis pidana yang paling berat. Oleh karena itu, harus selalu diancamkan secara alternatif dengan jenis pidana lainnya yakni pidana penjara seumur hidup atau pidana penjara paling lama 20 (dua puluh) tahun."
+        ]
+      },
+      {
+        "tag": "46_korupsi_kuhp",
+        "patterns": [
+          "Bagaimana ketentuan mengenai tindak pidana korupsi diatur dalam pidana khusus menurut KUHP?",
+          "Bagaimana KUHP mengatur tentang tindak pidana korupsi dalam pidana khusus?",
+          "Jelaskan peraturan dalam KUHP tentang pengaturan tindak pidana korupsi dalam pidana khusus.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana korupsi dalam pidana khusus?",
+          "Bagaimana KUHP mengatur prosedur terkait tindak pidana korupsi dalam pidana khusus?",
+          "Sebutkan beberapa aturan terkait tindak pidana korupsi dalam pidana khusus menurut KUHP.",
+          "Hukuman korupsi",
+          "Peraturan tentang atau mengenai korupsi"
+        ],
+        "responses": [
+          "Ketentuan tindak pidana korupsi (TIpikor) mencabut ketentuan Pasal 2 ayat (1), Pasal 3, Pasal 5, Pasal 11 dan Pasal 13 UU No.31 Tahun 1999 jo. UU No.20 Tahun 2001 tentang Pemberantasan Tindak Pidana Korupsi (“UU Tipikor”). Sehingga pengaturannya di KUHP baru menjadi ketentuan sebagaimana Pasal 603 sampai dengan Pasal 606 UU 1/2023.\n\nPasal 603:\nSetiap orang yang secara melawan hukum melakukan perbuatan memperkaya diri sendiri, orang lain, atau korporasi yang merugikan keuangan negara atau perekonomian negara. dengan pidana penjara seumur hidup atau pidana penjara paling singkat 2 (dua) tahun dan paling lama 20 (dua puluh) tahun dan Denda paling sedikit kategori II (Rp10.000.000,00) dan paling banyak kategori IV (Rp2.000.000.000,00).\n\nPasal 604:\nSetiap Orang yang dengan tujuan menguntungkan diri sendiri, orang lain, atau Korporasi menyalahgunakan kewenangan, kesempatan, atau sarana yang ada padanya karena jabatan atau kedudukan yang merugikan keuangan negara atau perekonomian negara, dipidana dengan pidana penjara seumur hidup atau pidana penjara paling singkat 2 (dua) tahun dan paling lama 20 (dua puluh) tahun dan pidana denda paling sedikit kategori II dan paling banyak kategori VI.\n\nPasal 605:\n(1) Dipidana dengan pidana penjara paling singkat 1 (satu) tahun dan paling lama 5 (lima) tahun dan pidana denda paling sedikit kategori III dan paling banyak kategori V, Setiap Orang yang:\n   a. memberi atau menjanjikan sesuatu kepada pegawai negeri atau penyelenggara negara dengan maksud supaya pegawai negeri atau penyelenggara negara tersebut berbuat atau tidak berbuat sesuatu dalam jabatannya, yang bertentangan dengan kewajibannya; atau\n   b. memberi sesuatu kepada pegawai negeri atau penyelenggara negara karena atau berhubungan dengan sesuatu yang bertentangan dengan kewajiban, yang dilakukan atau tidak dilakukan dalam jabatannya.\n(2) Pegawai negeri atau penyelenggara negara yang menerima pemberian atau janji sebagaimana dimaksud pada ayat (l), dipidana dengan pidana penjara paling singkat 1 (satu) tahun dan paling lama 6 (enam) tahun dan pidana denda paling sedikit kategori III dan paling banyak kategori V.\n\nPasal 606:\n(1) Setiap Orang yang memberikan hadiah atau janji kepada pegawai negeri atau penyelenggara negara dengan mengingat kekuasaan atau wewenang yang melekat pada jabatan atau kedudukannya, atau oleh pemberi hadiah atau janji dianggap melekat pada jabatan atau kedudukan tersebut, dipidana dengan pidana penjara paling lama 3 (tiga) tahun dan pidana denda paling banyak kategori IV.\n(2) Pegawai negeri atau penyelenggara negara yang menerima hadiah atau janji sebagaimana dimaksud pada ayat (1), dipidana dengan pidana penjara paling lama 4 (empat) tahun dan pidana denda paling banyak kategori IV."
+        ]
+      },
+      {
+        "tag": "47_narkotika_kuhp",
+        "patterns": [
+          "Bagaimana KUHP mengatur tindak pidana narkotika?",
+          "Bagaimana KUHP mengatur tentang tindak pidana narkotika?",
+          "Jelaskan peraturan dalam KUHP tentang pengaturan tindak pidana narkotika.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana narkotika?",
+          "Bagaimana KUHP mengatur prosedur terkait tindak pidana narkotika?",
+          "Sebutkan beberapa aturan terkait tindak pidana narkotika menurut KUHP.",
+          "Tindak pidana narkotika dalam kuhp",
+          "Hukuman narkotika",
+          "Peraturan tentang atau mengenai narkotika"
+        ],
+        "responses": [
+          "Tindak pidana narkotika diatur dari Pasal 609 sampai Pasal 611 dalam KUHP baru (UU no. 1/2023)."
+        ]
+      },
+      {
+        "tag": "48_perdagangan_orang_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur tindak pidana perdagangan orang?",
+          "Bagaimana KUHP mengatur tentang tindak pidana perdagangan orang?",
+          "Jelaskan peraturan dalam KUHP tentang tindak pidana perdagangan orang.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana perdagangan orang?",
+          "Bagaimana KUHP mengatur prosedur terkait tindak pidana perdagangan orang?",
+          "Sebutkan beberapa aturan terkait tindak pidana perdagangan orang menurut KUHP",
+          "Hukuman perdagangan orang",
+          "Peraturan tentang atau mengenai penetapan atau penjatuhan hukuman untuk kasus perdagangan orang"
+        ],
+        "responses": [
+          "Ketentuan mengenai larangan perdagangan orang pada dasarnya telah diatur di dalam Kitab Undang-Undang Hukum Pidana (KUHP) Pasal 455 UU 1/2023.\n\nPasal 455:\n(1)  Setiap Orang yang melakukan perekrutan, pengangkutan, penampungan, pengiriman, pemindahan, atau penerimaan seseorang dengan Ancaman Kekerasan, penggunaan Kekerasan, penculikan, penyekapan, pemalsuan, penipuan, penyalahgunaan kekuasaan atau posisi rentan, penjeratan utang, atau memberi bayaran atau manfaat walaupun memperoleh persetujuan dari orang yang memegang kendali atas orang lain, untuk tujuan mengeksploitasi orang tersebut di wilayah Negara Kesatuan Republik Indonesia, dipidana karena melakukan Tindak Pidana perdagangan orang, dengan pidana penjara paling singkat 3 (tiga) tahun dan paling lama 15 (lima belas) tahun dan pidana denda paling sedikit kategori IV dan paling banyak kategori VII.\n(2) Jika perbuatan sebagaimana dimalsud pada ayat (1) mengakibatkan orang tereksploitasi, pelaku dipidana dengan pidana yang sama."
+        ]
+      },
+      {
+        "tag": "49_pencucian_uang_kuhp",
+        "patterns": [
+          "Bagaimana KUHP ini mengatur tindak pidana pencucian uang?",
+          "Bagaimana KUHP mengatur tentang tindak pidana pencucian uang?",
+          "Jelaskan peraturan dalam KUHP tentang tindak pidana pencucian uang.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana pencucian uang?",
+          "Bagaimana KUHP mengatur prosedur terkait tindak pidana pencucian uang?",
+          "Sebutkan beberapa aturan terkait tindak pidana pencucian uang menurut KUHP",
+          "Tindak pidana pencucian uang",
+          "Peraturan tentang atau mengenai mengenai pencucian uang"
+        ],
+        "responses": [
+          "Kitab Undang-Undang Hukum Pidana (KUHP) Indonesia mengatur tindak pidana pencucian uang dalam beberapa pasal yang secara khusus menangani tindakan yang berhubungan dengan aktivitas pencucian uang. Namun, pengaturan yang lebih rinci mengenai tindak pidana pencucian uang terdapat dalam Undang-Undang Nomor 8 Tahun 2010 tentang Pencegahan dan Pemberantasan Tindak Pidana Pencucian Uang (UU TPPU).\n\nKUHP sendiri mungkin hanya memberikan landasan umum mengenai tindak pidana terkait kekayaan dan keuangan, namun UU TPPU memberikan kerangka hukum yang komprehensif untuk menangani, mencegah, dan memberantas pencucian uang di Indonesia."
+        ]
+      },
+      {
+        "tag": "50_kasus_pidana_khusus",
+        "patterns": [
+          "Sebutkan kasus pidana yang termasuk ke dalam pidana khusus",
+          "Apa saja contoh kasus pidana yang termasuk ke dalam pidana khusus?",
+          "Sebutkan beberapa jenis kasus pidana yang diatur dalam pidana khusus.",
+          "Bagaimana hukuman dalam kasus pidana khusus diatur dalam hukum Indonesia?",
+          "Apa yang membedakan kasus pidana khusus dengan kasus pidana umum?",
+          "Bagaimana penanganan hukum terhadap kasus pidana khusus berbeda dengan kasus pidana umum?",
+          "Jenis kasus pidana khusus",
+          "Kasus pidana khusus"
+        ],
+        "responses": [
+          "Berikut merupakan beberapa kasus tindak pidana yang termasuk ke dalam tindak pidana khusus:\n- KDRT (Kekerasan Dalam Rumah Tangga).\n- Kejahatan hak cipta.\n- Kehutanan.\n- Uang palsu.\n- Kejahatan merek.\n- Perbankan.\n- Perdagangan orang.\n- Praperadilan jinayat.\n- Penistaan.\n- Senjata api.\n- Mata uang.\n- Pornografi.\n- Pengelolaan wilayah pesisir.\n- Narkotika dan psikotropika.\n- Terorisme.\n- Lingkungan hidup.\n- Penempatan dan perlindungan TKI (Tenaga Kerja Indonesia).\n- Minyak dan Gas (Migas).\n- Konservasi SDA.\n- Farmasi.\n- Ilegal logging.\n- Pencurian uang.\n- Korupsi.\n- Penyiaran.\n- Ketenagalistrikan.\n- Perlindungan konsumen.\n- Pertambangan.\n- Cukai.\n- ITE.\n- Perpajakan.\n- Perkeretaapian.\n- Perumahan dan pemukiman.\n- Pelayaran.\n- HAM.\n- Anak.\n- Peradilan anak ABH.\n- Rahasia dagang.\n- Ketenagakerjaan.\n- Pemilu"
+        ]
+      },
+      {
+        "tag": "51_pidana_pencurian_kuhp",
+        "patterns": [
+          "Bagaimana KUHP mengatur tindak pidana pencurian?",
+          "Bagaimana bagaiman hukum untuk pencurian",
+          "Jelaskan peraturan dalam KUHP tentang pengaturan tindak pidana pencurian.",
+          "Apa yang diatur dalam KUHP mengenai tindak pidana pencurian?",
+          "Sebutkan beberapa aturan terkait tindak pidana pencurian menurut KUHP.",
+          "Tindak pidana pencurian dalam kuhp",
+          "Hukuman pencurian",
+          "Bagaimana hukuman untuk pencuri",
+          "Hukuman mencuri",
+          "Peraturan tentang atau mengenai pencurian"
+        ],
+        "responses": [
+          "Tindak pidana pencurian dalam KUHP baru UU No. 1 tahun 2023 diatur dalam Pasal 476 sampai 481, yaitu:\n1. Pencurian Biasa (Cubis):\n- Pasal 476: Mengatur mengenai pencurian biasa dengan pidana penjara paling lama 5 tahun atau pidana denda paling banyak kategori V.\n2. Pencurian Dengan Pemberatan (Curat):\n- Pasal 477: Mengatur mengenai pencurian dengan pemberatan dengan pidana penjara paling lama 7 tahun atau pidana denda paling banyak kategori V. Jika disertai cara-cara tertentu seperti kekerasan atau terjadi dalam situasi khusus (misalnya saat bencana alam), pidana bisa lebih berat.\n3. Pencurian Ringan (Curing):\n- Pasal 478: Mengatur jika tindak pidana sebagaimana dimaksud dalam Pasal 476 dan Pasal 477 ayat (1) huruf f dan huruf g dilakukan tidak dalam sebuah rumah atau pekarangan tertutup yang ada rumahnya, dan harga barang yang dicurinya tidak lebih dari Rp500.000,00 (lima ratus ribu rupiah), dipidana karena pencurian ringan, dengan pidana denda paling banyak kategori II.\n4. Pencurian Dengan Kekerasan (Curas):\n- Pasal 479: Mengatur mengenai pencurian dengan kekerasan, dengan pidana penjara paling lama 9 tahun. Jika dilakukan dalam kondisi tertentu (misalnya pada malam hari atau di rumah), pidana bisa mencapai 12 tahun, dan jika mengakibatkan kematian, pidana bisa sampai 15 tahun."
+        ]
+      },
+      {
+        "tag": "52_jenis_pencurian",
+        "patterns": [
+          "Jenis pencurian dalam hukum pidana kuhp",
+          "Jenis pencurian dibagi menjadi",
+          "Sebutkan jenis pencurian",
+          "Jelaskan jenis pencurian",
+          "Macam-macam pencurian"
+        ],
+        "responses": [
+          "Tindak pidana pencurian, khususnya dalam KUHP baru (UU No. 1/2023) terbagi menjadi 4 jenis, yaitu:\n- Pencurian biasa (CUBIS)\n- Pencurian ringan (CURING)\n- Pencurian dengan pemberatan (CURAT)\n- Pencurian dengan kekerasan (CURAS)"
+        ]
+      },
+      {
+        "tag": "53_pencurian_biasa_kuhp",
+        "patterns": [
+          "Pencurian biasa atau cubis adalah",
+          "Cubis adalah",
+          "Apa yang dimaksud dengan pencurian biasa atau cubis?",
+          "Apa itu pencurian biasa atau cubis?",
+          "Peraturan pencurian biasa atau cubis",
+          "Hukuman untuk pencurian yang termasuk jenis pencurian biasa atau cubis",
+          "Bagaimana kuhp mengatur pencurian biasa atau cubis?",
+          "Jelaskan mengenai pencurian biasa atau cubis",
+          "Peraturan tentang atau mengenai peencurian biasa atau cubis"
+        ],
+        "responses": [
+          "Pencurian biasa merupakan tindak pidana bagi setiap orang yang mengambil suatu barang milik orang lain dengan maksud untuk memiliki secara melawan hukum. Tindak pidan ini akan dihukum dengan pidana penjara paling lama 5 (lima) tahun atau denda paling banyak kategori V sebagaimana yang diatur dalam Pasal 476 KUHP baru (UU No. 1/2023)."
+        ]
+      },
+      {
+        "tag": "54_pencurian_pemberatan_kuhp",
+        "patterns": [
+          "Pencurian dengan pemberatan atau curat adalah",
+          "Curat adalah",
+          "Peraturan pencurian dengan pemberatan atau curat",
+          "Hukuman untuk pencurian dengan pemberatan yang termasuk jenis pencurian biasa atau curat",
+          "Bagaimana kuhp mengatur pencurian dengan pemberatan atau curat?",
+          "Jelaskan mengenai pencurian dengan pemberatan atau curat",
+          "Apa yang dimaksud dengan  pemberatan atau curat?",
+          "Apa itu pencurian dengan pemberatan atau curat?",
+          "Keadaan yang menyebabkan tindak pencurian menjadi pencurian dengan pemberatan atau curat?",
+          "Penyebab pencurian menjadi pencurian dengan pemberatan atau curat",
+          "Kriteri keadaan pencurian dengan pemberatan",
+          "Apa yang membuat pencurian masuk ke dalam pencurian dengan pemberatan?",
+          "Peraturan tentang atau mengenai pencurian dengan pemberatan atau curat"
+        ],
+        "responses": [
+          "Pencurian dengan pemberatan adalah pencurian yang disertai dengan keadaan atau cara tertentu yang membuat tindak pidana tersebut lebih berat dari pencurian biasa. Berikut keadaan atau cara yang membuat pencurian menjadi pencurian dengan pemberatan (curat) sebagaimana yang diatur dalam Pasal 477 KUHP baru (UU No. 1/2023):\n- Pencurian benda yang memiliki nilai khusus (benda suci, benda purbakala, ternak).\n- Pencurian yang terjadi pada situasi darurat atau bencana.\n- Pencurian yang dilakukan dengan cara merusak, membongkar, atau menggunakan kunci palsu.\n- Pencurian yang dilakukan secara bersama-sama.",
+          "Berikut keadaan atau cara yang membuat pencurian menjadi pencurian dengan pemberatan (curat) sebagaimana yang diatur dalam Pasal 477 KUHP baru (UU No. 1/2023):\n- Pencurian benda yang memiliki nilai khusus (benda suci, benda purbakala, ternak).\n- Pencurian yang terjadi pada situasi darurat atau bencana.\n- Pencurian yang dilakukan dengan cara merusak, membongkar, atau menggunakan kunci palsu.\n- Pencurian yang dilakukan secara bersama-sama."
+        ]
+      },
+      {
+        "tag": "55_pencurian_kekerasan_kuhp",
+        "patterns": [
+          "Pencurian dengan kekerasan atau curas adalah",
+          "Curas adalah",
+          "Peraturan pencurian dengan kekerasan atau curas",
+          "Hukuman untuk pencurian dengan kekerasan yang termasuk jenis pencurian biasa atau curas",
+          "Bagaimana kuhp mengatur pencurian dengan kekerasan atau curas?",
+          "Jelaskan mengenai pencurian dengan kekerasan atau curas",
+          "Apa yang dimaksud dengan kekerasan atau curas?",
+          "Apa itu pencurian dengan kekerasan atau curas?",
+          "Apa yang membuat pencurian masuk ke dalam golongan pencurian dengan kekerasan?",
+          "Jelaskan bagaimana bisa kasus pencurian digolongkan sebagai pencurian dengan kekerasan?",
+          "Peraturan tentang atau mengenai pencurian dengan kekerasan atau curas"
+        ],
+        "responses": [
+          "Pencurian dengan kekerasan sebagaimana yang diatur dalam Pasal 478 KUHP baru (UU No. 1/2023) merupakan tindak pidana pencurian yang dilakukan dengan kekerasan dimana pelaku melakukan pencurian yang disertai dengan kekerasan atau ancaman kekerasan untuk memudahkan pencurian, meloloskan diri saat tertangkap, atau memudahkan penguasaan barang."
+        ]
+      },
+      {
+        "tag": "56_pencurian_ringan_kuhp",
+        "patterns": [
+          "Pencurian ringan atau curing adalah",
+          "curing adalah",
+          "Peraturan pencurian ringan atau curing",
+          "Hukuman untuk pencurian ringan yang termasuk jenis pencurian biasa atau curing",
+          "Bagaimana kuhp mengatur pencurian ringan atau curing?",
+          "Jelaskan mengenai pencurian ringan atau curing",
+          "Apa yang dimaksud dengan pencurian ringan atau curing?",
+          "Apa itu pencurian ringan atau curing?",
+          "Peraturan tentang atau mengenai pencurian ringan atau curing"
+        ],
+        "responses": [
+          "Pencurian ringan adalah pencurian yang dilakukan di luar rumah atau pekarangan tertutup, dengan nilai barang yang dicuri tidak melebihi Rp. 500.000,- sebagaimana yang diatur dalam Pasal 478 KUHP baru (UU No. 1/2023)"
+        ]
+      }
+    ]
+  }
