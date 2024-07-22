@@ -1,4 +1,4 @@
-const colors = require('tailwindcss/colors');
+const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: [
@@ -6,18 +6,22 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{vue,js,ts}",
   ],
   theme: {
     extend: {
       colors: {
         indigo: colors.indigo,
-        customMaroon: '#541212',
-        customGreen: '#8B9A46',
-        customWhite: '#D9D9D9',
-        customNavy: '#072439',
-        customBeige: '#C59B6B',
+        customMaroon: "#541212",
+        customGreen: "#8B9A46",
+        customWhite: "#D9D9D9",
+        customNavy: "#072439",
+        customBeige: "#C59B6B",
       },
     },
   },
-  plugins: [],
-}
+  daisyui: {
+    themes: ["light"],
+  },
+  plugins: [require("daisyui")],
+};

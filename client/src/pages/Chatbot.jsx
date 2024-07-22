@@ -1,44 +1,53 @@
-import React, { useState } from 'react';
-import backgroundImage from '../assets/purple-hero.jpg';
-import axios from 'axios';
+import { useState } from "react";
+import backgroundImage from "../assets/purple-hero.jpg";
+import axios from "axios";
+import Footer from "./../components/Footer";
 
 const Chatbot = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
   const [remainingChats, setRemainingChats] = useState(5);
   const [usedChats, setUsedChats] = useState(0);
 
   // Chatbot profile information
   const botProfile = {
-    name: 'LegalGenie',
-    profilePicUrl: 'https://thumbs.dreamstime.com/b/cartoon-judge-gavel-illustration-holding-51384196.jpg',
+    name: "LegalGenie",
+    profilePicUrl:
+      "https://thumbs.dreamstime.com/b/cartoon-judge-gavel-illustration-holding-51384196.jpg",
   };
 
-  const handleSend = async() => {
+  const handleSend = async () => {
     if (message.trim()) {
-      const newMessage = { sender: 'user', text: message };
+      const newMessage = { sender: "user", text: message };
       const newChatHistory = [...chatHistory, newMessage];
       setChatHistory(newChatHistory);
-      setMessage(''); // Clear input field after sending message
+      setMessage(""); // Clear input field after sending message
 
-      try{
-        const response = await axios.post('http://localhost:5000/chat', { message }, {
-          headers: {
-            'Content-Type': 'application/json'
+      try {
+        const response = await axios.post(
+          "http://localhost:5000/chat",
+          { message },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true, // Set to true if you need to include credentials such as cookies
           },
-          withCredentials: true // Set to true if you need to include credentials such as cookies
-        });
+        );
 
         setChatHistory((prevMessages) => [
           ...prevMessages,
-          {sender: 'bot', text: response.data.response}
-        ])
-      } catch(error){
-        console.log('Response 404: ', error)
+          { sender: "bot", text: response.data.response },
+        ]);
+      } catch (error) {
+        console.log("Response 404: ", error);
         setChatHistory((prevMessages) => [
           ...prevMessages,
-          {sender: 'bot', text: 'Maaf, saya tidak bisa memproses pertanyaan mu.'}
-        ])
+          {
+            sender: "bot",
+            text: "Maaf, saya tidak bisa memproses pertanyaan mu.",
+          },
+        ]);
       }
     }
   };
@@ -52,38 +61,50 @@ const Chatbot = () => {
   };
 
   return (
-    <main className="flex-1 flex overflow-x-hidden bg-customNavy">
-      <div className="flex-1 flex">
-        <div className="mx-auto sm:px-6 lg:px-8 px-4 py-6 max-w-screen-xl w-full flex flex-col gap-6">
+    <main className="bg-customNavy flex flex-1 flex-col overflow-x-hidden">
+      <div className="flex flex-1">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
           {/* Title Section */}
           <div
-            className="w-full relative overflow-hidden rounded-lg p-4 bg-customBeige flex flex-col justify-end mt-24"
-            style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            className="bg-customBeige relative mt-24 flex w-full flex-col justify-end overflow-hidden rounded-lg p-4"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            <div className="m-8 z-20">
-              <h1 className="text-4xl font-bold text-white">Chatbot Interaktif</h1>
+            <div className="z-20 m-8">
+              <h1 className="text-4xl font-bold text-white">
+                Chatbot Interaktif
+              </h1>
               <div className="max-auto">
-                <p className="mt-8 text-gray-100">Chatbot kami siap membantu Anda dengan pertanyaan hukum yang Anda miliki. Mulai percakapan sekarang untuk mendapatkan bantuan langsung.</p>
+                <p className="mt-8 text-gray-100">
+                  Chatbot kami siap membantu Anda dengan pertanyaan hukum yang
+                  Anda miliki. Mulai percakapan sekarang untuk mendapatkan
+                  bantuan langsung.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Information Section */}
           <div>
-            <div className="w-full relative overflow-hidden rounded-lg p-4 bg-customBeige text-white dark:text-gray-900">
-              <div className="flex gap-3 items-start">
-                <span className="uil uil-info-circle flex-shrink-0 w-5 h-5"></span>
+            <div className="bg-customBeige relative w-full overflow-hidden rounded-lg p-4 text-white dark:text-gray-900">
+              <div className="flex items-start gap-3">
+                <span className="uil uil-info-circle h-5 w-5 flex-shrink-0"></span>
                 <div className="w-0 flex-1">
-                  <div className="text-sm opacity-90 mt-0 leading-5">Data diambil dari sumber terpercaya</div>
+                  <div className="mt-0 text-sm leading-5 opacity-90">
+                    Data diambil dari sumber terpercaya
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
             <div className="md:col-span-1">
-              <div className="p-4 bg-white shadow-md rounded-md">
-                <h3 className="text-lg font-bold text-left">Tanya Scoopie</h3>
+              <div className="rounded-md bg-white p-4 shadow-md">
+                <h3 className="text-left text-lg font-bold">Tanya Scoopie</h3>
                 <div className="mt-2">
                   <div className="flex justify-between">
                     <span>Free Trial</span>
@@ -98,39 +119,49 @@ const Chatbot = () => {
                     <span>{usedChats}</span>
                   </div>
                   {remainingChats === 0 ? (
-                    <a href="/login" className="mt-4 px-4 py-2 rounded-md bg-red-500 hover:bg-red-600 text-white block">Login</a>
+                    <a
+                      href="/login"
+                      className="mt-4 block rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600"
+                    >
+                      Login
+                    </a>
                   ) : (
-                    <button 
-                      className="mt-4 px-4 py-2 rounded-md bg-blue-500 hover:bg-blue-600 text-white"
+                    <button
+                      className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
                       onClick={handleNewChat}
                     >
                       New Chat
                     </button>
                   )}
                 </div>
-                <h3 className="text-lg font-bold mt-4 text-left">Riwayat Chat</h3>
+                <h3 className="mt-4 text-left text-lg font-bold">
+                  Riwayat Chat
+                </h3>
               </div>
             </div>
 
             {/* Chatbot Section */}
-            <div className="p-4 bg-white shadow-md rounded-md md:col-span-3 space-y-4">
-              <div className="h-64 overflow-y-auto bg-gray-100 p-4 rounded-md">
+            <div className="space-y-4 rounded-md bg-white p-4 shadow-md md:col-span-3">
+              <div className="h-[500px] overflow-y-auto rounded-md bg-gray-100 p-4">
                 {chatHistory.map((message, index) => (
-                  <div key={index} className={`mb-2 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
-                    {message.sender === 'bot' && (
+                  <div
+                    key={index}
+                    className={`mb-2 flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+                  >
+                    {message.sender === "bot" && (
                       <div className="flex items-end">
                         <img
                           src={botProfile.profilePicUrl}
                           alt={botProfile.name}
-                          className="w-8 h-8 rounded-full mr-2"
+                          className="mr-2 h-8 w-8 rounded-full"
                         />
-                        <div className="bg-gray-300 px-4 py-2 rounded-lg">
+                        <div className="rounded-lg bg-gray-300 px-4 py-2">
                           <p className="text-gray-900">{message.text}</p>
                         </div>
                       </div>
                     )}
-                    {message.sender === 'user' && (
-                      <div className="bg-blue-500 text-white px-4 py-2 rounded-lg">
+                    {message.sender === "user" && (
+                      <div className="rounded-lg bg-blue-500 px-4 py-2 text-white">
                         <p>{message.text}</p>
                       </div>
                     )}
@@ -140,19 +171,25 @@ const Chatbot = () => {
               <div className="flex gap-2">
                 <input
                   type="text"
-                  className="flex-1 p-2 border rounded-md"
+                  className="flex-1 rounded-md border p-2"
                   placeholder="Ketik pertanyaan Anda..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+                  onKeyDown={(e) => e.key === "Enter" && handleSend()}
                 />
-                <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600" onClick={handleSend}>Send</button>
+                <button
+                  className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                  onClick={handleSend}
+                >
+                  Send
+                </button>
               </div>
             </div>
             <br></br>
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 };

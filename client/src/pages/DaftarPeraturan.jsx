@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import SearchForm from '../components/SearchForm';
-import PeraturanCard from '../components/PeraturanCard';
-import { useSearchParams, useNavigate, Link } from 'react-router-dom';
-import axios from 'axios';
+import SearchForm from "../components/SearchForm";
+import PeraturanCard from "../components/PeraturanCard";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 const DaftarPeraturan = () => {
   const navigate = useNavigate();
@@ -38,12 +38,13 @@ const DaftarPeraturan = () => {
       const jenis = searchParams.get("jenis") || "";
       const judul = searchParams.get("judul") || "";
       const tahun = searchParams.get("tahun") || "";
-      const encodedJenis = encodeURIComponent(jenis); 
-      console.log('Jenis Peraturan Encode', encodedJenis)
+      const encodedJenis = encodeURIComponent(jenis);
+      console.log("Jenis Peraturan Encode", encodedJenis);
       try {
-        const response = await axios.get(`http://localhost:3000/peraturan/jenis/${encodedJenis}`, 
-          {params: {judul, tahun}
-        });
+        const response = await axios.get(
+          `http://localhost:3000/peraturan/jenis/${encodedJenis}`,
+          { params: { judul, tahun } },
+        );
         setPeraturanList(response.data);
       } catch (error) {
         console.error("Error fetching peraturan data:", error);
@@ -58,9 +59,9 @@ const DaftarPeraturan = () => {
       if (!searchParams.get("title")) {
         return true;
       }
-      return law.judul.toLowerCase().includes(
-        searchParams.get("title").toLowerCase()
-      );
+      return law.judul
+        .toLowerCase()
+        .includes(searchParams.get("title").toLowerCase());
     })
     .filter((law) => {
       if (!searchParams.get("year")) {
@@ -78,12 +79,12 @@ const DaftarPeraturan = () => {
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
 
   return (
-    <div className="min-h-screen bg-customNavy p-6 pt-32">
+    <div className="bg-customNavy min-h-screen p-6 pt-32">
       <div className="container mx-auto text-left">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
           <div className="md:col-span-1">
             <SearchForm />
-            <div className="mt-4 p-4 bg-white shadow-md rounded-md">
+            <div className="mt-4 rounded-md bg-white p-4 shadow-md">
               <h3 className="text-lg font-bold">DATA</h3>
               <div className="mt-2">
                 <div className="flex justify-between">
@@ -92,11 +93,21 @@ const DaftarPeraturan = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Berlaku</span>
-                  <span>{filteredData.filter((data) => data.status === "Berlaku").length}</span>
+                  <span>
+                    {
+                      filteredData.filter((data) => data.status === "Berlaku")
+                        .length
+                    }
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Tidak Berlaku</span>
-                  <span>{filteredData.filter((data) => data.status !== "Berlaku").length}</span>
+                  <span>
+                    {
+                      filteredData.filter((data) => data.status !== "Berlaku")
+                        .length
+                    }
+                  </span>
                 </div>
               </div>
             </div>
@@ -106,7 +117,7 @@ const DaftarPeraturan = () => {
             {filteredData
               .slice(
                 (Number(searchParams.get("page")) - 1) * ITEMS_PER_PAGE,
-                ITEMS_PER_PAGE * Number(searchParams.get("page"))
+                ITEMS_PER_PAGE * Number(searchParams.get("page")),
               )
               .map((data) => (
                 <Link to={`/detail-peraturan/${data._id}`} key={data._id}>
@@ -127,7 +138,7 @@ const DaftarPeraturan = () => {
                 Previous
               </button>
 
-              <span className="text-xl font-semibold">
+              <span className="text-xl font-semibold text-white">
                 {searchParams.get("page")} of {totalPages}
               </span>
 
