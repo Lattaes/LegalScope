@@ -8,7 +8,7 @@ const router = express.Router();
 //configure this as needed
 const upload = multer({ dest: 'uploads/' }); 
 
-router.put('/profile', isAuthenticated, upload.single('profilePicture'), updateProfile);
-router.get('/profile', isAuthenticated, readProfile);
+router.put('/updateProfile', isAuthenticated, upload.single('profilePicture'), updateProfile);
+router.get('/getProfile', isAuthenticated, readProfile);
 
 export default router;

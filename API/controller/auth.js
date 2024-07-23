@@ -14,23 +14,26 @@ const sendResponse = (res, statusCode, status, data, message) => {
 
 // Register function
 export async function Register(req, res) {
-    const { username, email, password } = req.body;
+    const { username, email, password, role } = req.body;
     try {
+        // Check if user already exists
         const userExist = await User.findOne({ email });
         if (userExist) {
             return sendResponse(res, 400, 'failed', [], "This email is already registered!");
         }
 
+        // Hash password
         const hashedPassword = await bcrypt.hash(password, 10); // Hash the password
         const newUser = new User({
             username,
             email,
-            password: hashedPassword // Save the hashed password
+            password: hashedPassword, // Save the hashed password
+            role: role || 'user'//set role to user by default
         });
 
+        // Save user to database
         const savedUser = await newUser.save();
         const { password: dbPassword, role: dbRole, ...user_data } = savedUser._doc; // Exclude password and role from response
-
         sendResponse(res, 201, "success", [user_data], "Thank you for registering with us. Your account has been successfully created.");
 
     } catch (err) {
@@ -45,32 +48,30 @@ export async function Login(req, res) {
     try {
         // Check if user exists
         const user = await User.findOne({ email }).select("+password");
-        if (!user)
-            return res.status(401).json({
-                status: "failed",
-                data: [],
-                message: "Account does not exist",
-            });
+        if (!user){
+            return sendResponse(res, 401, 'failed', [], "Please register first!");
+        }
             
         // if user exists, validate password
         const isPasswordValid = bcrypt.compare(req.body.password, user.password);
-        // if not valid, return unathorized response
-        if (!isPasswordValid)
-            return res.status(401).json({
-                status: "failed",
-                data: [],
-                message:
-                    "Invalid email or password. Please try again with the correct credentials.",
-            });
+        if (!isPasswordValid){
+            return sendResponse(res, 401, 'failed', [], "Invalid email or password");
+        }
 
-        let options = {
-            maxAge: 20 * 60 * 1000, // would expire in 20minutes
-            httpOnly: true, // The cookie is only accessible by the web server
-            secure: true,
-            sameSite: "None",
+         // Token creation options
+         const tokenOptions = {
+            expiresIn: '20m'
         };
-        const token = jwt.sign({ _id: user._id }, process.env.SECRET_ACCESS_TOKEN, { expiresIn: '20m' });
-        res.cookie("SessionID", token, options); // Set token in cookie
+        const token = jwt.sign({ _id: user._id }, process.env.SECRET_ACCESS_TOKEN, tokenOptions);
+
+        const cookieOptions = {
+            maxAge: 20 * 60 * 1000, // 20 minutes
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+            sameSite: 'None' // Ensure SameSite=None for cross-site cookie usage
+        };
+        
+        res.cookie("SessionID", token, cookieOptions); // Set token in cookie
 
         const { password: pwd, ...user_data } = user._doc;
 
@@ -78,15 +79,11 @@ export async function Login(req, res) {
         const responseData = { ...user_data, token };
 
         sendResponse(res, 200, "success", [responseData], "You have successfully logged in.");
+
     } catch (err) {
-        res.status(500).json({
-            status: "error",
-            code: 500,
-            data: [],
-            message: "Internal Server Error",
-        });
+        console.log(err);
+        sendResponse(res, 500, "error", [], "Internal server error")
     }
-    res.end();
 }
 
 

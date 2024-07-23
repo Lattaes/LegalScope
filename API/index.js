@@ -3,6 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import route from "./Router/index.js";
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+
 
 dotenv.config()
 
@@ -11,6 +13,7 @@ const app = express();
 // Middleware to parse JSON
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser())
 app.use(route);
 
 // Root route

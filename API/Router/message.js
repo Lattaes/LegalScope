@@ -4,8 +4,8 @@ import { isAuthenticated } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.post('/messages', isAuthenticated, sendMessage);
-router.get('/messages/:email', isAuthenticated, getMessages);
-router.delete('/messages/:id', isAuthenticated, deleteMessage);
+router.post('/sendMessages', isAuthenticated, sendMessage);
+router.get('/messages/:userId', isAuthenticated, getMessages);
+router.delete('/messages/:userId/:messageId', isAuthenticated, deleteMessage);
 
 export default router;

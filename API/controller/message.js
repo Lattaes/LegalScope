@@ -1,6 +1,7 @@
 import Chat from "../models/message.model.js";
 import User from "../models/user.model.js";
 
+// Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
     res.status(statusCode).json({
         status,
@@ -11,7 +12,12 @@ const sendResponse = (res, statusCode, status, data, message) => {
 
 // Send message function
 export async function sendMessage(req, res) {
-    const { userId, sender, message } = req.body;
+    const { sender, message } = req.body;
+    const userId = req.user._id; // Get userId from req.user
+
+    console.log("Sender:", sender); // Debugging line
+    console.log("Message:", message); // Debugging line
+
     try {
         const userExist = await User.findById(userId);
         if (userExist) {
@@ -33,15 +39,17 @@ export async function sendMessage(req, res) {
                     messages: [newMessage]
                 });
             }
-
-            sendResponse(res, 200, "success", newMessage, "Message sent successfully");
+            sendResponse(res, 200, "success", chat, "Message sent successfully");
         } else {
             sendResponse(res, 400, "error", [], "User not found");
         }
     } catch (err) {
+        console.error("Error in sendMessage:", err); // Debugging line
         sendResponse(res, 500, "error", [], "Internal Server Error!");
     }
 }
+
+
 
 // Get messages function
 export async function getMessages(req, res) {
@@ -49,7 +57,7 @@ export async function getMessages(req, res) {
     try {
         const chat = await Chat.findOne({ userId });
         if (chat) {
-            sendResponse(res, 200, "success", chat.messages, "Messages retrieved");
+            sendResponse(res, 200, "success", chat, "Messages retrieved");
         } else {
             sendResponse(res, 404, "error", [], "Chat not found");
         }
@@ -69,7 +77,7 @@ export async function deleteMessage(req, res) {
                 chat.messages.splice(messageIndex, 1);
                 chat.updatedAt = new Date();
                 await chat.save();
-                sendResponse(res, 200, "success", [], "Message deleted successfully!");
+                sendResponse(res, 200, "success", chat, "Message deleted successfully!");
             } else {
                 sendResponse(res, 404, "error", [], "Message not found");
             }
