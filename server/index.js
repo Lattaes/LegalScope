@@ -15,20 +15,21 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   });
 
 // Middleware
-app.use(express.json());
+app.use(express.json({ limit: '10mb' }));
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' })); 
 
 // CORS configuration
 app.use(
   cors({
     credentials: true,
-    origin: 'http://localhost:5175' // Update with your frontend's URL during development
+    origin: 'http://localhost:5175'
   })
 );
 
-// Routes
-app.use('/', require('./routes/authRoutes')); // Example route, replace with your actual routes
+// Routes should come after CORS middleware
+app.use('/', require('./routes/authRoutes'));
+app.use('/profile', require('./routes/profileRoutes'));
 
 const port = process.env.PORT || 5000; // Use process.env.PORT for deployment flexibility
 app.listen(port, () => console.log(`Server is running on port ${port}`));

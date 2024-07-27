@@ -22,9 +22,12 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true
-  }
+  },
+  profileImage: String,
+  dateOfBirth: Date,
+  phoneNumber: String, 
+  province: String, 
+  city: String 
 });
 
-const User = mongoose.model('User', userSchema);
-
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);

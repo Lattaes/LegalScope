@@ -79,17 +79,23 @@ const loginUser = async (req, res) => {
   }
 };
 
-
 const getProfile = async (req, res) => {
   try {
     const token = req.cookies.token;
     if (!token) {
+      console.error('No token found in cookies');
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    if (!decoded || !decoded.id) {
+      console.error('Failed to decode token');
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+
     const user = await User.findById(decoded.id);
     if (!user) {
+      console.error('User not found for ID:', decoded.id);
       return res.status(404).json({ error: 'User not found' });
     }
 
@@ -101,7 +107,7 @@ const getProfile = async (req, res) => {
 };
 
 const updateProfile = async (req, res) => {
-  const { firstName, lastName, email } = req.body;
+  const { profileImage, dateOfBirth, phoneNumber, province, city } = req.body;
   const userId = req.user.id;
 
   try {
@@ -110,15 +116,17 @@ const updateProfile = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    user.firstName = firstName || user.firstName;
-    user.lastName = lastName || user.lastName;
-    user.email = email || user.email;
+    user.profileImage = profileImage || user.profileImage;
+    user.dateOfBirth = dateOfBirth || user.dateOfBirth;
+    user.phoneNumber = phoneNumber || user.phoneNumber;
+    user.province = province || user.province;
+    user.city = city || user.city;
 
     await user.save();
 
     return res.json({ user });
   } catch (error) {
-    console.error('Update Profile Error:', error);
+    console.error('Update Profile Error:', error); // Log detailed error
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 };
