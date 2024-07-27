@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const Dropdown = ({ label, options, onSelect }) => {
+const Dropdown = ({ label, options, onSelect, selectedValue }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+
+  useEffect(() => {
+    setSelectedOption(selectedValue || "");
+  }, [selectedValue]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -15,16 +19,16 @@ const Dropdown = ({ label, options, onSelect }) => {
   };
 
   return (
-    <div className="relative inline-block text-left w-full mb-4">
+    <div className="relative mb-4 inline-block w-full text-left">
       <div>
         <button
           type="button"
-          className="inline-flex justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex w-full justify-between rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
           onClick={toggleDropdown}
         >
           {selectedOption || label}
           <svg
-            className="ml-2 -mr-1 h-5 w-5"
+            className="-mr-1 ml-2 h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
             fill="currentColor"
@@ -40,12 +44,12 @@ const Dropdown = ({ label, options, onSelect }) => {
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+        <div className="absolute right-0 z-10 mt-2 w-full origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
             {options.map((option) => (
               <button
                 key={option}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                className="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-100"
                 onClick={() => handleOptionClick(option)}
               >
                 {option}
