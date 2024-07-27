@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import SearchForm from '../components/SearchForm';
-import PeraturanCard from '../components/PeraturanCard';
-import { useSearchParams, useNavigate, Link } from 'react-router-dom';
-import data from '../db/data.json';
+import React, { useEffect, useState } from "react";
+import SearchForm from "../components/SearchForm";
+import PeraturanCard from "../components/PeraturanCard";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
+import axios from "axios";
 
 const DaftarPeraturan = () => {
   const navigate = useNavigate();
   const ITEMS_PER_PAGE = 10;
+  const [peraturanList, setPeraturanList] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleNavigate = (urlId) => {
     navigate(`/detail-peraturan/${urlId}`);
   };
-
-  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleNextPage = () => {
     const currentPage = Number(searchParams.get("page"));
@@ -33,40 +33,58 @@ const DaftarPeraturan = () => {
       searchParams.set("page", 1);
       setSearchParams(searchParams);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
-  const filteredData = data
+    const fetchPeraturan = async () => {
+      const jenis = searchParams.get("jenis") || "";
+      const judul = searchParams.get("judul") || "";
+      const tahun = searchParams.get("tahun") || "";
+      const encodedJenis = encodeURIComponent(jenis);
+      console.log("Jenis Peraturan Encode", encodedJenis);
+      try {
+        const response = await axios.get(
+          `http://localhost:3000/peraturan/jenis/${encodedJenis}`,
+          { params: { judul, tahun } },
+        );
+        setPeraturanList(response.data);
+      } catch (error) {
+        console.error("Error fetching peraturan data:", error);
+      }
+    };
+
+    fetchPeraturan();
+  }, [searchParams]);
+
+  const filteredData = peraturanList
     .filter((law) => {
       if (!searchParams.get("title")) {
         return true;
       }
-      return law.Title.toLowerCase().includes(
-        searchParams.get("title").toLowerCase()
-      );
+      return law.judul
+        .toLowerCase()
+        .includes(searchParams.get("title").toLowerCase());
     })
     .filter((law) => {
       if (!searchParams.get("year")) {
         return true;
       }
-      return law.Tahun === Number(searchParams.get("year"));
+      return law.tahun === Number(searchParams.get("year"));
     })
     .filter((law) => {
       if (!searchParams.get("type")) {
         return true;
       }
-      return law["Bentuk Peraturan"] === searchParams.get("type");
+      return law.jenis_bentuk_peraturan === searchParams.get("type");
     });
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
 
   return (
-    <div className="min-h-screen bg-customNavy p-6 pt-32">
+    <div className="bg-customNavy min-h-screen p-6 pt-32">
       <div className="container mx-auto text-left">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
           <div className="md:col-span-1">
             <SearchForm />
-            <div className="mt-4 p-4 bg-white shadow-md rounded-md">
+            <div className="mt-4 rounded-md bg-white p-4 shadow-md">
               <h3 className="text-lg font-bold">DATA</h3>
               <div className="mt-2">
                 <div className="flex justify-between">
@@ -75,29 +93,38 @@ const DaftarPeraturan = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Berlaku</span>
-                  <span>{filteredData.filter((data) => data.Status === "Berlaku").length}</span>
+                  <span>
+                    {
+                      filteredData.filter((data) => data.status === "Berlaku")
+                        .length
+                    }
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Tidak Berlaku</span>
-                  <span>{filteredData.filter((data) => data.Status !== "Berlaku").length}</span>
+                  <span>
+                    {
+                      filteredData.filter((data) => data.status !== "Berlaku")
+                        .length
+                    }
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* List of Peraturan */}
           <div className="flex flex-col space-y-4 md:col-span-3">
             {filteredData
               .slice(
                 (Number(searchParams.get("page")) - 1) * ITEMS_PER_PAGE,
-                ITEMS_PER_PAGE * Number(searchParams.get("page"))
+                ITEMS_PER_PAGE * Number(searchParams.get("page")),
               )
               .map((data) => (
-                <Link to={`/detail-peraturan/${data.id}`} key={data.id}>
+                <Link to={`/detail-peraturan/${data._id}`} key={data._id}>
                   <PeraturanCard
-                    title={data.Title}
-                    subtitle={data.wrapper}
-                    year={data.Tahun}
+                    title={data.judul}
+                    subtitle={data.tentang}
+                    year={data.tahun}
                   />
                 </Link>
               ))}
@@ -111,7 +138,7 @@ const DaftarPeraturan = () => {
                 Previous
               </button>
 
-              <span className="text-xl font-semibold">
+              <span className="text-xl font-semibold text-white">
                 {searchParams.get("page")} of {totalPages}
               </span>
 
