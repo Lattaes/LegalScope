@@ -1,156 +1,224 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import axios from 'axios';
+import { UserContext } from '../context/userContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = () => {
-  const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '',
-    dateOfBirth: '',
-    phoneNumber: '',
-    province: '',
-    city: ''
-  });
+  const { user, setUser } = useContext(UserContext);
+  const [profileImage, setProfileImage] = useState(null);
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [selectedProvince, setSelectedProvince] = useState('');
+  const [selectedCity, setSelectedCity] = useState('');
+  const [cities, setCities] = useState([]);
+
+  const provinces = [
+    'Aceh', 'Bali', 'Banten', 'Bengkulu', 'Central Java', 'Central Kalimantan', 
+    'Central Sulawesi', 'East Java', 'East Kalimantan', 'East Nusa Tenggara', 
+    'Gorontalo', 'Jakarta', 'Jambi', 'Lampung', 'Maluku', 'North Kalimantan', 
+    'North Maluku', 'North Sulawesi', 'North Sumatra', 'Papua', 'Riau', 
+    'Riau Islands', 'Southeast Sulawesi', 'South Kalimantan', 'South Sulawesi', 
+    'South Sumatra', 'West Java', 'West Kalimantan', 'West Nusa Tenggara', 
+    'West Papua', 'West Sulawesi', 'West Sumatra', 'Yogyakarta'
+  ];
+
+  const citiesByProvince = {
+    // ... (same as before)
+  };
 
   useEffect(() => {
-    const fetchUserData = async () => {
+    const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/profile');
-        setUserData(response.data);
+        const response = await axios.get('/profile');
+        setUser(response.data);
+        setProfileImage(response.data.profileImage);
+        setDateOfBirth(response.data.dateOfBirth || '');
+        setPhoneNumber(response.data.phoneNumber || '');
+        setSelectedProvince(response.data.province || '');
+        setSelectedCity(response.data.city || '');
       } catch (error) {
-        console.error('Error fetching profile data:', error);
+        console.error('Error fetching profile:', error);
       }
     };
 
-    fetchUserData();
-  }, []);
+    if (!user) {
+      fetchProfile();
+    }
+  }, [user, setUser]);
+
+  useEffect(() => {
+    if (selectedProvince) {
+      setCities(citiesByProvince[selectedProvince] || []);
+      setSelectedCity('');
+    }
+  }, [selectedProvince]);
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const handleProvinceChange = (event) => {
+    setSelectedProvince(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setSelectedCity(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.put('/profile', {
+        profileImage,
+        dateOfBirth,
+        phoneNumber,
+        province: selectedProvince,
+        city: selectedCity
+      }, {
+        withCredentials: true
+      });
+      toast.success('Profile updated successfully');
+    } catch (error) {
+      if (error.response) {
+        toast.error(`Error updating profile: ${error.response.data.error}`);
+      } else {
+        toast.error('Error updating profile');
+      }
+    }
+  };
+
+  if (!user) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <main className="min-h-screen flex-1 flex bg-customNavy overflow-x-hidden pt-48">
-      <div className="flex-1">
-        <div className="mx-auto sm:px-6 lg:px-8 px-4 py-6 max-w-screen-xl w-full flex-1 flex flex-col md:flex-row gap-6">
-          {/* Sidebar */}
-          <div className="w-full md:w-1/4 lg:w-1/5 flex flex-col gap-2">
-            <div className="w-full flex border-l-4 pl-1.5 border-white">
-              <a
-                className="focus:outline-none focus-visible:outline-0 disabled:cursor-not-allowed disabled:opacity-75 
-                flex-shrink-0 font-medium rounded-md text-sm gap-x-1.5 px-2.5 py-1.5 text-white dark:text-white 
-                bg-white-900 hover:bg-blue-900 disabled:bg-white-900 dark:bg-white-900 dark:hover:bg-white-800 
-                dark:disabled:bg-white-900 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white 
-                dark:focus-visible:ring-white inline-flex items-center transition-all duration-300 ease-in-out w-full"
-              >
-                <span className="i-uil-setting flex-shrink-0 h-5 w-5" aria-hidden="true"></span>
-                <span>Profil</span>
-              </a>
+    <>
+      <ToastContainer />
+      <main className="bg-customNavy min-h-screen flex items-center justify-center p-6">
+        <div className="bg-white shadow-lg rounded-lg p-8 md:p-12 max-w-6xl w-full">
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Profile Image */}
+            <div className="flex-shrink-0 w-32 h-32">
+              <img
+                src={profileImage || 'https://via.placeholder.com/128'}
+                alt="Profile"
+                className="w-full h-full rounded-full object-cover border border-gray-300 shadow-md"
+              />
+              <input
+                type="file"
+                onChange={handleImageChange}
+                className="mt-4 block w-full text-sm text-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              />
             </div>
-          </div>
 
-          {/* Main Content */}
-          <div className="flex-1 flex">
-            <div className="flex-1 flex flex-col gap-6">
-              <div className="rounded-lg divide-y divide-gray-200 dark:divide-gray-800 ring-1 ring-gray-200 dark:ring-gray-800 shadow bg-white dark:bg-gray-900 w-full">
-                <div className="px-4 py-5 sm:px-6">
-                  <h1 className="text-lg font-bold text-customWhite">Profil</h1>
+            {/* Profile Details */}
+            <div className="flex-1">
+              <h1 className="text-4xl font-bold text-gray-900 mb-6">Profile</h1>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <label htmlFor="firstName" className="block text-lg font-medium text-gray-700">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      value={user.firstName || ''}
+                      readOnly
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label htmlFor="lastName" className="block text-lg font-medium text-gray-700">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      value={user.lastName || ''}
+                      readOnly
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
                 </div>
-                <div className="px-4 py-5 sm:px-6">
-                  <form className="space-y-4">
-                    {/* First Name and Last Name */}
-                    <div className="flex gap-4">
-                      <div className="w-1/2">
-                        <label htmlFor="firstName" className="block font-medium text-gray-700 dark:text-gray-200">Nama Awal</label>
-                        <input
-                          id="firstName"
-                          name="firstName"
-                          type="text"
-                          className="block w-full mt-1 border-0 form-input rounded-md placeholder-gray-400 dark:placeholder-gray-500 text-sm px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                          defaultValue={userData.firstName}
-                        />
-                      </div>
-                      <div className="w-1/2">
-                        <label htmlFor="lastName" className="block font-medium text-gray-700 dark:text-gray-200">Nama Akhir</label>
-                        <input
-                          id="lastName"
-                          name="lastName"
-                          type="text"
-                          className="block w-full mt-1 border-0 form-input rounded-md placeholder-gray-400 dark:placeholder-gray-500 text-sm px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                          defaultValue={userData.lastName}
-                        />
-                      </div>
-                    </div>
 
-                    {/* Date of Birth and Phone Number */}
-                    <div className="flex gap-4">
-                      <div className="w-1/2">
-                        <label htmlFor="dateOfBirth" className="block font-medium text-gray-700 dark:text-gray-200">Tanggal Lahir</label>
-                        <input
-                          id="dateOfBirth"
-                          name="dateOfBirth"
-                          type="date"
-                          className="block w-full mt-1 border-0 form-input rounded-md placeholder-gray-400 dark:placeholder-gray-500 text-sm px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                          defaultValue={userData.dateOfBirth}
-                        />
-                      </div>
-                      <div className="w-1/2">
-                        <label htmlFor="noTelp" className="block font-medium text-gray-700 dark:text-gray-200">No. Telp</label>
-                        <input
-                          id="noTelp"
-                          name="noTelp"
-                          type="text"
-                          className="block w-full mt-1 border-0 form-input rounded-md placeholder-gray-400 dark:placeholder-gray-500 text-sm px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 text-gray-900 dark:text-white ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
-                          defaultValue={userData.phoneNumber}
-                        />
-                      </div>
-                    </div>
-
-                    {/* Province and City */}
-                    <div className="flex gap-4">
-                      <div className="w-1/2">
-                        <label htmlFor="province" className="block font-medium text-gray-700 dark:text-gray-200">Provinsi</label>
-                        <button
-                          id="province"
-                          name="province"
-                          className="relative w-full mt-1 border-0 inline-flex items-center text-left cursor-default rounded-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 pe-9 text-gray-400 dark:text-gray-500"
-                          type="button"
-                        >
-                          <span className="block truncate">{userData.province || 'Cari Provinsi'}</span>
-                          <span className="absolute inset-y-0 end-0 flex items-center pointer-events-none px-2.5">
-                            <span className="i-heroicons-chevron-down-20-solid flex-shrink-0 text-gray-400 dark:text-gray-500 h-5 w-5" aria-hidden="true"></span>
-                          </span>
-                        </button>
-                      </div>
-                      <div className="w-1/2">
-                        <label htmlFor="city" className="block font-medium text-gray-700 dark:text-gray-200">Kota</label>
-                        <button
-                          id="city"
-                          name="city"
-                          className="relative w-full mt-1 border-0 inline-flex items-center text-left cursor-default rounded-md text-sm gap-x-1.5 px-2.5 py-1.5 shadow-sm bg-white dark:bg-gray-900 ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 pe-9 text-gray-400 dark:text-gray-500"
-                          type="button"
-                        >
-                          <span className="block truncate">{userData.city || 'Cari Kota'}</span>
-                          <span className="absolute inset-y-0 end-0 flex items-center pointer-events-none px-2.5">
-                            <span className="i-heroicons-chevron-down-20-solid flex-shrink-0 text-gray-400 dark:text-gray-500 h-5 w-5" aria-hidden="true"></span>
-                          </span>
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Save Button */}
-                    <div className="flex justify-end">
-                      <button
-                        type="submit"
-                        className="focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 flex-shrink-0 font-medium rounded-md text-sm px-4 py-2 text-white bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 transition-all duration-300"
-                      >
-                        Simpan
-                      </button>
-                    </div>
-                  </form>
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <label htmlFor="dateOfBirth" className="block text-lg font-medium text-gray-700">Date of Birth</label>
+                    <input
+                      type="date"
+                      id="dateOfBirth"
+                      value={dateOfBirth}
+                      onChange={(e) => setDateOfBirth(e.target.value)}
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <label htmlFor="phoneNumber" className="block text-lg font-medium text-gray-700">Phone Number</label>
+                    <input
+                      type="text"
+                      id="phoneNumber"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    />
+                  </div>
                 </div>
-              </div>
+
+                <div className="flex gap-6">
+                  <div className="flex-1">
+                    <label htmlFor="province" className="block text-lg font-medium text-gray-700">Province</label>
+                    <select
+                      id="province"
+                      value={selectedProvince}
+                      onChange={handleProvinceChange}
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    >
+                      <option value="">Select a province</option>
+                      {provinces.map((province) => (
+                        <option key={province} value={province}>
+                          {province}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div className="flex-1">
+                    <label htmlFor="city" className="block text-lg font-medium text-gray-700">City</label>
+                    <select
+                      id="city"
+                      value={selectedCity}
+                      onChange={handleCityChange}
+                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                    >
+                      <option value="">Select a city</option>
+                      {cities.map((city) => (
+                        <option key={city} value={city}>
+                          {city}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div className="flex justify-end">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  >
+                    Save
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 
-export default Profile;
+export default Profile

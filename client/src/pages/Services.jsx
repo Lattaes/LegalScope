@@ -50,10 +50,10 @@ const Services = () => {
     <section className="services bg-cover bg-center text-white py-16" style={{ backgroundColor: '#072439' }}>
       <div className="container mx-auto text-center">
         <h1 className="text-4xl font-bold md:text-[42px]">
-          Our Service
+          Layanan Kami
         </h1>
         <p className="mt-[30px] mb-[40px] w-3/4 mx-auto">
-          We turn information into actionable insights. We work to understand your issues and are driven to ask better questions in the pursuit of making work.
+          Kami mengubah informasi menjadi wawasan yang dapat ditindaklanjuti. Kami berkomitmen untuk memahami masalah Anda dan didorong untuk mengajukan pertanyaan yang lebih baik demi hasil yang lebih baik.
         </p>
         <div className="cards flex justify-center gap-x-7 gap-y-10 flex-wrap">
           {services.map((service, index) => (
@@ -66,7 +66,7 @@ const Services = () => {
               <h2 className="text-2xl font-medium pb-4">{service.title}</h2>
               <p className="text-base pb-6">{service.description}</p>
               <button>
-                <a className="no-underline text-white hover:underline hover:text-violet-500 duration-500" href={service.link}>Learn more</a>
+                <a className="no-underline text-white hover:underline hover:text-violet-500 duration-500" href={service.link}>Pelajari lebih lanjut</a>
               </button>
             </div>
           ))}

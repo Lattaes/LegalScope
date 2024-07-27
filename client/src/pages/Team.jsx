@@ -9,39 +9,39 @@ const Team = () => {
   const teamMembers = [
     {
       name: 'Galih Lanjar Pangastuti',
-      position: 'Executive Officer',
+      position: 'Developer',
       image: Member,
       instagram: 'https://www.instagram.com/lattae30/',
-      linkedin: 'https://www.linkedin.com/in/sunny_khan'
+      linkedin: 'https://www.linkedin.com/in/galih-lanjar-pangastuti-502351201/'
     },
     {
       name: 'Ghania Shafiqa Raisa',
-      position: 'UX/UI Designer',
+      position: 'Developer',
       image: Member2,
       instagram: 'https://www.instagram.com/ghania.sr/',
-      linkedin: 'https://www.linkedin.com/in/alina_jesia'
+      linkedin: 'https://www.linkedin.com/in/ghania-shafiqa-raisa-68654b24b/'
     },
     {
       name: 'Kevin Khalfani Fadillah',
-      position: 'Business Development',
+      position: 'Developer',
       image: Member3,
       instagram: 'https://www.instagram.com/kevink.f/',
-      linkedin: 'https://www.linkedin.com/in/alex_sohag'
+      linkedin: 'https://www.linkedin.com/in/kevin-khalfani-f/'
     },
     {
       name: 'Sayyid Nabil Rifki',
-      position: 'Head of Marketing',
+      position: 'Developer',
       image: Member4,
       instagram: 'https://www.instagram.com/snabillr/',
-      linkedin: 'https://www.linkedin.com/in/afroza_mou'
+      linkedin: 'https://www.linkedin.com/'
     }
   ];
 
   return (
     <section className="team bg-customNavy text-white text-center py-40">
-      <h1 className="text-4xl font-bold leading-[55px] lg:text-[42px] mb-8">Meet Our Team</h1>
+      <h1 className="text-4xl font-bold leading-[55px] lg:text-[42px] mb-8">Temui Tim Kami</h1>
       <p className="text-white my-8 w-2/3 lg:w-1/3 mx-auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis accumsan nisi Ut ut felis congue nisl hendrerit commodo.
+        Kami adalah tim profesional yang berdedikasi untuk memberikan solusi terbaik dalam industri.
       </p>
       <div className="cards flex justify-center gap-10 flex-wrap">
         {teamMembers.map((member, index) => (
