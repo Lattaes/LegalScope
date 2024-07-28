@@ -1,12 +1,14 @@
 import axios from 'axios';
 import { createContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 export const UserContext = createContext({});
 
 export function UserContextProvider({ children }) {
     const [user, setUser] = useState(null);
-    const [token, setToken] = useState(Cookies.get('token') || null);
+    const token = Cookies.get('token');
+    const [chatHistory, setChatHistory] = useState([]);
 
     useEffect(() => {
         const fetchUserProfile = async () => {
@@ -27,17 +29,14 @@ export function UserContextProvider({ children }) {
                 console.log('No token found');
             }
         };
-        if (!user) {
-            fetchUserProfile();
-        }
-    }, [user]);
+        fetchUserProfile();
+    }, [token]);
+
+    console.log('Token after fetch (useEffect):', token);
 
     const updateProfile = async (profileData) => {
-        const token = Cookies.get('token');
         if (token) {
-            // Store token in cookies
-            Cookies.set('token', token, {path: '/', httpOnly: false, expires: 1/72})
-            console.log('Token fetch (updateProfile):', token);
+            console.log('Token update (updateProfile):', token);
             try {
                 const formData = new FormData();
                 formData.append('firstName', profileData.firstName);
@@ -49,7 +48,8 @@ export function UserContextProvider({ children }) {
 
                 const response = await axios.put('http://127.0.0.1:3000/profile/updateProfile', formData, {
                     headers: {
-                        Authorization: `Bearer ${token}`
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'multipart/form-data'
                     },
                     withCredentials: true
                 });
@@ -66,9 +66,58 @@ export function UserContextProvider({ children }) {
         }
     };
 
+    const sendMessage = async (sender, message) => {
+        if (token) {
+            try {
+                const response = await axios.post('http://127.0.0.1:3000/sendMessages', { sender, message }, {
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    withCredentials: true
+                });
+
+                setChatHistory(response.data.data.messages);
+                return response.data.data;
+            } catch (error) {
+                console.error('Error sending message:', error.response ? error.response.data : error.message);
+                throw error;
+            }
+        } else {
+            console.error('No token available');
+            throw new Error('No token available');
+        }
+    };
+
+    const getChatHistory = async (userId) => {
+        if (token) {
+            try {
+                const response = await axios.get(`http://127.0.0.1:3000/messages/${userId}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    },
+                    withCredentials: true
+                });
+
+                setChatHistory(response.data.data.messages);
+                return response.data.data;
+            } catch (error) {
+                console.error('Error fetching chat history:', error.response ? error.response.data : error.message);
+                throw error;
+            }
+        } else {
+            console.error('No token available');
+            throw new Error('No token available');
+        }
+    };
+
     return (
-        <UserContext.Provider value={{ user, setUser, updateProfile }}>
+        <UserContext.Provider value={{ user, setUser, updateProfile, sendMessage, getChatHistory, chatHistory, setChatHistory }}>
             {children}
         </UserContext.Provider>
     );
 }
+
+UserContextProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};

@@ -14,6 +14,7 @@ import Peraturan from './pages/Peraturan';
 import DaftarPeraturan from './pages/DaftarPeraturan';
 import DetailPeraturan from './pages/DetailPeraturan';
 import Profile from './pages/Profile';
+import TentangKami from './pages/TentangKami';
 // import EditProfile from './pages/EditProfile';
 
 axios.defaults.baseURL = 'http://localhost:5000';
@@ -45,6 +46,7 @@ function App() {
           <Route path="/detail-peraturan/:id" element={<DetailPeraturan />} />
           <Route path='/prediksi' element={<Prediksi />} />
           <Route path='/chatbot' element={<Chatbot />} />
+          <Route path='/tentang-kami' element={<TentangKami />} />
         </Routes>
       </UserContextProvider>
     </>

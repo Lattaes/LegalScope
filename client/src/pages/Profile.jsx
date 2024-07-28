@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import { UserContext } from '../context/userContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const { user, setUser, updateProfile } = useContext(UserContext);
   const [profilePicture, setProfilePicture] = useState(null);
+  const navigate = useNavigate();
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -22,7 +24,7 @@ const Profile = () => {
     event.preventDefault();
 
     try {
-      await updateProfile({
+       await updateProfile({
         firstName: user.firstName,
         lastName: user.lastName,
         profilePicture
@@ -31,6 +33,7 @@ const Profile = () => {
     } catch (error) {
       toast.error('Failed updating profile');
     }
+    navigate('/');
   };
 
   if (!user) {

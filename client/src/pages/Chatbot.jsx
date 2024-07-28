@@ -1,13 +1,16 @@
-import { useState } from "react";
+import React, { useState, useContext } from 'react';
 import backgroundImage from "../assets/purple-hero.jpg";
+import { UserContext } from '../context/userContext';
 import axios from "axios";
 import Footer from "./../components/Footer";
 
 const Chatbot = () => {
   const [message, setMessage] = useState("");
   const [chatHistory, setChatHistory] = useState([]);
-  const [remainingChats, setRemainingChats] = useState(5);
-  const [usedChats, setUsedChats] = useState(0);
+  const [remainingChats] = useState(5);
+  const [sessions, setSessions] = useState([]);
+  const [selectedSessionIndex, setSelectedSessionIndex] = useState(null);
+  const { sendMessage } = useContext(UserContext);
 
   // Chatbot profile information
   const botProfile = {
@@ -19,8 +22,8 @@ const Chatbot = () => {
   const handleSend = async () => {
     if (message.trim()) {
       const newMessage = { sender: "user", text: message };
-      const newChatHistory = [...chatHistory, newMessage];
-      setChatHistory(newChatHistory);
+      const updatedChatHistory = [...chatHistory, newMessage];
+      setChatHistory(updatedChatHistory);
       setMessage(""); // Clear input field after sending message
 
       try {
@@ -35,29 +38,54 @@ const Chatbot = () => {
           },
         );
 
-        setChatHistory((prevMessages) => [
-          ...prevMessages,
-          { sender: "bot", text: response.data.response },
-        ]);
+        
+
+        const botMessage = { sender: "bot", text: response.data.response };
+        setChatHistory([...updatedChatHistory, botMessage]);
+
+      try {
+          await sendMessage( "user", message)
+       } catch (error) {
+         console.error('Failed send message');
+       }
+
+        if (selectedSessionIndex !== null) {
+          // Update the selected session's history
+          const updatedSessions = [...sessions];
+          updatedSessions[selectedSessionIndex].history = [...updatedChatHistory, botMessage];
+          setSessions(updatedSessions);
+        }
       } catch (error) {
         console.log("Response 404: ", error);
-        setChatHistory((prevMessages) => [
-          ...prevMessages,
-          {
-            sender: "bot",
-            text: "Maaf, saya tidak bisa memproses pertanyaan mu.",
-          },
-        ]);
+        const errorMessage = {
+          sender: "bot",
+          text: "Maaf, saya tidak bisa memproses pertanyaan mu.",
+        };
+        setChatHistory([...updatedChatHistory, errorMessage]);
+
+        if (selectedSessionIndex !== null) {
+          const updatedSessions = [...sessions];
+          updatedSessions[selectedSessionIndex].history = [...updatedChatHistory, errorMessage];
+          setSessions(updatedSessions);
+        }
       }
     }
   };
 
   const handleNewChat = () => {
     if (remainingChats > 0) {
+      const newSession = {
+        id: Date.now(), // Unique identifier for the session
+        history: [...chatHistory],
+      };
+      setSessions([...sessions, newSession]);
       setChatHistory([]);
-      setRemainingChats(remainingChats - 1);
-      setUsedChats(usedChats + 1);
     }
+  };
+
+  const handleSelectSession = (index) => {
+    setSelectedSessionIndex(index);
+    setChatHistory(sessions[index].history);
   };
 
   return (
@@ -106,37 +134,26 @@ const Chatbot = () => {
               <div className="rounded-md bg-white p-4 shadow-md">
                 <h3 className="text-left text-lg font-bold">Tanya Scoopie</h3>
                 <div className="mt-2">
-                  <div className="flex justify-between">
-                    <span>Free Trial</span>
-                    <span>{remainingChats}/5</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Tersisa</span>
-                    <span>{remainingChats}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Chat Terpakai</span>
-                    <span>{usedChats}</span>
-                  </div>
-                  {remainingChats === 0 ? (
-                    <a
-                      href="/login"
-                      className="mt-4 block rounded-md bg-red-500 px-4 py-2 text-white hover:bg-red-600"
-                    >
-                      Login
-                    </a>
-                  ) : (
-                    <button
+                <button
                       className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-                      onClick={handleNewChat}
-                    >
+                      onClick={handleNewChat}>
                       New Chat
                     </button>
-                  )}
                 </div>
-                <h3 className="mt-4 text-left text-lg font-bold">
-                  Riwayat Chat
-                </h3>
+                <h3 className="mt-4 text-left text-lg font-bold">Riwayat Chat</h3>
+                <ul className="mt-2">
+                  {sessions.map((session, index) => (
+                    <li
+                      key={session.id}
+                      className={`cursor-pointer p-2 hover:bg-gray-200 ${
+                        selectedSessionIndex === index ? 'bg-gray-300' : ''
+                      }`}
+                      onClick={() => handleSelectSession(index)}
+                    >
+                      Chat {index + 1} - {new Date(session.id).toLocaleDateString()}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
 

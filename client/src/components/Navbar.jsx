@@ -49,7 +49,7 @@ const Navbar = () => {
           <ul className="hidden sm:flex">
             <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:text-violet-600">
               <div className="dropdown dropdown-hover dropdown-end">
-                <div tabIndex={0} role="button" className="m-1">
+                <div tabIndex={0} role="button" >
                   Peraturan Indonesia
                 </div>
                 <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
@@ -63,12 +63,16 @@ const Navbar = () => {
                 </ul>
               </div>
             </li>
-            <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:border-b hover:text-violet-600">
-              <Link to="/prediksi">Prediksi Hukum</Link>
-            </li>
-            <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:border-b hover:text-violet-600">
-              <Link to="/chatbot">Chatbot Interaktif</Link>
-            </li>
+            {user && (
+              <>
+                <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:border-b hover:text-violet-600">
+                  <Link to="/prediksi">Prediksi Hukum</Link>
+                </li>
+                <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:border-b hover:text-violet-600">
+                  <Link to="/chatbot">Chatbot Interaktif</Link>
+                </li>
+              </>
+            )}
             <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:border-b hover:text-violet-600">
               <Link to="/tentang-kami">Tentang Kami</Link>
             </li>
@@ -140,12 +144,16 @@ const Navbar = () => {
             <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
               <Link to="/peraturan">Peraturan Indonesia</Link>
             </li>
-            <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
-              <Link to="/prediksi">Prediksi Hukum</Link>
-            </li>
-            <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
-              <Link to="/chatbot">Chatbot Interaktif</Link>
-            </li>
+            {user && (
+              <>
+                <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
+                  <Link to="/prediksi">Prediksi Hukum</Link>
+                </li>
+                <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
+                  <Link to="/chatbot">Chatbot Interaktif</Link>
+                </li>
+              </>
+            )}
             <li onClick={() => setMenuOpen(false)} className="py-4 cursor-pointer">
               <Link to="/tentang-kami">Tentang Kami</Link>
             </li>

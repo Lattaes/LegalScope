@@ -30,7 +30,7 @@ function Login() {
         console.log('Sending login data:', { email, password }, token);
 
         // Store token in cookies
-        Cookies.set('token', token, {path: '/', httpOnly: false, expires: 1/72})
+        Cookies.set('token', token, {path: '/', httpOnly: true, expires: 1/72})
 
         setUser(user);
         setData({ email: '', password: '' });
@@ -96,7 +96,7 @@ function Login() {
           </div>
 
           <div className="mt-3 text-xs flex justify-between items-center text-[#002D74]">
-            <a href="#">Don't have an account?</a>
+            <a href="#">Don`t have an account?</a>
           </div>
         </div>
 

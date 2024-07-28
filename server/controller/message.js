@@ -29,17 +29,18 @@ export async function sendMessage(req, res) {
                 timestamp: new Date()
             };
 
+            let updatedChat;
             if (chat) {
                 chat.messages.push(newMessage);
                 chat.updatedAt = new Date();
-                await chat.save();
+                updatedChat = await chat.save();
             } else {
-                await Chat.create({
+                updatedChat = await Chat.create({
                     userId,
                     messages: [newMessage]
                 });
             }
-            sendResponse(res, 200, "success", chat, "Message sent successfully");
+            sendResponse(res, 200, "success", updatedChat, "Message sent successfully");
         } else {
             sendResponse(res, 400, "error", [], "User not found");
         }
