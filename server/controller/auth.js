@@ -60,18 +60,22 @@ export async function Login(req, res) {
 
          // Token creation options
          const tokenOptions = {
-            expiresIn: '20m'
+            expiresIn: '1H'
         };
         const token = jwt.sign({ _id: user._id }, process.env.SECRET_ACCESS_TOKEN, tokenOptions);
+        console.log('authjs', token);
+        
 
         const cookieOptions = {
             maxAge: 20 * 60 * 1000, // 20 minutes
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', // Use secure cookies in production
+            secure: process.env.NODE_ENV === 'production', 
+            // Use secure cookies in production
             sameSite: 'None' // Ensure SameSite=None for cross-site cookie usage
         };
         
         res.cookie("SessionID", token, cookieOptions); // Set token in cookie
+        
 
         const { password: pwd, ...user_data } = user._doc;
 

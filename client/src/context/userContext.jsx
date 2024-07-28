@@ -1,12 +1,13 @@
 import axios from 'axios';
 import { createContext, useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 export const UserContext = createContext({});
 
 export function UserContextProvider({ children }) {
     const [user, setUser] = useState(null);
-    const [token, setToken] = useState(Cookies.get('token') || null);
+    const token = Cookies.get('token');
 
     useEffect(() => {
         const fetchUserProfile = async () => {
@@ -27,16 +28,11 @@ export function UserContextProvider({ children }) {
                 console.log('No token found');
             }
         };
-        if (!user) {
-            fetchUserProfile();
-        }
-    }, [user]);
+        fetchUserProfile();
+    }, [token]);
 
     const updateProfile = async (profileData) => {
-        const token = Cookies.get('token');
         if (token) {
-            // Store token in cookies
-            Cookies.set('token', token, {path: '/', httpOnly: false, expires: 1/72})
             console.log('Token fetch (updateProfile):', token);
             try {
                 const formData = new FormData();
@@ -49,7 +45,8 @@ export function UserContextProvider({ children }) {
 
                 const response = await axios.put('http://127.0.0.1:3000/profile/updateProfile', formData, {
                     headers: {
-                        Authorization: `Bearer ${token}`
+                        Authorization: `Bearer ${token}`,
+                        'Content-Type': 'multipart/form-data'
                     },
                     withCredentials: true
                 });
@@ -72,3 +69,7 @@ export function UserContextProvider({ children }) {
         </UserContext.Provider>
     );
 }
+
+UserContextProvider.propTypes = {
+    children: PropTypes.node.isRequired
+};

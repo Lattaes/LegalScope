@@ -22,7 +22,7 @@ const Profile = () => {
     event.preventDefault();
 
     try {
-      await updateProfile({
+       await updateProfile({
         firstName: user.firstName,
         lastName: user.lastName,
         profilePicture
