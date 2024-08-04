@@ -3,14 +3,14 @@ import { FaFilePdf, FaLock } from "react-icons/fa";
 
 const PeraturanCard = ({ title, subtitle, document, tags, year, status }) => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-md flex flex-col space-y-2">
+    <div className="p-5 bg-slate-700 shadow-md text-justify rounded-md flex flex-col space-y-2">
         <div className="flex justify-between items-center">
-        <div className="text-sm font-bold">Peraturan Indonesia</div>
-        <div className="text-sm font-bold">{year}</div>
+        <div className="text-sm text-white font-bold">Peraturan Indonesia</div>
+        <div className="text-sm text-white font-bold">{year}</div>
       </div>
-      <h3 className="text-lg font-semibold">{title}</h3>
+      <h3 className="text-lg text-white font-semibold">{title}</h3>
       <a href="/detail-peraturan">
-        <p className="text-blue-500">{subtitle}</p>
+        <p className="text-sm text-blue-300">{subtitle}</p>
       </a>
 
       {tags && (

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link, useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import backgroundImage from '../assets/purple-hero.jpg';
+import Footer from '../components/Footer';
 
 function Peraturan() {
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ function Peraturan() {
     };
 
     return (
-        <main className="flex-1 flex overflow-x-hidden bg-customNavy">
+        <main className="flex-1 flex flex-col overflow-x-hidden bg-customNavy">
             <div className="flex-1 flex">
                 <div className="mx-auto sm:px-6 lg:px-8 px-4 py-6 max-w-screen-xl w-full flex flex-col gap-6">
                     <div className="w-full relative overflow-hidden rounded-lg p-4 bg-customBeige flex flex-col justify-end mt-24"
@@ -79,6 +80,7 @@ function Peraturan() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </main>
     );
 }

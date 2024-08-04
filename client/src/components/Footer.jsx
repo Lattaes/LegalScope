@@ -61,9 +61,7 @@ const Footer = () => {
           <div className="py-8 px-4">
             <h1 className="sm:text-3xl text-xl font-bold mb-3">LEGALSCOPE.</h1>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit consectetur adipisicing elit ipsum
-              dolor sit amet consectetur. adipisicing
+            LegalScope adalah sebuah platform yang menyediakan sistem pencarian dan analisis data hukum yang terperinci.
             </p>
             <br />
             {/* Social Handle */}

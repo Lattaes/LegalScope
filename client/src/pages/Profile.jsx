@@ -44,11 +44,11 @@ const Profile = () => {
     <>
       <ToastContainer />
       <main className="bg-customNavy min-h-screen flex items-center justify-center p-6">
-        <div className="bg-white shadow-lg rounded-lg p-8 md:p-12 max-w-6xl w-full">
+        <div className="bg-slate-700 shadow-lg rounded-lg p-8 md:p-12 max-w-6xl w-full">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-shrink-0 w-32 h-32">
               <img
-                src={profilePicture || user.profilePicture || 'https://via.placeholder.com/128'}
+                src={profilePicture || `data:image/jpeg;base64,${user.profilePicture}` || 'https://via.placeholder.com/128'}
                 alt="Profile"
                 className="w-full h-full rounded-full object-cover border border-gray-300 shadow-md"
               />
@@ -60,7 +60,7 @@ const Profile = () => {
             </div>
 
             <div className="flex-1">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">Profile</h1>
+              <h1 className="text-4xl font-bold text-white mb-6">Profile</h1>
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="flex gap-6">
                   <div className="flex-1">
@@ -70,7 +70,7 @@ const Profile = () => {
                       id="userName"
                       value={user.username || ''}
                       readOnly
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="mt-1 block px-3 h-7 w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                   <div className="flex-1">
@@ -80,7 +80,7 @@ const Profile = () => {
                       id="email"
                       value={user.email || ''}
                       readOnly
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="mt-1 block px-3 w-full h-7 border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const Profile = () => {
                       id="firstName"
                       value={user.firstName || ''}
                       onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="mt-1 h-7 px-3 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                   <div className="flex-1">
@@ -103,7 +103,7 @@ const Profile = () => {
                       id="lastName"
                       value={user.lastName || ''}
                       onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-                      className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                      className="mt-1 px-3 h-7 block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>

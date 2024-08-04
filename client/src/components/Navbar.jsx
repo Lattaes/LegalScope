@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Logo from '../assets/logo-icon.png';
 import DefaultProfile from '../assets/default-profile.png'; // Import the default profile picture
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -26,6 +26,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -39,23 +40,31 @@ const Navbar = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    if (user) {
+      navigate('/dashboard');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <nav className="bg-customNavy fixed top-0 z-50 h-24 w-full shadow-xl">
       <div className="container mx-auto flex h-full w-full items-center justify-between px-4 2xl:px-16">
-        <Link to="/">
+        <div onClick={handleLogoClick} className="cursor-pointer">
           <h2 className="text-1xl font-bold text-white md:text-3xl">LEGALSCOPE.</h2>
-        </Link>
+        </div>
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex">
             <li className="text-l ml-10 cursor-pointer text-white duration-500 hover:text-violet-600">
               <div className="dropdown dropdown-hover dropdown-end">
-                <div tabIndex={0} role="button" >
+                <div tabIndex={0} role="button">
                   Peraturan Indonesia
                 </div>
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <ul tabIndex={0} className="dropdown-content menu bg-slate-700 rounded-box z-[1] w-52 p-2 shadow">
                   {PeraturanIndoContent.map((content, index) => (
                     <li key={index}>
-                      <Link to={content.link} className="block px-4 py-2 hover:bg-gray-200 text-gray-800">
+                      <Link to={content.link} className="block px-4 py-2 hover:bg-gray-400 text-white">
                         {content.name}
                       </Link>
                     </li>
@@ -92,17 +101,17 @@ const Navbar = () => {
           <div className="flex items-center ml-10">
             <div className="relative">
               <img
-                src={user.profileImage || DefaultProfile}
+                src={`data:image/jpeg;base64,${user.profilePicture}` || DefaultProfile}
                 alt="Profile"
-                className="w-8 h-8 rounded-full object-cover cursor-pointer"
+                className="w-9 h-9 rounded-full object-cover cursor-pointer"
                 onClick={handleNav}
               />
               {menuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                <div className="absolute right-0 mt-2 w-48 bg-slate-700 rounded-md shadow-lg py-1">
                   <Link to="/profile">
-                    <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">View Profile</p>
+                    <p className="block px-4 py-2 text-white hover:bg-gray-400">View Profile</p>
                   </Link>
-                  <p onClick={handleLogout} className="block px-4 py-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
+                  <p onClick={handleLogout} className="block px-4 py-2 text-white hover:bg-gray-400 cursor-pointer">
                     Log Out
                   </p>
                 </div>
@@ -123,7 +132,7 @@ const Navbar = () => {
         }
       >
         <div className="flex w-full items-center justify-end">
-          <Link to="/">
+          <div onClick={handleLogoClick} className="cursor-pointer">
             <img
               src={Logo}
               alt="Logo"
@@ -131,7 +140,7 @@ const Navbar = () => {
               height="100"
               className="cursor-pointer pt-6"
             />
-          </Link>
+          </div>
           <div onClick={handleNav} className="cursor-pointer">
             <AiOutlineClose size={25} />
           </div>

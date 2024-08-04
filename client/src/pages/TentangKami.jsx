@@ -1,8 +1,9 @@
 import React from 'react';
 import productPhotoFront from '../assets/logo-icon.png'; // Front photo
-import productPhotoBack from '../assets/pbl-pbl.jpg'; // Back photo
+import productPhotoBack from '../assets/sambal-matah.jpg'; // Back photo
 import { FaRegLightbulb, FaUsers, FaRegHandshake, FaMailBulk } from 'react-icons/fa';
 import { MdPerson } from 'react-icons/md';
+import Footer from '../components/Footer';
 
 const teamMembers = [
   { name: 'Galih Lanjar Pangastuti', id: '2107412037' },
@@ -13,7 +14,7 @@ const teamMembers = [
 
 const TentangKami = () => {
   return (
-    <div className="bg-customNavy min-h-screen p-8 pt-32">
+    <main className="bg-customNavy min-h-screen p-8 pt-32">
       <div className="container mx-auto bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center">
         {/* Left Container for Flip Photo */}
         <div className="flex-1 mb-6 md:mb-0">
@@ -24,14 +25,14 @@ const TentangKami = () => {
                   <img
                     src={productPhotoFront}
                     alt="Front"
-                    className="w-full h-auto rounded-lg shadow-lg border-2 border-gradient-to-r from-blue-500 to-teal-500"
+                    className="w-[650px] h-[750px] rounded-lg shadow-lg border-2 border-gradient-to-r from-blue-500 to-teal-500"
                   />
                 </div>
                 <div className="flip-card-back">
                   <img
                     src={productPhotoBack}
                     alt="Back"
-                    className="w-full h-auto rounded-lg shadow-lg border-2 border-gradient-to-r from-blue-500 to-teal-500"
+                    className="w-[650px] h-[750px] rounded-lg shadow-lg border-2 border-gradient-to-r from-blue-500 to-teal-500"
                   />
                 </div>
               </div>
@@ -94,7 +95,11 @@ const TentangKami = () => {
           </div>
         </div>
       </div>
-    </div>
+      <br></br>
+      <br></br>
+      <Footer />
+    </main>
+    
   );
 };
 

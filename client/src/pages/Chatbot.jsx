@@ -34,17 +34,16 @@ const Chatbot = () => {
             headers: {
               "Content-Type": "application/json",
             },
-            withCredentials: true, // Set to true if you need to include credentials such as cookies
+            withCredentials: true, 
           },
         );
-
-        
 
         const botMessage = { sender: "bot", text: response.data.response };
         setChatHistory([...updatedChatHistory, botMessage]);
 
       try {
           await sendMessage( "user", message)
+          await sendMessage("bot", response.data.response)
        } catch (error) {
          console.error('Failed send message');
        }
@@ -131,8 +130,8 @@ const Chatbot = () => {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
             <div className="md:col-span-1">
-              <div className="rounded-md bg-white p-4 shadow-md">
-                <h3 className="text-left text-lg font-bold">Tanya Scoopie</h3>
+              <div className="rounded-md bg-slate-700 p-4 shadow-md">
+                <h3 className="text-left text-lg text-white font-bold">Tanya LegalGenie</h3>
                 <div className="mt-2">
                 <button
                       className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
@@ -140,13 +139,13 @@ const Chatbot = () => {
                       New Chat
                     </button>
                 </div>
-                <h3 className="mt-4 text-left text-lg font-bold">Riwayat Chat</h3>
+                <h3 className="mt-4 text-left text-white text-lg font-bold">Riwayat Chat</h3>
                 <ul className="mt-2">
                   {sessions.map((session, index) => (
                     <li
                       key={session.id}
-                      className={`cursor-pointer p-2 hover:bg-gray-200 ${
-                        selectedSessionIndex === index ? 'bg-gray-300' : ''
+                      className={`cursor-pointer p-2 text-white hover:text-slate-700  hover:bg-gray-200 ${
+                        selectedSessionIndex === index ? 'bg-gray-300 text-slate-700' : ''
                       }`}
                       onClick={() => handleSelectSession(index)}
                     >
@@ -158,8 +157,8 @@ const Chatbot = () => {
             </div>
 
             {/* Chatbot Section */}
-            <div className="space-y-4 rounded-md bg-white p-4 shadow-md md:col-span-3">
-              <div className="h-[500px] overflow-y-auto rounded-md bg-gray-100 p-4">
+            <div className="space-y-4 rounded-md bg-slate-700 p-4 shadow-md md:col-span-3">
+              <div className="h-[500px] overflow-y-auto rounded-md bg-slate-800 p-4">
                 {chatHistory.map((message, index) => (
                   <div
                     key={index}
@@ -172,7 +171,7 @@ const Chatbot = () => {
                           alt={botProfile.name}
                           className="mr-2 h-8 w-8 rounded-full"
                         />
-                        <div className="rounded-lg bg-gray-300 px-4 py-2">
+                        <div className="rounded-lg bg-gray-300 px-4 py-2 text-left" style={{ whiteSpace: 'pre-line' }}>
                           <p className="text-gray-900">{message.text}</p>
                         </div>
                       </div>
@@ -188,7 +187,7 @@ const Chatbot = () => {
               <div className="flex gap-2">
                 <input
                   type="text"
-                  className="flex-1 rounded-md border p-2"
+                  className="flex-1 rounded-md border p-2 text-white bg-slate-800"
                   placeholder="Ketik pertanyaan Anda..."
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}

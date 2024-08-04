@@ -44,6 +44,12 @@ function Prediksi() {
     ],
   };
 
+  const predictionDescriptions = {
+    cubis: "Pencurian Biasa",
+    curas: "Pencurian Dengan Kekerasan",
+    curat: "Pencurian Dengan Pemberatan"
+  };
+
   const [predictionResult, setPredictionResult] = useState("");
   const [visibleDescriptions, setVisibleDescriptions] = useState({});
   const [showModal, setShowModal] = useState(false);
@@ -78,6 +84,7 @@ function Prediksi() {
         },
       );
       setPredictionResult(response.data.prediksi);
+      console.log(response.data.prediksi)
       setShowModal(true);
     } catch (error) {
       console.error("Error fetching prediction:", error);
@@ -108,7 +115,9 @@ function Prediksi() {
       ></div>
       <div className="z-50 rounded bg-white p-6 shadow-lg">
         <h2 className="mb-4 text-xl font-bold">Hasil Prediksi</h2>
-        <p className="mb-4">{predictionResult}</p>
+        <p className="mb-4">
+          {predictionResult} ({predictionDescriptions[predictionResult.toLowerCase()]})
+        </p>
         <h3 className="text-lg font-semibold">Data yang Dimasukkan:</h3>
         <ul className="mb-4 list-inside list-disc">
           {Object.entries(inputs).map(([key, value]) => (
@@ -167,12 +176,12 @@ function Prediksi() {
           </div>
 
           {/* Content Section */}
-          <div className="container mx-auto gap-4 rounded-md bg-white p-4 shadow">
+          <div className="container mx-auto gap-4 rounded-md bg-slate-700 p-4 shadow">
             <form className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
               {Object.entries(categories).map(([label, options]) => (
                 <div key={label} className="mb-4">
                   <div className="mb-2 flex items-center">
-                    <h3 className="text-lg font-semibold">{label}</h3>
+                    <h3 className="text-lg text-white font-semibold">{label}</h3>
                     <button
                       type="button"
                       className="ml-2 text-blue-500 hover:text-blue-700 focus:outline-none"
@@ -278,7 +287,7 @@ function Prediksi() {
                 Reset
               </button>
               <button
-                className="rounded-lg bg-customMaroon px-8 py-2 font-bold text-white hover:bg-red-900 focus:outline-none"
+                className="rounded-lg bg-blue-500 px-8 py-2 font-bold text-white hover:bg-blue-600 focus:outline-none"
                 onClick={handleSubmit}
                 disabled={!inputs}
               >
@@ -288,11 +297,12 @@ function Prediksi() {
           </div>
 
           {showModal && (
-            <div className="flex flex-col rounded bg-white p-6 shadow-lg">
-              <h2 className="mb-4 text-xl font-bold">Hasil Prediksi</h2>
-              <p className="mb-4">{predictionResult}</p>
-              <h3 className="text-lg font-semibold">Data yang Dimasukkan:</h3>
-              <ul className="mb-4 list-inside list-disc">
+            <div className="flex flex-col rounded bg-slate-700 p-6 shadow-lg">
+              <h2 className="mb-4 text-xl text-white font-bold">Hasil Prediksi</h2>
+              <p className="text-white">{predictionResult}</p>
+              <p className="mb-4 text-white">({predictionDescriptions[predictionResult.toLowerCase()]})</p>
+              <h3 className="text-lg text-white font-semibold">Data yang Dimasukkan:</h3>
+              <ul className="list-none mb-4 list-inside list-disc text-white">
                 {Object.entries(inputs).map(([key, value]) => (
                   <li key={key}>
                     {key}: {value}
@@ -307,15 +317,6 @@ function Prediksi() {
               </button>
             </div>
           )}
-
-          {/* Modal Section */}
-          {/* {showModal && (
-            <Modal
-              predictionResult={predictionResult}
-              onClose={closeModal}
-              inputs={inputs}
-            />
-          )} */}
           <br></br>
         </div>
       </div>

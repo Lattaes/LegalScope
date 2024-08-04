@@ -9,7 +9,7 @@ export function UserContextProvider({ children }) {
     const [user, setUser] = useState(null);
     const token = Cookies.get('token');
     const [chatHistory, setChatHistory] = useState([]);
-
+    
     useEffect(() => {
         const fetchUserProfile = async () => {
             if (token) {
@@ -68,8 +68,9 @@ export function UserContextProvider({ children }) {
 
     const sendMessage = async (sender, message) => {
         if (token) {
+            console.log('Token send message (updateProfile):', token);
             try {
-                const response = await axios.post('http://127.0.0.1:3000/sendMessages', { sender, message }, {
+                const response = await axios.post('http://127.0.0.1:3000/message/sendMessages', { sender, message }, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                         'Content-Type': 'application/json'

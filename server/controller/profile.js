@@ -1,4 +1,5 @@
 import User from '../models/user.model.js';
+import fs from 'fs';
 
 // Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
@@ -10,14 +11,26 @@ const sendResponse = (res, statusCode, status, data, message) => {
 };
 
 export async function updateProfile(req, res){
-    const {firstName, lastName} = req.body;
-    const profilePicture = req.file ? req.file.path : null;    
+    const {firstName, lastName} = req.body; 
+    let profilePicture = null;
+
+    // Log the uploaded file details
+    console.log('Uploaded file:', req.file);
+
+    if(req.file) {
+        const fileBuffer = fs.readFileSync(req.file.path);
+        profilePicture = fileBuffer.toString('base64')
+
+        // Delete file from server (optional)
+        fs.unlinkSync(req.file.path)
+    } 
 
     try {
         const updatedData = {firstName, lastName};
         if(profilePicture) updatedData.profilePicture = profilePicture;
 
         const updatedUser = await User.findByIdAndUpdate(req.user._id, updatedData, {new : true});
+
         if (!updatedUser || null) {
             return sendResponse(res, 404, 'failed', [], 'User not found');
         }

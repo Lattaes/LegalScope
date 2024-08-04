@@ -10,15 +10,16 @@ import Pricing from './Pricing';
 import Team from './Team';
 import Footer from '../components/Footer';
 import Newsletter from './Newsletter';
+import logoIcon from '../assets/logo-icon.png';
 
 function Home() {
   return (
     <>
       <section className="hero bg-cover bg-center text-white py-20 relative bg-customNavy">
-        <div className="circlePosition absolute z-10 top-1/2 left-0 transform -translate-x -translate-y-1/2 w-[550px] h-[600px] bg-customBeige rounded-full blur-[90px]"></div>
+        {/* <div className="circlePosition absolute z-10 top-1/2 left-0 transform -translate-x -translate-y-1/2 w-[550px] h-[600px] bg-customBeige rounded-full blur-[90px]"></div> */}
         <div className="container max-w-6xl mx-auto px-4 py-24 md:flex md:justify-between items-center relative z-20">
-          <div className="md:w-1/2 text-center md:text-left">
-            <img src={heroImage} alt="Hero Image" className="mx-auto md:max-w-none w-72" />
+         <div className="md:w-1 text-center md:text-left">
+            <img src={logoIcon} alt="Hero Image" className="mx-auto md:max-w-none w-96" />
           </div>
           <div className="md:w-1/2 md:pl-2 text-center md:text-left">
             <div className="mb-4 text-gray-300">

@@ -45,65 +45,25 @@ const handleReset = (e) => {
 };
 
   return (
-    <div className="rounded-md bg-white p-4 shadow-md">
-      <h2 className="mb-4 text-xl font-bold">Pencarian Spesifik</h2>
+    <div className="rounded-md bg-slate-700 p-4 shadow-md">
+      <h2 className="mb-4 text-xl text-white font-bold">Pencarian Spesifik</h2>
       <form onReset={handleReset} onSubmit={handleSubmit} className="space-y-4">
         <input
-          className="w-full rounded border p-2"
+          className="w-full bg-slate-200 rounded border p-2"
           type="text"
           placeholder="judul peraturan"
           onChange={(e) => setTitleText(e.target.value)}
         />
-        {/* <input
-          className="w-full rounded border p-2"
-          type="text"
-          placeholder="nomor"
-        /> */}
         <input
-          className="w-full rounded border p-2"
+          className="w-full bg-slate-200 rounded border p-2"
           type="text"
           placeholder="tahun"
           onChange={(e) => setYearInput(e.target.value)}
         />
-        {/* <input
-          className="w-full rounded border p-2"
-          type="text"
-          placeholder="Undang-Undang"
-        />
-        <select className="w-full rounded border p-2">
-          <option>-- Pilih Pemrakarsa --</option>
-        </select>
-        <select className="w-full rounded border p-2">
-          <option>-- Pilih Status --</option>
-        </select> */}
-        {/* <select
-          onChange={(e) => setTypeSelect(e.target.value)}
-          className="w-full rounded border p-2"
-        >
-          {[
-            "UUD",
-            "TAP MPR",
-            "UU",
-            "UUDRT",
-            "PERPPU",
-            "PP",
-            "PERPRES",
-            "PENPRES",
-            "KEPPRES",
-            "INPRES",
-            "PERMEN",
-            "PERBAN",
-            "PERDA",
-          ].map((type, index) => (
-            <option key={index} value={type}>
-              {type}
-            </option>
-          ))}
-        </select> */}
         <div className="flex space-x-2">
           <button
             type="submit"
-            className="flex flex-1 items-center justify-center rounded bg-green-500 p-2 text-white"
+            className="flex flex-1 items-center justify-center rounded bg-slate-800 p-2 text-white"
           >
             <FaSearch className="mr-2" /> Cari
           </button>

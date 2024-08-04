@@ -1,5 +1,6 @@
 import Chat from "../models/message.model.js";
 import User from "../models/user.model.js";
+import { DateTime } from 'luxon';
 
 // Helper function to send responses
 const sendResponse = (res, statusCode, status, data, message) => {
@@ -23,16 +24,21 @@ export async function sendMessage(req, res) {
         if (userExist) {
             const chat = await Chat.findOne({ userId });
 
+            const now = DateTime.now().setZone('Asia/Jakarta');
+            const formattedDate = now.toFormat('yyyy-MM-dd HH:mm:ss');
+
             const newMessage = {
                 sender,
                 message,
-                timestamp: new Date()
+                timestamp: formattedDate
             };
+
+            console.log('Tanggal -> ', newMessage.timestamp)
 
             let updatedChat;
             if (chat) {
                 chat.messages.push(newMessage);
-                chat.updatedAt = new Date();
+                chat.updatedAt = formattedDate
                 updatedChat = await chat.save();
             } else {
                 updatedChat = await Chat.create({
@@ -45,7 +51,7 @@ export async function sendMessage(req, res) {
             sendResponse(res, 400, "error", [], "User not found");
         }
     } catch (err) {
-        console.error("Error in sendMessage:", err); // Debugging line
+        console.error("Error in sendMessage:", err); 
         sendResponse(res, 500, "error", [], "Internal Server Error!");
     }
 }

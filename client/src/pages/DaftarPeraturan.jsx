@@ -84,14 +84,14 @@ const DaftarPeraturan = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-4">
           <div className="md:col-span-1">
             <SearchForm />
-            <div className="mt-4 rounded-md bg-white p-4 shadow-md">
-              <h3 className="text-lg font-bold">DATA</h3>
+            <div className="mt-4 rounded-md bg-slate-700 p-4 shadow-md">
+              <h3 className="text-lg text-white font-bold">DATA</h3>
               <div className="mt-2">
-                <div className="flex justify-between">
+                <div className="flex text-white justify-between">
                   <span>Jumlah Peraturan</span>
                   <span>{filteredData.length}</span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex text-white justify-between">
                   <span>Berlaku</span>
                   <span>
                     {
@@ -100,7 +100,7 @@ const DaftarPeraturan = () => {
                     }
                   </span>
                 </div>
-                <div className="flex justify-between">
+                <div className="flex text-white justify-between">
                   <span>Tidak Berlaku</span>
                   <span>
                     {
